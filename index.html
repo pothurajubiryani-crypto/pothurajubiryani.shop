@@ -3,580 +3,915 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Pothuraju Biryani - The Dum God of Biryani. Authentic Hyderabadi Dum Biryani, Pulao & Chinese in Kondapur, Hyderabad. Order on WhatsApp or call 96400 34646.">
-<meta name="keywords" content="biryani kondapur, hyderabad biryani, dum biryani, chicken biryani kondapur, pothuraju biryani, best biryani kondapur, chinese food kondapur">
+<meta name="description" content="Pothuraju Biryani - The Dum God of Biryani. Authentic Hyderabadi Dum Biryani in Kondapur, Hyderabad. Order on WhatsApp 96400 34646.">
+<meta name="keywords" content="biryani kondapur, hyderabad biryani, dum biryani, chicken biryani kondapur, pothuraju biryani, best biryani kondapur">
 <meta property="og:title" content="Pothuraju Biryani - The Dum God of Biryani | Kondapur">
 <meta property="og:description" content="Authentic Hyderabadi Dum Biryani, Pulao & Chinese. Order direct & save 10%!">
 <meta property="og:type" content="restaurant">
-<meta property="og:url" content="https://pothurajubiryani.shop">
 <title>Pothuraju Biryani | The Dum God of Biryani | Kondapur, Hyderabad</title>
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
 <style>
-/* ==================== RESET & VARIABLES ==================== */
+/* ===== RESET & VARIABLES ===== */
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --fire:#C62828;--fire-dark:#B71C1C;--orange:#E65100;--gold:#FFB300;
-  --dark:#1A1A2E;--dark2:#16213E;--cream:#FFF3E0;--warm:#FFF8F0;
-  --text:#333;--text-light:#666;--text-lighter:#999;
-  --green:#2E7D32;--wa-green:#25D366;
-  --shadow:0 4px 20px rgba(0,0,0,0.08);--shadow-lg:0 8px 40px rgba(0,0,0,0.12);
+--fire:#C62828;--dark-red:#B71C1C;--orange:#E65100;--gold:#FFB300;
+--dark:#1A1A2E;--cream:#FFF3E0;--wa:#25D366;
+--sh:0 8px 32px rgba(0,0,0,.12);--sh-lg:0 16px 48px rgba(0,0,0,.18);
 }
-html{scroll-behavior:smooth}
-body{font-family:'Poppins',sans-serif;color:var(--text);background:#fff;overflow-x:hidden}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Poppins',sans-serif;color:#333;background:#fff;overflow-x:hidden}
 a{text-decoration:none;color:inherit}
 img{max-width:100%;display:block}
-.container{max-width:1100px;margin:0 auto;padding:0 20px}
+.ctn{max-width:1140px;margin:0 auto;padding:0 24px}
 
-/* ==================== NAVBAR ==================== */
-.navbar{position:fixed;top:0;left:0;right:0;z-index:1000;padding:12px 0;transition:all 0.3s}
-.navbar.scrolled{background:rgba(26,26,46,0.97);backdrop-filter:blur(10px);box-shadow:0 2px 20px rgba(0,0,0,0.2);padding:8px 0}
-.nav-inner{display:flex;justify-content:space-between;align-items:center;max-width:1100px;margin:0 auto;padding:0 20px}
-.nav-logo{font-family:'Playfair Display',serif;font-size:22px;font-weight:900;color:var(--gold);letter-spacing:1px}
-.nav-logo span{color:var(--cream);font-size:11px;display:block;letter-spacing:3px;font-family:'Poppins',sans-serif;font-weight:400;text-transform:uppercase}
-.nav-links{display:flex;gap:25px;align-items:center}
-.nav-links a{color:rgba(255,255,255,0.7);font-size:13px;font-weight:500;transition:color 0.3s;letter-spacing:0.5px}
+/* ===== LOADER ===== */
+.loader{position:fixed;inset:0;background:var(--dark);z-index:99999;display:flex;align-items:center;justify-content:center;transition:opacity .6s,visibility .6s}
+.loader.done{opacity:0;visibility:hidden;pointer-events:none}
+.loader-logo{width:100px;height:100px;border-radius:50%;border:3px solid var(--gold);animation:loaderPulse 1s ease infinite;display:flex;align-items:center;justify-content:center;box-shadow:0 0 40px rgba(255,179,0,.3)}
+.loader-logo img{width:70px;height:70px;border-radius:50%;object-fit:cover}
+@keyframes loaderPulse{0%,100%{transform:scale(1);box-shadow:0 0 20px rgba(255,179,0,.3)}50%{transform:scale(1.08);box-shadow:0 0 50px rgba(255,179,0,.5)}}
+
+/* ===== NAVBAR ===== */
+.nav{position:fixed;top:0;left:0;right:0;z-index:5000;padding:14px 0;transition:all .35s}
+.nav.scrolled{background:rgba(26,26,46,.97);backdrop-filter:blur(12px);padding:8px 0;box-shadow:0 2px 20px rgba(0,0,0,.3)}
+.nav-inner{display:flex;justify-content:space-between;align-items:center;max-width:1140px;margin:0 auto;padding:0 24px}
+.nav-brand{font-family:'Playfair Display',serif;font-size:22px;font-weight:900;color:var(--gold);line-height:1.1}
+.nav-brand small{display:block;font-family:'Poppins',sans-serif;font-size:10px;font-weight:400;color:rgba(255,255,255,.6);letter-spacing:3px;text-transform:uppercase}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{color:rgba(255,255,255,.7);font-size:13px;font-weight:500;letter-spacing:.5px;transition:color .3s}
 .nav-links a:hover{color:var(--gold)}
-.nav-order{background:var(--wa-green);color:#fff!important;padding:8px 18px;border-radius:25px;font-weight:600;opacity:1!important;transition:transform 0.2s}
-.nav-order:hover{transform:scale(1.05)}
-.nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer}
-.nav-toggle span{width:24px;height:2px;background:var(--gold);transition:0.3s}
+.nav-cta{background:var(--wa);color:#fff!important;padding:9px 20px;border-radius:30px;font-weight:600;font-size:13px;transition:transform .2s,box-shadow .2s}
+.nav-cta:hover{transform:scale(1.05);box-shadow:0 4px 16px rgba(37,211,102,.35)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.hamburger span{width:24px;height:2px;background:var(--gold);transition:.3s;border-radius:2px}
+.hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
 
-/* ==================== HERO ==================== */
-.hero{min-height:100vh;background:linear-gradient(135deg,var(--dark) 0%,#0F0F23 40%,#2D1B0E 100%);display:flex;align-items:center;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;width:600px;height:600px;background:radial-gradient(circle,rgba(198,40,40,0.12),transparent 70%);top:-100px;right:-100px}
-.hero::after{content:'';position:absolute;width:400px;height:400px;background:radial-gradient(circle,rgba(255,179,0,0.08),transparent 70%);bottom:-50px;left:-50px}
-.hero-content{position:relative;z-index:2;text-align:center;width:100%;padding:120px 20px 80px}
-.hero-badge{display:inline-block;background:rgba(255,179,0,0.1);border:1px solid rgba(255,179,0,0.3);color:var(--gold);padding:6px 20px;border-radius:30px;font-size:12px;letter-spacing:2px;text-transform:uppercase;margin-bottom:25px}
-.hero-logo{width:130px;height:130px;border-radius:50%;border:3px solid var(--gold);background:var(--cream);display:flex;align-items:center;justify-content:center;margin:0 auto 25px;box-shadow:0 0 40px rgba(255,179,0,0.2)}
-.hero-logo span{font-family:'Playfair Display',serif;font-size:44px;font-weight:900;color:var(--fire)}
-.hero h1{font-family:'Playfair Display',serif;font-size:clamp(42px,8vw,72px);font-weight:900;color:var(--gold);letter-spacing:4px;line-height:1.1;text-shadow:2px 4px 8px rgba(0,0,0,0.3)}
-.hero-tagline{font-size:clamp(14px,2.5vw,18px);color:var(--cream);letter-spacing:6px;text-transform:uppercase;margin:10px 0 30px;font-weight:300}
-.hero-ctas{display:flex;gap:15px;justify-content:center;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 30px;border-radius:50px;font-weight:600;font-size:15px;transition:all 0.3s;cursor:pointer;border:none}
-.btn-wa{background:var(--wa-green);color:#fff;box-shadow:0 4px 15px rgba(37,211,102,0.3)}
-.btn-wa:hover{transform:translateY(-2px);box-shadow:0 6px 25px rgba(37,211,102,0.4)}
-.btn-call{background:transparent;color:var(--gold);border:2px solid var(--gold)}
-.btn-call:hover{background:var(--gold);color:var(--dark)}
-.btn-menu{background:var(--fire);color:#fff;box-shadow:0 4px 15px rgba(198,40,40,0.3)}
-.btn-menu:hover{transform:translateY(-2px);background:var(--fire-dark)}
-.hero-scroll{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);color:rgba(255,255,255,0.3);font-size:12px;letter-spacing:2px;animation:bounce 2s infinite}
-@keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
-
-/* ==================== OFFER STRIP ==================== */
-.offer-strip{background:linear-gradient(90deg,var(--fire),var(--orange));padding:14px 0;text-align:center;color:#fff;font-size:14px;font-weight:600;letter-spacing:0.5px}
-.offer-strip .highlight{background:rgba(255,255,255,0.2);padding:2px 10px;border-radius:10px;margin:0 4px}
-
-/* ==================== ABOUT ==================== */
-.about{padding:80px 0;background:var(--warm)}
-.section-title{font-family:'Playfair Display',serif;font-size:clamp(28px,5vw,38px);font-weight:800;color:var(--dark);text-align:center;margin-bottom:8px}
-.section-sub{text-align:center;color:var(--text-light);font-size:15px;margin-bottom:40px}
-.about-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px;max-width:900px;margin:0 auto}
-.about-card{background:#fff;border-radius:16px;padding:30px 24px;text-align:center;box-shadow:var(--shadow);transition:transform 0.3s}
-.about-card:hover{transform:translateY(-5px)}
-.about-card .icon{font-size:36px;margin-bottom:12px}
-.about-card h3{font-size:16px;font-weight:700;color:var(--dark);margin-bottom:6px}
-.about-card p{font-size:13px;color:var(--text-light);line-height:1.6}
-
-/* ==================== MENU ==================== */
-.menu{padding:80px 0;background:#fff}
-.menu-tabs{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:40px}
-.menu-tab{padding:10px 24px;border-radius:30px;font-size:14px;font-weight:600;cursor:pointer;transition:all 0.3s;border:2px solid #eee;background:#fff;color:var(--text)}
-.menu-tab.active,.menu-tab:hover{background:var(--fire);color:#fff;border-color:var(--fire)}
-.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;max-width:900px;margin:0 auto}
-.menu-category{display:none}
-.menu-category.active{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;max-width:900px;margin:0 auto}
-.menu-item{display:flex;justify-content:space-between;align-items:flex-start;padding:16px 20px;background:var(--warm);border-radius:12px;transition:transform 0.2s;border:1px solid transparent}
-.menu-item:hover{transform:translateX(5px);border-color:var(--cream)}
-.mi-info{flex:1;padding-right:12px}
-.mi-badge{display:inline-block;font-size:8px;font-weight:700;padding:2px 8px;border-radius:4px;letter-spacing:0.5px;margin-left:6px;vertical-align:middle}
-.badge-best{background:#FFECB3;color:var(--orange)}
-.badge-new{background:#E8F5E9;color:var(--green)}
-.badge-spicy{background:#FFEBEE;color:var(--fire)}
-.badge-premium{background:#F3E5F5;color:#7B1FA2}
-.mi-name{font-weight:600;font-size:15px;color:var(--dark)}
-.mi-desc{font-size:12px;color:var(--text-lighter);margin-top:3px;line-height:1.4}
-.mi-veg{display:inline-block;width:14px;height:14px;border:1.5px solid var(--green);border-radius:2px;position:relative;margin-right:5px;vertical-align:middle}
-.mi-veg::after{content:'';position:absolute;width:7px;height:7px;background:var(--green);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%)}
-.mi-nv{display:inline-block;width:14px;height:14px;border:1.5px solid var(--fire);border-radius:2px;position:relative;margin-right:5px;vertical-align:middle}
-.mi-nv::after{content:'';position:absolute;width:7px;height:7px;background:var(--fire);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%)}
-.mi-price{text-align:right;white-space:nowrap}
-.mi-price .main{font-size:18px;font-weight:700;color:var(--fire)}
-.mi-price .half{font-size:11px;color:var(--text-lighter);display:block}
-
-/* ==================== COMBOS ==================== */
-.combos{padding:80px 0;background:linear-gradient(135deg,var(--dark) 0%,#2D1B0E 100%)}
-.combos .section-title{color:var(--gold)}
-.combos .section-sub{color:rgba(255,255,255,0.5)}
-.combo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;max-width:900px;margin:0 auto}
-.combo-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:24px;position:relative;overflow:hidden;transition:transform 0.3s}
-.combo-card:hover{transform:translateY(-5px);border-color:var(--gold)}
-.combo-card.featured{border-color:var(--gold);background:rgba(255,179,0,0.05)}
-.combo-tag{position:absolute;top:12px;right:12px;background:var(--fire);color:#fff;font-size:9px;font-weight:700;padding:4px 10px;border-radius:12px;letter-spacing:1px}
-.combo-card.featured .combo-tag{background:var(--gold);color:var(--dark)}
-.combo-name{font-family:'Playfair Display',serif;font-size:20px;color:#fff;margin-bottom:6px}
-.combo-items{font-size:13px;color:rgba(255,255,255,0.6);line-height:1.6;margin-bottom:15px}
-.combo-pricing{display:flex;align-items:center;gap:10px}
-.combo-old{text-decoration:line-through;color:rgba(255,255,255,0.3);font-size:15px}
-.combo-new{font-size:32px;font-weight:800;color:var(--gold)}
-.combo-save{background:var(--green);color:#fff;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:600}
-.combo-order{display:inline-flex;align-items:center;gap:6px;background:var(--wa-green);color:#fff;padding:10px 20px;border-radius:25px;font-size:13px;font-weight:600;margin-top:15px;transition:transform 0.2s}
-.combo-order:hover{transform:scale(1.05)}
-
-/* ==================== DIRECT ORDER BANNER ==================== */
-.direct-banner{padding:50px 0;background:linear-gradient(90deg,#E8F5E9,#C8E6C9);text-align:center}
-.direct-banner h2{font-family:'Playfair Display',serif;font-size:28px;color:var(--green);margin-bottom:8px}
-.direct-banner p{font-size:15px;color:#555;margin-bottom:20px}
-.direct-features{display:flex;justify-content:center;gap:30px;flex-wrap:wrap;margin-bottom:20px}
-.direct-feat{font-size:14px;color:var(--green);font-weight:600;display:flex;align-items:center;gap:6px}
-
-/* ==================== REVIEWS ==================== */
-.reviews{padding:80px 0;background:var(--warm)}
-.review-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;max-width:900px;margin:0 auto}
-.review-card{background:#fff;border-radius:16px;padding:24px;box-shadow:var(--shadow)}
-.review-stars{color:var(--gold);font-size:16px;margin-bottom:8px}
-.review-text{font-size:14px;color:var(--text);line-height:1.6;font-style:italic;margin-bottom:12px}
-.review-author{font-size:12px;color:var(--text-lighter)}
-.review-source{font-size:11px;color:var(--fire);font-weight:600}
-
-/* ==================== LOCATION ==================== */
-.location{padding:80px 0;background:#fff}
-.location-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;max-width:900px;margin:0 auto;align-items:center}
-.loc-info h3{font-family:'Playfair Display',serif;font-size:24px;color:var(--dark);margin-bottom:15px}
-.loc-detail{display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid #f0f0f0}
-.loc-detail .loc-icon{font-size:18px;min-width:25px}
-.loc-detail .loc-text{font-size:14px;color:var(--text-light);line-height:1.5}
-.loc-detail .loc-text strong{color:var(--dark);display:block;margin-bottom:2px}
-.loc-map{border-radius:16px;overflow:hidden;height:300px;background:#eee;box-shadow:var(--shadow)}
-.loc-map iframe{width:100%;height:100%;border:0}
-
-/* ==================== ORDER SECTION ==================== */
-.order-section{padding:80px 0;background:linear-gradient(135deg,var(--dark),#2D1B0E);text-align:center}
-.order-section h2{font-family:'Playfair Display',serif;font-size:clamp(28px,5vw,38px);color:var(--gold);margin-bottom:8px}
-.order-section p{color:rgba(255,255,255,0.5);font-size:15px;margin-bottom:30px}
-.order-phone{font-size:clamp(36px,6vw,52px);font-weight:900;color:#fff;letter-spacing:3px;margin-bottom:20px}
-.order-btns{display:flex;gap:15px;justify-content:center;flex-wrap:wrap}
-.order-note{color:rgba(255,255,255,0.3);font-size:12px;margin-top:20px}
-
-/* ==================== FOOTER ==================== */
-.footer{background:var(--dark);padding:40px 0 20px;text-align:center}
-.footer-brand{font-family:'Playfair Display',serif;font-size:24px;color:var(--gold);letter-spacing:2px}
-.footer-tag{color:rgba(255,255,255,0.4);font-size:12px;letter-spacing:3px;margin:5px 0 20px}
-.footer-links{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:20px}
-.footer-links a{color:rgba(255,255,255,0.5);font-size:13px;transition:color 0.3s}
-.footer-links a:hover{color:var(--gold)}
-.footer-social{display:flex;justify-content:center;gap:15px;margin-bottom:20px}
-.footer-social a{width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;font-size:16px;color:rgba(255,255,255,0.5);transition:all 0.3s}
-.footer-social a:hover{border-color:var(--gold);color:var(--gold)}
-.footer-copy{color:rgba(255,255,255,0.2);font-size:11px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.05)}
-.footer-apps{color:rgba(255,255,255,0.4);font-size:12px;margin-bottom:15px}
-
-/* ==================== FLOATING BUTTONS ==================== */
-.float-btns{position:fixed;bottom:20px;right:20px;z-index:999;display:flex;flex-direction:column;gap:10px}
-.float-wa{width:56px;height:56px;border-radius:50%;background:var(--wa-green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:28px;box-shadow:0 4px 15px rgba(37,211,102,0.4);transition:transform 0.3s;cursor:pointer}
-.float-wa:hover{transform:scale(1.1)}
-.float-call{width:56px;height:56px;border-radius:50%;background:var(--fire);color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 4px 15px rgba(198,40,40,0.3);transition:transform 0.3s;cursor:pointer}
-.float-call:hover{transform:scale(1.1)}
-
-/* ==================== RESPONSIVE ==================== */
+/* ===== MOBILE NAV ===== */
 @media(max-width:768px){
-  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(26,26,46,0.98);padding:20px;flex-direction:column;gap:15px;text-align:center}
-  .nav-links.open{display:flex}
-  .nav-toggle{display:flex}
-  .hero-content{padding:100px 20px 60px}
-  .hero-ctas{flex-direction:column;align-items:center}
-  .btn{width:100%;max-width:280px;justify-content:center}
-  .menu-grid,.menu-category.active{grid-template-columns:1fr}
-  .combo-grid{grid-template-columns:1fr}
-  .location-grid{grid-template-columns:1fr}
-  .review-grid{grid-template-columns:1fr}
-  .order-btns{flex-direction:column;align-items:center}
+.nav-links{position:fixed;top:0;right:-100%;width:75%;max-width:300px;height:100vh;background:var(--dark);flex-direction:column;justify-content:center;gap:32px;padding:40px;transition:right .4s cubic-bezier(.25,.8,.25,1);box-shadow:-8px 0 40px rgba(0,0,0,.4)}
+.nav-links.open{right:0}
+.nav-links a{font-size:18px;color:rgba(255,255,255,.85)}
+.hamburger{display:flex}
 }
+
+/* ===== HERO ===== */
+.hero{min-height:100vh;background:linear-gradient(160deg,#0a0a1a 0%,var(--dark) 30%,#1a0d0d 60%,#0f0a05 100%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;text-align:center}
+.hero-bg{position:absolute;inset:0;overflow:hidden}
+.hero-bg::before{content:'';position:absolute;width:700px;height:700px;background:radial-gradient(circle,rgba(198,40,40,.15),transparent 65%);top:-150px;right:-150px;animation:heroGlow 6s ease infinite alternate}
+.hero-bg::after{content:'';position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(255,179,0,.08),transparent 65%);bottom:-100px;left:-100px;animation:heroGlow 8s ease infinite alternate-reverse}
+@keyframes heroGlow{0%{transform:scale(1) translate(0,0)}100%{transform:scale(1.15) translate(20px,-20px)}}
+
+/* Fire particles */
+.particles{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.particle{position:absolute;border-radius:50%;opacity:0;animation:particleRise linear infinite}
+.particle:nth-child(1){width:4px;height:4px;background:#C62828;left:10%;animation-duration:8s;animation-delay:0s}
+.particle:nth-child(2){width:3px;height:3px;background:#FFB300;left:20%;animation-duration:10s;animation-delay:1s}
+.particle:nth-child(3){width:5px;height:5px;background:#E65100;left:35%;animation-duration:9s;animation-delay:2s}
+.particle:nth-child(4){width:3px;height:3px;background:#C62828;left:50%;animation-duration:11s;animation-delay:.5s}
+.particle:nth-child(5){width:4px;height:4px;background:#FFB300;left:65%;animation-duration:8.5s;animation-delay:3s}
+.particle:nth-child(6){width:3px;height:3px;background:#E65100;left:78%;animation-duration:10s;animation-delay:1.5s}
+.particle:nth-child(7){width:5px;height:5px;background:#FFB300;left:88%;animation-duration:9s;animation-delay:4s}
+.particle:nth-child(8){width:2px;height:2px;background:#C62828;left:42%;animation-duration:12s;animation-delay:2.5s}
+.particle:nth-child(9){width:4px;height:4px;background:#E65100;left:5%;animation-duration:7s;animation-delay:5s}
+.particle:nth-child(10){width:3px;height:3px;background:#FFB300;left:92%;animation-duration:9.5s;animation-delay:0.8s}
+.particle:nth-child(11){width:2px;height:2px;background:#C62828;left:55%;animation-duration:11s;animation-delay:3.5s}
+.particle:nth-child(12){width:4px;height:4px;background:#FFB300;left:72%;animation-duration:8s;animation-delay:1.2s}
+@keyframes particleRise{0%{bottom:-10px;opacity:0;transform:translateX(0)}15%{opacity:.7}50%{opacity:.4;transform:translateX(30px)}85%{opacity:.1}100%{bottom:110%;opacity:0;transform:translateX(-20px)}}
+
+.hero-content{position:relative;z-index:2;padding:40px 20px}
+.hero-logo-wrap{width:130px;height:130px;margin:0 auto 32px;border-radius:50%;border:3px solid var(--gold);display:flex;align-items:center;justify-content:center;box-shadow:0 0 60px rgba(255,179,0,.2),inset 0 0 30px rgba(255,179,0,.05);animation:logoFloat 4s ease infinite}
+.hero-logo-wrap img{width:105px;height:105px;border-radius:50%;object-fit:cover}
+@keyframes logoFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(3rem,8vw,6rem);font-weight:900;color:var(--gold);line-height:1;letter-spacing:3px;text-shadow:0 4px 30px rgba(255,179,0,.2);margin-bottom:4px}
+.hero-biryani{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,4vw,2.5rem);color:var(--cream);font-weight:600;margin-bottom:16px}
+.hero-tagline{font-size:clamp(14px,2vw,18px);color:rgba(255,243,224,.7);letter-spacing:6px;text-transform:uppercase;font-weight:300;margin-bottom:40px;overflow:hidden}
+.hero-tagline span{display:inline-block;animation:tagReveal 1.2s cubic-bezier(.25,.8,.25,1) forwards;animation-delay:.8s;opacity:0;transform:translateY(20px)}
+@keyframes tagReveal{to{opacity:1;transform:translateY(0)}}
+.hero-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:50px;font-size:15px;font-weight:600;font-family:'Poppins',sans-serif;cursor:pointer;border:none;transition:all .3s;letter-spacing:.3px}
+.btn-wa{background:var(--wa);color:#fff;box-shadow:0 4px 20px rgba(37,211,102,.3)}
+.btn-wa:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(37,211,102,.4)}
+.btn-outline{background:transparent;color:var(--gold);border:2px solid var(--gold)}
+.btn-outline:hover{background:var(--gold);color:var(--dark);transform:translateY(-2px)}
+.btn-fire{background:linear-gradient(135deg,var(--fire),var(--dark-red));color:#fff;box-shadow:0 4px 20px rgba(198,40,40,.3)}
+.btn-fire:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(198,40,40,.4)}
+.scroll-hint{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);color:rgba(255,243,224,.4);font-size:12px;letter-spacing:2px;text-align:center}
+.scroll-hint::after{content:'';display:block;width:1px;height:40px;background:linear-gradient(to bottom,rgba(255,179,0,.4),transparent);margin:8px auto 0;animation:scrollBounce 2s ease infinite}
+@keyframes scrollBounce{0%,100%{transform:translateY(0);opacity:.4}50%{transform:translateY(12px);opacity:1}}
+
+/* ===== OFFER STRIP ===== */
+.offer-strip{background:linear-gradient(90deg,var(--dark-red),var(--fire),var(--orange));padding:12px 0;overflow:hidden;white-space:nowrap}
+.offer-track{display:inline-flex;animation:marquee 22s linear infinite}
+.offer-track span{display:inline-block;padding:0 60px;color:#fff;font-size:14px;font-weight:600;letter-spacing:.5px}
+.offer-track span b{color:var(--gold)}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ===== SECTION UTILITIES ===== */
+.sec{padding:90px 0}
+.sec-dark{background:var(--dark);color:#fff}
+.sec-cream{background:var(--cream)}
+.sec-title{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,42px);font-weight:800;text-align:center;margin-bottom:12px}
+.sec-sub{text-align:center;color:#888;font-size:15px;margin-bottom:50px;max-width:560px;margin-left:auto;margin-right:auto}
+.sec-dark .sec-sub{color:rgba(255,255,255,.5)}
+
+/* Scroll animations */
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .7s cubic-bezier(.25,.8,.25,1),transform .7s cubic-bezier(.25,.8,.25,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-left{opacity:0;transform:translateX(-40px);transition:opacity .7s,transform .7s}
+.reveal-left.visible{opacity:1;transform:translateX(0)}
+.reveal-right{opacity:0;transform:translateX(40px);transition:opacity .7s,transform .7s}
+.reveal-right.visible{opacity:1;transform:translateX(0)}
+
+/* ===== WHY SECTION ===== */
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px}
+.why-card{background:#fff;border-radius:16px;padding:36px 28px;text-align:center;box-shadow:var(--sh);transition:transform .3s,box-shadow .3s;border:1px solid rgba(0,0,0,.04)}
+.why-card:hover{transform:translateY(-6px) scale(1.02);box-shadow:var(--sh-lg)}
+.why-icon{width:64px;height:64px;border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:28px}
+.why-icon.ic1{background:linear-gradient(135deg,#fce4ec,#ffcdd2);color:var(--fire)}
+.why-icon.ic2{background:linear-gradient(135deg,#fff3e0,#ffe0b2);color:var(--orange)}
+.why-icon.ic3{background:linear-gradient(135deg,#fff8e1,#ffecb3);color:#F57F17}
+.why-icon.ic4{background:linear-gradient(135deg,#e8f5e9,#c8e6c9);color:#2E7D32}
+.why-card h3{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;margin-bottom:8px;color:var(--dark)}
+.why-card p{font-size:14px;color:#777;line-height:1.6}
+
+/* ===== MENU ===== */
+.menu-tabs{display:flex;justify-content:center;gap:12px;margin-bottom:40px;flex-wrap:wrap}
+.menu-tab{padding:10px 24px;border-radius:30px;font-size:14px;font-weight:600;cursor:pointer;border:2px solid #e0e0e0;background:#fff;color:#666;transition:all .3s}
+.menu-tab:hover{border-color:var(--fire);color:var(--fire)}
+.menu-tab.active{background:var(--fire);color:#fff;border-color:var(--fire);box-shadow:0 4px 16px rgba(198,40,40,.25)}
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px}
+.menu-panel{display:none;animation:fadeTab .4s ease}
+.menu-panel.active{display:block}
+@keyframes fadeTab{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.menu-item{background:#fff;border-radius:14px;padding:22px 24px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 2px 12px rgba(0,0,0,.06);border:1px solid rgba(0,0,0,.04);transition:transform .25s,box-shadow .25s;position:relative;overflow:hidden}
+.menu-item:hover{transform:translateY(-3px);box-shadow:var(--sh)}
+.menu-item-left{flex:1;min-width:0}
+.menu-item-name{font-weight:700;font-size:15px;color:var(--dark);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.badge{font-size:9px;padding:3px 8px;border-radius:20px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;white-space:nowrap}
+.badge-best{background:#FFF3E0;color:var(--orange)}
+.badge-prem{background:#FCE4EC;color:var(--fire)}
+.badge-new{background:#E8F5E9;color:#2E7D32}
+.badge-spicy{background:#FBE9E7;color:#BF360C}
+.badge-special{background:#EDE7F6;color:#4527A0}
+.badge-nv{background:#FFEBEE;color:var(--fire);font-size:8px;padding:2px 6px}
+.badge-veg{background:#E8F5E9;color:#2E7D32;font-size:8px;padding:2px 6px}
+.menu-item-price{margin-top:6px;font-size:18px;font-weight:800;color:var(--fire)}
+.menu-item-price small{font-size:12px;font-weight:500;color:#999;margin-left:6px}
+.menu-item-right{display:flex;align-items:center;gap:0;margin-left:16px}
+.qty-wrap{display:flex;align-items:center;gap:0;border:2px solid #eee;border-radius:10px;overflow:hidden}
+.qty-btn{width:34px;height:34px;border:none;background:#fafafa;font-size:18px;font-weight:700;cursor:pointer;color:var(--fire);transition:background .2s;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif}
+.qty-btn:hover{background:#ffebee}
+.qty-val{width:32px;text-align:center;font-size:14px;font-weight:700;color:var(--dark);background:#fff}
+.add-btn{padding:9px 18px;border-radius:10px;border:2px solid var(--fire);background:#fff;color:var(--fire);font-size:13px;font-weight:700;cursor:pointer;transition:all .25s;font-family:'Poppins',sans-serif}
+.add-btn:hover{background:var(--fire);color:#fff}
+
+/* ===== COMBOS ===== */
+.combos-sec{background:linear-gradient(160deg,#0a0a1a,#1a0d0d,var(--dark));position:relative;overflow:hidden}
+.combos-sec::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='30' cy='30' r='1' fill='rgba(255,179,0,.04)'/%3E%3C/svg%3E");pointer-events:none}
+.combos-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.combo-card{background:rgba(255,255,255,.04);backdrop-filter:blur(8px);border:1px solid rgba(255,179,0,.12);border-radius:18px;padding:30px 24px;position:relative;overflow:hidden;transition:transform .3s,border-color .3s}
+.combo-card:hover{transform:translateY(-4px);border-color:rgba(255,179,0,.3)}
+.combo-badge{position:absolute;top:16px;right:16px;background:var(--gold);color:var(--dark);font-size:10px;font-weight:800;padding:4px 12px;border-radius:20px;letter-spacing:.5px}
+.combo-name{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--gold);margin-bottom:10px}
+.combo-desc{font-size:13px;color:rgba(255,255,255,.55);line-height:1.6;margin-bottom:16px}
+.combo-pricing{display:flex;align-items:baseline;gap:12px;margin-bottom:6px}
+.combo-price{font-size:32px;font-weight:800;color:#fff}
+.combo-old{font-size:16px;color:rgba(255,255,255,.35);text-decoration:line-through}
+.combo-save{color:var(--wa);font-size:13px;font-weight:700;margin-bottom:20px}
+.combo-order{display:inline-flex;align-items:center;gap:8px;background:var(--wa);color:#fff;padding:11px 24px;border-radius:30px;font-size:14px;font-weight:600;border:none;cursor:pointer;transition:transform .2s,box-shadow .2s;font-family:'Poppins',sans-serif}
+.combo-order:hover{transform:scale(1.04);box-shadow:0 4px 20px rgba(37,211,102,.3)}
+
+/* Counter stats */
+.stats-row{display:flex;justify-content:center;gap:48px;margin-top:60px;flex-wrap:wrap}
+.stat-item{text-align:center}
+.stat-num{font-family:'Playfair Display',serif;font-size:42px;font-weight:900;color:var(--gold)}
+.stat-label{font-size:13px;color:rgba(255,255,255,.45);margin-top:4px}
+
+/* ===== DIRECT ORDER BANNER ===== */
+.direct-banner{background:linear-gradient(135deg,#1B5E20,#2E7D32,#43A047);padding:60px 0;position:relative;overflow:hidden}
+.direct-banner::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='20' cy='20' r='.5' fill='rgba(255,255,255,.05)'/%3E%3C/svg%3E");pointer-events:none}
+.direct-inner{text-align:center;position:relative;z-index:1}
+.direct-inner h2{font-family:'Playfair Display',serif;font-size:clamp(26px,4vw,38px);font-weight:800;color:#fff;margin-bottom:24px}
+.direct-inner h2 em{color:var(--gold);font-style:normal}
+.direct-perks{display:flex;justify-content:center;gap:36px;flex-wrap:wrap;margin-bottom:32px}
+.direct-perk{display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.9);font-size:14px;font-weight:500}
+.direct-perk .dp-icon{width:36px;height:36px;background:rgba(255,255,255,.15);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px}
+
+/* ===== REVIEWS ===== */
+.reviews-wrap{max-width:700px;margin:0 auto;position:relative;overflow:hidden}
+.reviews-track{display:flex;transition:transform .5s cubic-bezier(.25,.8,.25,1)}
+.review-slide{min-width:100%;padding:0 20px}
+.review-card{background:#fff;border-radius:18px;padding:40px 36px;box-shadow:var(--sh);text-align:center;border:1px solid rgba(0,0,0,.04)}
+.review-stars{color:var(--gold);font-size:22px;letter-spacing:4px;margin-bottom:16px}
+.review-text{font-size:16px;line-height:1.8;color:#555;margin-bottom:20px;font-style:italic}
+.review-author{font-weight:700;color:var(--dark);font-size:14px}
+.review-source{font-size:12px;color:#aaa;margin-top:2px}
+.review-dots{display:flex;justify-content:center;gap:10px;margin-top:24px}
+.review-dot{width:10px;height:10px;border-radius:50%;background:#ddd;cursor:pointer;transition:all .3s;border:none}
+.review-dot.active{background:var(--fire);transform:scale(1.3)}
+.review-arrows{display:flex;justify-content:center;gap:16px;margin-top:16px}
+.review-arrow{width:40px;height:40px;border-radius:50%;border:2px solid #ddd;background:#fff;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;color:#666;transition:all .3s}
+.review-arrow:hover{border-color:var(--fire);color:var(--fire)}
+
+/* ===== LOCATION ===== */
+.loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+@media(max-width:768px){.loc-grid{grid-template-columns:1fr}}
+.loc-map{border-radius:18px;overflow:hidden;box-shadow:var(--sh);height:350px}
+.loc-map iframe{width:100%;height:100%;border:none}
+.loc-info h3{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--dark);margin-bottom:20px}
+.loc-row{display:flex;gap:14px;margin-bottom:18px;align-items:flex-start}
+.loc-icon{width:40px;height:40px;border-radius:12px;background:var(--cream);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.loc-detail{font-size:14px;color:#666;line-height:1.6}
+.loc-detail strong{color:var(--dark);display:block;font-size:13px;margin-bottom:2px}
+.loc-badges{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+.loc-badge{padding:8px 16px;border-radius:10px;font-size:12px;font-weight:600;background:#fff;border:1px solid #e0e0e0;color:#555}
+
+/* ===== FINAL CTA ===== */
+.final-cta{background:linear-gradient(160deg,#0a0a1a,var(--dark),#1a0d0d);padding:80px 0;text-align:center;position:relative;overflow:hidden}
+.final-cta::before{content:'';position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(198,40,40,.1),transparent 65%);top:-150px;right:-100px}
+.final-cta h2{font-family:'Playfair Display',serif;font-size:clamp(28px,5vw,44px);font-weight:800;color:var(--gold);margin-bottom:12px}
+.final-cta p{color:rgba(255,255,255,.5);font-size:15px;margin-bottom:30px}
+.final-phone{font-family:'Playfair Display',serif;font-size:clamp(32px,6vw,52px);font-weight:900;color:#fff;margin-bottom:32px;letter-spacing:3px}
+.final-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+/* ===== FOOTER ===== */
+.footer{background:#0a0a1a;padding:50px 0 24px;color:rgba(255,255,255,.4)}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:40px}
+@media(max-width:768px){.footer-grid{grid-template-columns:1fr}}
+.footer-brand{font-family:'Playfair Display',serif;font-size:24px;font-weight:900;color:var(--gold);margin-bottom:8px}
+.footer-tagline{font-size:13px;color:rgba(255,255,255,.3);margin-bottom:16px}
+.footer-desc{font-size:13px;line-height:1.7;color:rgba(255,255,255,.35)}
+.footer h4{color:var(--gold);font-size:14px;font-weight:700;margin-bottom:16px;letter-spacing:1px;text-transform:uppercase}
+.footer ul{list-style:none}
+.footer li{margin-bottom:10px}
+.footer li a{font-size:13px;color:rgba(255,255,255,.4);transition:color .3s}
+.footer li a:hover{color:var(--gold)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:20px;text-align:center;font-size:12px}
+
+/* ===== FLOATING BTNS ===== */
+.float-btns{position:fixed;bottom:24px;right:24px;z-index:4000;display:flex;flex-direction:column;gap:12px}
+.float-btn{width:56px;height:56px;border-radius:50%;border:none;cursor:pointer;font-size:24px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,.2);transition:transform .3s}
+.float-btn:hover{transform:scale(1.1)}
+.float-wa{background:var(--wa);color:#fff;animation:pulse 2s ease infinite}
+.float-call{background:var(--gold);color:var(--dark)}
+@keyframes pulse{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.3)}50%{box-shadow:0 4px 40px rgba(37,211,102,.6)}}
+
+/* ===== CART ===== */
+.cart-float{position:fixed;bottom:24px;right:92px;z-index:4000;width:56px;height:56px;border-radius:50%;background:var(--fire);color:#fff;border:none;cursor:pointer;font-size:22px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(198,40,40,.3);transition:transform .3s}
+.cart-float:hover{transform:scale(1.1)}
+.cart-badge{position:absolute;top:-4px;right:-4px;background:var(--gold);color:var(--dark);font-size:11px;font-weight:800;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid var(--fire)}
+.cart-badge:empty{display:none}
+.cart-panel{position:fixed;top:0;right:-420px;width:400px;max-width:90vw;height:100vh;background:#fff;z-index:6000;box-shadow:-8px 0 40px rgba(0,0,0,.15);transition:right .4s cubic-bezier(.25,.8,.25,1);display:flex;flex-direction:column}
+.cart-panel.open{right:0}
+.cart-overlay{position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:5500;opacity:0;visibility:hidden;transition:all .3s}
+.cart-overlay.open{opacity:1;visibility:visible}
+.cart-header{padding:20px 24px;border-bottom:1px solid #eee;display:flex;justify-content:space-between;align-items:center}
+.cart-header h3{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--dark)}
+.cart-close{background:none;border:none;font-size:24px;cursor:pointer;color:#999;padding:4px}
+.cart-body{flex:1;overflow-y:auto;padding:20px 24px}
+.cart-empty{text-align:center;padding:40px 0;color:#aaa;font-size:14px}
+.cart-item{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid #f5f5f5}
+.cart-item-info{flex:1}
+.cart-item-name{font-weight:600;font-size:14px;color:var(--dark)}
+.cart-item-price{font-size:13px;color:var(--fire);font-weight:700;margin-top:2px}
+.cart-item-qty{display:flex;align-items:center;gap:0;border:1px solid #eee;border-radius:8px;overflow:hidden}
+.cart-item-qty button{width:30px;height:30px;border:none;background:#fafafa;font-size:16px;font-weight:700;cursor:pointer;color:var(--fire);font-family:'Poppins',sans-serif}
+.cart-item-qty span{width:28px;text-align:center;font-size:13px;font-weight:700}
+.cart-footer{padding:20px 24px;border-top:1px solid #eee}
+.cart-total{display:flex;justify-content:space-between;font-size:18px;font-weight:800;color:var(--dark);margin-bottom:16px}
+.cart-checkout{width:100%;padding:14px;border-radius:14px;border:none;background:var(--wa);color:#fff;font-size:16px;font-weight:700;cursor:pointer;font-family:'Poppins',sans-serif;transition:transform .2s,box-shadow .2s;display:flex;align-items:center;justify-content:center;gap:8px}
+.cart-checkout:hover{transform:scale(1.02);box-shadow:0 4px 20px rgba(37,211,102,.3)}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:600px){
+.menu-grid{grid-template-columns:1fr}
+.combos-grid{grid-template-columns:1fr}
+.stats-row{gap:28px}
+.stat-num{font-size:32px}
+.hero-btns .btn{padding:12px 24px;font-size:13px}
+.direct-perks{gap:16px}
+.why-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:400px){.why-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 
+<!-- LOADER -->
+<div class="loader" id="loader">
+<div class="loader-logo">
+<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAB4AHgDASIAAhEBAxEB/8QAGwABAAIDAQEAAAAAAAAAAAAAAAUGAQMEAgf/xAA6EAACAQMDAgMEBwcEAwAAAAABAgMABBEFEiExQRNRYZQicYEGFSNCkaGxJDIzYnLB0TRDUvCi4fH/xAAYAQADAQEAAAAAAAAAAAAAAAAAAQIDFP/EACcRAAICAQMDBAIDAAAAAAAAAAABAhESAyExE0FRBGGh8HGRweHx/9oADAMBAAIRAxEAPwC20pSuI6BSlQGt3rvcexxuyIihpShwWJ6LnsMcn5Um6VsaTbpE7WKqdjMbK/gaHKpJII3QE4YE4z8Qe9WWW4CXMUQwSx94eQpKSaspwadG+tIuo2nWKM7ickkdBUTr2rRW0ghyZHAyY0OMH+Y9vh1qFi+klzA5MUdvjuuw/rmipN+xUYXGy5GYC5WE/eUkVtqC0fU4NSvt7ExTkH7Jz1/pPcfnEnazGWecMeVbAHkKVtOmS4+DqpSlWQKUpQApSlAClKxQBGn7LWplPSeJXX1K5B/UV7ng8W4tpOPsXLf+JH96239obqNDE4jnibfG5GQD3B9CODXKbLUZsmW8hh/lijLfmTTHmWzPV/cpDaykyBMKcsTgLxWjTNRt5rOL7WJAsajDOA2cc5B/wCmtkOj23tH7VLJdyoNw8XG1fUKOKhY9Yt7XToEihWW4jTZvZfdXHGc9/lQqopXJ0kTd9fQWMfjysWJGEQdWPp/mqffXkt5cNLM2WPYdEHYCvFxcy3MrTTSFmPV28vIDyrzFE8siRxIWdjhEHUnzNB1Qgobv79/wktAZLeaa7m/2l2IoGSzHsPkPzqb0nW4NRjwTslHVCef/YrjuYk0XRGUsDLtOSO7t/38BWqOwW30uKzKI8zHap7iVupB6+6P09aG0c8m3JssMixXCNE+1wR7y9eDWnT5mtrj2CZiwwWgcnJKjqp9R+nw9mtFgPbdRe8P8MAGOL+ZvvH5dPxoIlwS1KhdFv5bu/neRWRLgCSKPrsReNx8i3l6VNUNUQnZmlKUhiuGXWdOhlaOW9hR0OGUtyDXbVF17EWsX5VRwwOPUqM00VGOTqy5Q6haTxPLDcwvGnLMHGF+PlXONe0s5/boePWqLgOYmIxuHvAd+/NY3+KJlYDC9KNjTo+/4/Vlrk12yN3HLHdRq37r88EZ/wAVUmeMythzjcSvPGM8VlZma3eTAyDxRQZrZsYBLUoxxstLjF3t4/s874y2TIc+uDXRbX72e428+xm6sFG74ZxWpwVaAHrnmkf+rkHpVFu28X5/i/Jl7hr6dEuLk7WbBklJIUedWq1m062iF09+txtAjWRyPdHkAOmcVU4S4tsoNzZPWvNyu5oxgBz1xT70Yyg8c/x28lnOr2mouVlvUtbUHB5xJJ8P+I9evwqN1XVz7a0em3rxWkaqiLGxVeBzjHao6fDRSKOq4rlh/jJ8aI8WZ6sHGajd2do1i/gI8O+mPwf/ADV4t9b06cxol5EZJMALnkk9vjVEyfEn9AP0rr0EBtQ08Hn7Yf3obsp6ONu/Pw6L/SlKgzFUXXZB9cX7JhsOB8wozV6qMk+j2mzXEk8tv4jyMWbc7YyfTNNV3KhJwdooSzlplaTgDy7V7LRxrIQ4Yv0Aq/LoWlr0sYPmuaqX0o0g6femaGMC1lOV2jhD3X09KpU2C1ZxW+5FI6i2dCfeJ4FA6+ylM+9nOKWkCzylHk8MYznGe4/zWQume/ta4iHu7gR0645q8TPqv4o0vMuIipyU6ivfjQqzSKSWYdK9HTWQDfPCDuAIzyMnGay+mFUdzMgVRnB/e+YpYFL1Ek7pfdjQsoS3ChsODmvReI3CybuAOeO9dH1YnibPal3bS3IHGCBg8+v4V4GmOxO2eE4yDzjBGD+hFPAS15UlXFfB4W4VmcPtCnoQOtYj8IrH7yqyHn1rXdW/s7qu9XyM5Xp1qwfRTRFuA93ewK8BXbGrjO492qXFIteok3urIRJFaWUZxuGATUhoMZ+trGNSGZXLHHYAHJq0yfRzSpOtmi/0kj9DXRY6XZ6dn2SBYy3VuST4zU7FdVtNNfW7OulKVJmZrFZrFACvMsSTRtHKiujDBVhkGvVKAKvqP0NR2L6fKI8/7UnI+R61A3Ogala532bsB96Mbx+VfRqVSmyXBHyp4njOHjZfRlIrxx6V9YIz15+NefCTOdi5/pFVmTgfLY4ZJSBHE7nyVSakrX6OandY/ZjEnnKdoHy6/lX0IcdOKUsx4Fe0z6I21sRJeN7TIOduMIPl3+dWEAAAAYA6AUpUttlJJClKUhmaVilAGaxSlAClKUAKUpQApSlAClKUAKUpQBmsUpQBmlKUAf/Z" alt="Pothuraju Biryani">
+</div>
+</div>
+
 <!-- NAVBAR -->
-<nav class="navbar" id="navbar">
-  <div class="nav-inner">
-    <a href="#" class="nav-logo">POTHURAJU<span>The Dum God of Biryani</span></a>
-    <div class="nav-links" id="navLinks">
-      <a href="#menu">Menu</a>
-      <a href="#combos">Combos</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#location">Visit Us</a>
-      <a href="https://wa.me/919640034646?text=Hi%20Pothuraju!%20I'd%20like%20to%20order" class="nav-order">&#128172; Order Now</a>
-    </div>
-    <div class="nav-toggle" id="navToggle" onclick="document.getElementById('navLinks').classList.toggle('open')">
-      <span></span><span></span><span></span>
-    </div>
-  </div>
+<nav class="nav" id="navbar">
+<div class="nav-inner">
+<a href="#" class="nav-brand">POTHURAJU<small>The Dum God of Biryani</small></a>
+<div class="nav-links" id="navLinks">
+<a href="#about">About</a>
+<a href="#menu">Menu</a>
+<a href="#combos">Combos</a>
+<a href="#reviews">Reviews</a>
+<a href="#location">Location</a>
+<a href="https://wa.me/919640034646" target="_blank" class="nav-cta">&#9742; Order Now</a>
+</div>
+<button class="hamburger" id="hamburger" aria-label="Menu">
+<span></span><span></span><span></span>
+</button>
+</div>
 </nav>
 
 <!-- HERO -->
-<section class="hero">
-  <div class="hero-content">
-    <div class="hero-badge">&#128293; Now Serving in Kondapur, </div>
-    <div class="hero-logo"><img src="data:image/jpeg;base64,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" alt="Pothuraju Biryani Logo" style="width:100%;height:100%;object-fit:cover;border-radius:50%"></div>
-    <h1>POTHURAJU</h1>
-    <p class="hero-tagline">The Dum God of Biryani</p>
-    <div class="hero-ctas">
-      <a href="https://wa.me/919640034646?text=Hi%20Pothuraju!%20I'd%20like%20to%20order" class="btn btn-wa">&#128172; Order on WhatsApp</a>
-      <a href="tel:+919640034646" class="btn btn-call">&#128222; Call: 96400 34646</a>
-      <a href="#menu" class="btn btn-menu">&#128214; View Menu</a>
-    </div>
-  </div>
-  <div class="hero-scroll">SCROLL DOWN &#9660;</div>
+<section class="hero" id="hero">
+<div class="hero-bg">
+<div class="particles">
+<div class="particle"></div><div class="particle"></div><div class="particle"></div>
+<div class="particle"></div><div class="particle"></div><div class="particle"></div>
+<div class="particle"></div><div class="particle"></div><div class="particle"></div>
+<div class="particle"></div><div class="particle"></div><div class="particle"></div>
+</div>
+</div>
+<div class="hero-content">
+<div class="hero-logo-wrap">
+<img src="data:image/jpeg;base64,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" alt="Pothuraju Biryani Logo">
+</div>
+<h1 class="hero-title">POTHURAJU</h1>
+<div class="hero-biryani">BIRYANI</div>
+<p class="hero-tagline"><span>The Dum God of Biryani</span></p>
+<div class="hero-btns">
+<a href="https://wa.me/919640034646" target="_blank" class="btn btn-wa">&#128172; Order on WhatsApp</a>
+<a href="tel:+919640034646" class="btn btn-outline">&#9742; Call Now</a>
+<a href="#menu" class="btn btn-fire">&#9776; View Menu</a>
+</div>
+</div>
+<div class="scroll-hint">SCROLL</div>
 </section>
 
 <!-- OFFER STRIP -->
 <div class="offer-strip">
-  &#128293; IT Lunch Combo: Chicken Biryani + Raita + Drink @ just <span class="highlight">&#8377;199</span> | Order Direct & Save 10%! &#128293;
+<div class="offer-track">
+<span>&#128293; <b>IT Lunch Combo:</b> Chicken Biryani + Raita + Drink @ just <b>&#8377;199</b> &nbsp;|&nbsp; Order Direct &amp; Save 10%! &nbsp;|&nbsp; &#128293; <b>IT Lunch Combo:</b> Chicken Biryani + Raita + Drink @ just <b>&#8377;199</b> &nbsp;|&nbsp; Order Direct &amp; Save 10%! &nbsp;|&nbsp; &#128293; <b>IT Lunch Combo:</b> Chicken Biryani + Raita + Drink @ just <b>&#8377;199</b> &nbsp;|&nbsp; Order Direct &amp; Save 10%!</span>
+<span>&#128293; <b>IT Lunch Combo:</b> Chicken Biryani + Raita + Drink @ just <b>&#8377;199</b> &nbsp;|&nbsp; Order Direct &amp; Save 10%! &nbsp;|&nbsp; &#128293; <b>IT Lunch Combo:</b> Chicken Biryani + Raita + Drink @ just <b>&#8377;199</b> &nbsp;|&nbsp; Order Direct &amp; Save 10%! &nbsp;|&nbsp; &#128293; <b>IT Lunch Combo:</b> Chicken Biryani + Raita + Drink @ just <b>&#8377;199</b> &nbsp;|&nbsp; Order Direct &amp; Save 10%!</span>
+</div>
 </div>
 
-<!-- ABOUT -->
-<section class="about" id="about">
-  <div class="container">
-    <h2 class="section-title">Why Pothuraju?</h2>
-    <p class="section-sub">Authentic Hyderabadi Dum Biryani made with love and tradition</p>
-    <div class="about-grid">
-      <div class="about-card">
-        <div class="icon">&#128293;</div>
-        <h3>Authentic Dum</h3>
-        <p>Slow-cooked on dum for hours. Real handi, real fire, real Hyderabadi taste — no shortcuts.</p>
-      </div>
-      <div class="about-card">
-        <div class="icon">&#129385;</div>
-        <h3>Fresh Daily</h3>
-        <p>Fresh chicken, basmati rice, and hand-ground spices every single day. Nothing frozen, nothing stale.</p>
-      </div>
-      <div class="about-card">
-        <div class="icon">&#127835;</div>
-        <h3>20+ Items</h3>
-        <p>Biryanis, Pulaos, Chinese starters — something for every craving, every mood.</p>
-      </div>
-      <div class="about-card">
-        <div class="icon">&#128666;</div>
-        <h3>Fast Delivery</h3>
-        <p>Order on WhatsApp for the fastest delivery. Direct orders get 10% off — no app commissions!</p>
-      </div>
-    </div>
-  </div>
+<!-- WHY POTHURAJU -->
+<section class="sec" id="about">
+<div class="ctn">
+<h2 class="sec-title reveal">Why <span style="color:var(--fire)">Pothuraju</span>?</h2>
+<p class="sec-sub reveal">Every grain tells a story of tradition, slow-cooked perfection, and the uncompromising pursuit of flavor.</p>
+<div class="why-grid">
+<div class="why-card reveal" style="transition-delay:.1s">
+<div class="why-icon ic1">&#128293;</div>
+<h3>Authentic Dum</h3>
+<p>Slow-cooked over coal in sealed handis. No shortcuts, no pressure cookers. Just pure, traditional dum.</p>
+</div>
+<div class="why-card reveal" style="transition-delay:.2s">
+<div class="why-icon ic2">&#127807;</div>
+<h3>Fresh Daily</h3>
+<p>Every ingredient sourced fresh each morning. No frozen meat, no day-old rice. Made fresh, served fresh.</p>
+</div>
+<div class="why-card reveal" style="transition-delay:.3s">
+<div class="why-icon ic3">&#127869;</div>
+<h3>20+ Items</h3>
+<p>From royal Mutton Dum to fiery Dragon Chicken. A curated menu that covers every craving.</p>
+</div>
+<div class="why-card reveal" style="transition-delay:.4s">
+<div class="why-icon ic4">&#9889;</div>
+<h3>Fast Delivery</h3>
+<p>Kondapur deliveries in under 30 minutes. Hotter than your ex's texts. Order via WhatsApp.</p>
+</div>
+</div>
+</div>
 </section>
 
 <!-- MENU -->
-<section class="menu" id="menu">
-  <div class="container">
-    <h2 class="section-title">Our Menu</h2>
-    <p class="section-sub">Prices inclusive of taxes | Prices may vary on delivery apps</p>
+<section class="sec sec-cream" id="menu">
+<div class="ctn">
+<h2 class="sec-title reveal">Our <span style="color:var(--fire)">Menu</span></h2>
+<p class="sec-sub reveal">Crafted with passion, served with pride. Tap + to add items to your cart.</p>
+<div class="menu-tabs reveal">
+<button class="menu-tab active" data-tab="biryani">&#127835; Biryani</button>
+<button class="menu-tab" data-tab="pulao">&#127858; Pulao</button>
+<button class="menu-tab" data-tab="chinese">&#129379; Chinese</button>
+<button class="menu-tab" data-tab="sides">&#129380; Sides & Drinks</button>
+</div>
 
-    <div class="menu-tabs">
-      <div class="menu-tab active" onclick="showCategory('biryani',this)">&#127835; Biryani</div>
-      <div class="menu-tab" onclick="showCategory('pulao',this)">&#127858; Pulao</div>
-      <div class="menu-tab" onclick="showCategory('chinese',this)">&#127834; Chinese</div>
-      <div class="menu-tab" onclick="showCategory('sides',this)">&#127867; Sides & Drinks</div>
-    </div>
-
-    <!-- BIRYANI -->
-    <div class="menu-category active" id="cat-biryani">
-      <div class="menu-item">
-        <div class="mi-info"><span class="mi-nv"></span><span class="mi-name">Chicken Dum Biryani <span class="mi-badge badge-best">BESTSELLER</span></span><div class="mi-desc">Slow-cooked Hyderabadi dum with tender chicken, saffron rice & secret spice blend</div></div>
-        <div class="mi-price"><div class="main">&#8377;249</div><span class="half">Half &#8377;149</span></div>
-      </div>
-      <div class="menu-item">
-        <div class="mi-info"><span class="mi-nv"></span><span class="mi-name">Mutton Dum Biryani <span class="mi-badge badge-premium">PREMIUM</span></span><div class="mi-desc">Tender mutton pieces slow-cooked with aromatic basmati & whole spices</div></div>
-        <div class="mi-price"><div class="main">&#8377;349</div><span class="half">Half &#8377;199</span></div>
-      </div>
-      <div class="menu-item">
-        <div class="mi-info"><span class="mi-nv"></span><span class="mi-name">Boneless Chicken Biryani <span class="mi-badge badge-new">SPECIAL</span></span><div class="mi-desc">All meat, no bones — pure biryani bliss for the boneless lovers</div></div>
-        <div class="mi-price"><div class="main">&#8377;299</div><span class="half">Half &#8377;179</span></div>
-      </div>
-      <div class="menu-item">
-        <div class="mi-info"><span class="mi-nv"></span><span class="mi-name">Chicken Fry Piece Biryani <span class="mi-badge badge-new">NEW</span></span><div class="mi-desc">Crispy fried chicken pieces layered over fragrant biryani rice</div></div>
-        <div class="mi-price"><div class="main">&#8377;279</div><span class="half">Half &#8377;159</span></div>
-      </div>
-      <div class="menu-item">
-        <div class="mi-info"><span class="mi-nv"></span><span class="mi-name">Egg Biryani</span><div class="mi-desc">Perfectly boiled eggs layered with fragrant dum rice & spices</div></div>
-        <div class="mi-price"><div class="main">&#8377;199</div><span class="half">Half &#8377;119</span></div>
-      </div>
-      <div class="menu-item">
-        <div class="mi-info"><span class="mi-veg"></span><span class="mi-name">Veg Dum Biryani</span><div class="mi-desc">Mixed vegetables & paneer in aromatic dum-cooked basmati rice</div></div>
-        <div class="mi-price"><div class="main">&#8377;179</div><span class="half">Half &#8377;109</span></div>
-      </div>
-    </div>
-
-    <!-- PULAO -->
-    <div class="menu-category" id="cat-pulao">
-      <div class="menu-item">
-        <div class="mi-info"><span class="mi-nv"></span><span class="mi-name">Chicken Pulao</span><div class="mi-desc">Lightly spiced basmati rice with tender chicken pieces</div></div>
-        <div class="mi-price"><div class="main">&#8377;199</div><span class="half">Half &#8377;119</span></div>
-      </div>
-      <div class="menu-item">
-        <div class="mi-info"><span class="mi-nv"></span><span class="mi-name">Egg Pulao</span><div class="mi-desc">Fluffy egg curry with fragrant pulao rice</div></div>
-        <div class="mi-price"><div class="main">&#8377;169</div><span class="half">Half &#8377;99</span></div>
-      </div>
-      <div class="menu-item">
-        <div class="mi-info"><span class="mi-veg"></span><span class="mi-name">Veg Pulao</span><div class="mi-desc">Garden-fresh vegetables in aromatic basmati</div></div>
-        <div class="mi-price"><div class="main">&#8377;149</div><span class="half">Half &#8377;89</span></div>
-      </div>
-    </div>
-
-    <!-- CHINESE -->
-    <div class="menu-category" id="cat-chinese">
-      <div class="menu-item">
-        <div class="mi-info"><span class="mi-nv"></span><span class="mi-name">Chicken 65 <span class="mi-badge badge-best">BESTSELLER</span></span><div class="mi-desc">Hyderabadi-style deep fried spicy chicken with curry leaves</div></div>
-        <div class="mi-price"><div class="main">&#8377;229</div></div>
-      </div>
-      <div class="menu-item">
-        <div class="mi-info"><span class="mi-nv"></span><span class="mi-name">Chicken Manchurian</span><div class="mi-desc">Crispy chicken balls in spicy manchurian sauce</div></div>
-        <div class="mi-price"><div class="main">&#8377;219</div></div>
-      </div>
-      <div class="menu-item">
-        <div class="mi-info"><span class="mi-nv"></span><span class="mi-name">Chilli Chicken</span><div class="mi-desc">Spicy Indo-Chinese chicken with peppers & onions</div></div>
-        <div class="mi-price"><div class="main">&#8377;229</div></div>
-      </div>
-      <div class="menu-item">
-        <div class="mi-info"><span class="mi-nv"></span><span class="mi-name">Dragon Chicken <span class="mi-badge badge-spicy">SPICY</span></span><div class="mi-desc">Extra spicy crispy chicken in fiery dragon sauce</div></div>
-        <div class="mi-price"><div class="main">&#8377;249</div></div>
-      </div>
-      <div class="menu-item">
-        <div class="mi-info"><span class="mi-veg"></span><span class="mi-name">Veg Manchurian</span><div class="mi-desc">Crispy vegetable balls in tangy manchurian gravy</div></div>
-        <div class="mi-price"><div class="main">&#8377;179</div></div>
-      </div>
-      <div class="menu-item">
-        <div class="mi-info"><span class="mi-veg"></span><span class="mi-name">Paneer 65</span><div class="mi-desc">Crispy paneer cubes in spicy masala coating</div></div>
-        <div class="mi-price"><div class="main">&#8377;199</div></div>
-      </div>
-      <div class="menu-item">
-        <div class="mi-info"><span class="mi-nv"></span><span class="mi-name">Chicken Fried Rice</span><div class="mi-desc">Wok-tossed rice with chicken, egg & vegetables</div></div>
-        <div class="mi-price"><div class="main">&#8377;199</div></div>
-      </div>
-      <div class="menu-item">
-        <div class="mi-info"><span class="mi-veg"></span><span class="mi-name">Veg Fried Rice</span><div class="mi-desc">Classic vegetable fried rice with soy & sesame</div></div>
-        <div class="mi-price"><div class="main">&#8377;149</div></div>
-      </div>
-    </div>
-
-    <!-- SIDES -->
-    <div class="menu-category" id="cat-sides">
-      <div class="menu-item">
-        <div class="mi-info"><span class="mi-veg"></span><span class="mi-name">Raita</span><div class="mi-desc">Cool yogurt with onions, tomatoes & spices</div></div>
-        <div class="mi-price"><div class="main">&#8377;39</div></div>
-      </div>
-      <div class="menu-item">
-        <div class="mi-info"><span class="mi-veg"></span><span class="mi-name">Salan (Gravy)</span><div class="mi-desc">Traditional Hyderabadi peanut & sesame gravy</div></div>
-        <div class="mi-price"><div class="main">&#8377;49</div></div>
-      </div>
-      <div class="menu-item">
-        <div class="mi-info"><span class="mi-veg"></span><span class="mi-name">Buttermilk / Lassi</span><div class="mi-desc">Refreshing cooling drink</div></div>
-        <div class="mi-price"><div class="main">&#8377;49</div></div>
-      </div>
-      <div class="menu-item">
-        <div class="mi-info"><span class="mi-veg"></span><span class="mi-name">Soft Drink (300ml)</span></div>
-        <div class="mi-price"><div class="main">&#8377;40</div></div>
-      </div>
-      <div class="menu-item">
-        <div class="mi-info"><span class="mi-veg"></span><span class="mi-name">Water Bottle (1L)</span></div>
-        <div class="mi-price"><div class="main">&#8377;20</div></div>
-      </div>
-    </div>
-  </div>
+<!-- Biryani -->
+<div class="menu-panel active" data-panel="biryani">
+<div class="menu-grid" id="menuBiryani"></div>
+</div>
+<!-- Pulao -->
+<div class="menu-panel" data-panel="pulao">
+<div class="menu-grid" id="menuPulao"></div>
+</div>
+<!-- Chinese -->
+<div class="menu-panel" data-panel="chinese">
+<div class="menu-grid" id="menuChinese"></div>
+</div>
+<!-- Sides -->
+<div class="menu-panel" data-panel="sides">
+<div class="menu-grid" id="menuSides"></div>
+</div>
+</div>
 </section>
 
 <!-- COMBOS -->
-<section class="combos" id="combos">
-  <div class="container">
-    <h2 class="section-title">Value Combos</h2>
-    <p class="section-sub">More food, better prices — order smart!</p>
-    <div class="combo-grid">
-      <div class="combo-card featured">
-        <div class="combo-tag">BEST VALUE</div>
-        <div class="combo-name">IT Lunch Combo</div>
-        <div class="combo-items">Chicken Biryani + Raita + Soft Drink</div>
-        <div class="combo-pricing">
-          <span class="combo-old">&#8377;328</span>
-          <span class="combo-new">&#8377;199</span>
-          <span class="combo-save">SAVE &#8377;129</span>
-        </div>
-        <a href="https://wa.me/919640034646?text=Hi!%20I'd%20like%20to%20order%20the%20IT%20Lunch%20Combo%20(₹199)" class="combo-order">&#128172; Order This Combo</a>
-      </div>
-      <div class="combo-card">
-        <div class="combo-tag">FOR TWO</div>
-        <div class="combo-name">Couple Pack</div>
-        <div class="combo-items">2 Chicken Biryani + 1 Chicken 65 + 2 Drinks</div>
-        <div class="combo-pricing">
-          <span class="combo-old">&#8377;807</span>
-          <span class="combo-new">&#8377;499</span>
-          <span class="combo-save">SAVE &#8377;308</span>
-        </div>
-        <a href="https://wa.me/919640034646?text=Hi!%20I'd%20like%20to%20order%20the%20Couple%20Pack%20(₹499)" class="combo-order">&#128172; Order This Combo</a>
-      </div>
-      <div class="combo-card">
-        <div class="combo-tag">OFFICE</div>
-        <div class="combo-name">Office Pack (5)</div>
-        <div class="combo-items">5 Chicken Biryani + 2 Starters + Raita</div>
-        <div class="combo-pricing">
-          <span class="combo-old">&#8377;1,742</span>
-          <span class="combo-new">&#8377;999</span>
-          <span class="combo-save">SAVE &#8377;743</span>
-        </div>
-        <a href="https://wa.me/919640034646?text=Hi!%20I'd%20like%20to%20order%20the%20Office%20Pack%20(₹999)" class="combo-order">&#128172; Order This Combo</a>
-      </div>
-      <div class="combo-card">
-        <div class="combo-tag">PARTY</div>
-        <div class="combo-name">Party Pack (10)</div>
-        <div class="combo-items">10 Chicken Biryani + 4 Starters + 10 Drinks</div>
-        <div class="combo-pricing">
-          <span class="combo-old">&#8377;3,806</span>
-          <span class="combo-new">&#8377;1,899</span>
-          <span class="combo-save">SAVE &#8377;1,907</span>
-        </div>
-        <a href="https://wa.me/919640034646?text=Hi!%20I'd%20like%20to%20order%20the%20Party%20Pack%20(₹1899)" class="combo-order">&#128172; Order This Combo</a>
-      </div>
-    </div>
-  </div>
+<section class="sec combos-sec sec-dark" id="combos">
+<div class="ctn">
+<h2 class="sec-title reveal" style="color:var(--gold)">Value <span style="color:#fff">Combos</span></h2>
+<p class="sec-sub reveal">Maximum flavor, maximum savings. Because great biryani shouldn't burn your wallet.</p>
+<div class="combos-grid">
+
+<div class="combo-card reveal" style="transition-delay:.1s">
+<div class="combo-badge">BEST VALUE</div>
+<div class="combo-name">IT Lunch Combo</div>
+<div class="combo-desc">Chicken Biryani + Raita + Soft Drink<br>Perfect for your lunch break.</div>
+<div class="combo-pricing"><span class="combo-price">&#8377;199</span><span class="combo-old">&#8377;328</span></div>
+<div class="combo-save">SAVE &#8377;129</div>
+<a href="https://wa.me/919640034646?text=Hi!%20I%20want%20to%20order%20the%20IT%20Lunch%20Combo%20(Chicken%20Biryani%20%2B%20Raita%20%2B%20Soft%20Drink)%20%40%20%E2%82%B9199" target="_blank" class="combo-order">&#128172; Order on WhatsApp</a>
+</div>
+
+<div class="combo-card reveal" style="transition-delay:.2s">
+<div class="combo-badge">FOR TWO</div>
+<div class="combo-name">Couple Pack</div>
+<div class="combo-desc">2 Chicken Biryani + 1 Chicken 65 + 2 Drinks<br>Date night, sorted.</div>
+<div class="combo-pricing"><span class="combo-price">&#8377;499</span><span class="combo-old">&#8377;807</span></div>
+<div class="combo-save">SAVE &#8377;308</div>
+<a href="https://wa.me/919640034646?text=Hi!%20I%20want%20to%20order%20the%20Couple%20Pack%20(2%20Chicken%20Biryani%20%2B%201%20Chicken%2065%20%2B%202%20Drinks)%20%40%20%E2%82%B9499" target="_blank" class="combo-order">&#128172; Order on WhatsApp</a>
+</div>
+
+<div class="combo-card reveal" style="transition-delay:.3s">
+<div class="combo-badge">OFFICE</div>
+<div class="combo-name">Office Pack (5)</div>
+<div class="combo-desc">5 Chicken Biryani + 2 Starters + Raita<br>Friday lunch for the squad.</div>
+<div class="combo-pricing"><span class="combo-price">&#8377;999</span><span class="combo-old">&#8377;1,742</span></div>
+<div class="combo-save">SAVE &#8377;743</div>
+<a href="https://wa.me/919640034646?text=Hi!%20I%20want%20to%20order%20the%20Office%20Pack%20(5%20Chicken%20Biryani%20%2B%202%20Starters%20%2B%20Raita)%20%40%20%E2%82%B9999" target="_blank" class="combo-order">&#128172; Order on WhatsApp</a>
+</div>
+
+<div class="combo-card reveal" style="transition-delay:.4s">
+<div class="combo-badge">PARTY</div>
+<div class="combo-name">Party Pack (10)</div>
+<div class="combo-desc">10 Chicken Biryani + 4 Starters + 10 Drinks<br>Go big or go home.</div>
+<div class="combo-pricing"><span class="combo-price">&#8377;1,899</span><span class="combo-old">&#8377;3,806</span></div>
+<div class="combo-save">SAVE &#8377;1,907</div>
+<a href="https://wa.me/919640034646?text=Hi!%20I%20want%20to%20order%20the%20Party%20Pack%20(10%20Chicken%20Biryani%20%2B%204%20Starters%20%2B%2010%20Drinks)%20%40%20%E2%82%B91899" target="_blank" class="combo-order">&#128172; Order on WhatsApp</a>
+</div>
+
+</div>
+
+<!-- Stats -->
+<div class="stats-row reveal">
+<div class="stat-item"><div class="stat-num" data-count="50000">0</div><div class="stat-label">Biryanis Served</div></div>
+<div class="stat-item"><div class="stat-num" data-count="4800">0</div><div class="stat-label">Happy Customers</div></div>
+<div class="stat-item"><div class="stat-num" data-count="20">0</div><div class="stat-label">Menu Items</div></div>
+<div class="stat-item"><div class="stat-num" data-count="30">0</div><div class="stat-label">Min Delivery</div></div>
+</div>
+</div>
 </section>
 
 <!-- DIRECT ORDER BANNER -->
-<div class="direct-banner">
-  <h2>Order Direct & Save 10%!</h2>
-  <p>Skip the apps. Order directly on WhatsApp or call us. Better price, same great food.</p>
-  <div class="direct-features">
-    <div class="direct-feat">&#10003; No App Commission</div>
-    <div class="direct-feat">&#10003; 10% Cheaper</div>
-    <div class="direct-feat">&#10003; Faster Delivery</div>
-    <div class="direct-feat">&#10003; Direct Support</div>
-  </div>
-  <a href="https://wa.me/919640034646?text=Hi%20Pothuraju!%20I'd%20like%20to%20order" class="btn btn-wa">&#128172; Order on WhatsApp</a>
+<section class="direct-banner">
+<div class="ctn direct-inner">
+<h2 class="reveal">Order Direct & Save <em>10%</em></h2>
+<div class="direct-perks reveal">
+<div class="direct-perk"><div class="dp-icon">&#10003;</div>No App Commission</div>
+<div class="direct-perk"><div class="dp-icon">&#128176;</div>10% Cheaper</div>
+<div class="direct-perk"><div class="dp-icon">&#9889;</div>Faster Delivery</div>
+<div class="direct-perk"><div class="dp-icon">&#128222;</div>Direct Support</div>
 </div>
+<a href="https://wa.me/919640034646?text=Hi!%20I%20want%20to%20place%20a%20direct%20order." target="_blank" class="btn btn-wa reveal" style="font-size:17px;padding:16px 40px">&#128172; Order on WhatsApp Now</a>
+</div>
+</section>
 
 <!-- REVIEWS -->
-<section class="reviews" id="reviews">
-  <div class="container">
-    <h2 class="section-title">What Our Customers Say</h2>
-    <p class="section-sub">Real reviews from real biryani lovers</p>
-    <div class="review-grid">
-      <div class="review-card">
-        <div class="review-stars">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
-        <div class="review-text">"Best biryani in Kondapur! The dum is perfect and the portions are super generous. My go-to for lunch every week."</div>
-        <div class="review-author">— Ravi K.</div>
-        <div class="review-source">Google Review</div>
-      </div>
-      <div class="review-card">
-        <div class="review-stars">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
-        <div class="review-text">"Ordered the couple pack for date night. The chicken 65 was incredible and biryani was on another level. Will order again!"</div>
-        <div class="review-author">— Priya S.</div>
-        <div class="review-source">Zomato Review</div>
-      </div>
-      <div class="review-card">
-        <div class="review-stars">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
-        <div class="review-text">"We order office packs every Friday for our team. Consistent quality, great taste, and the WhatsApp ordering is so convenient."</div>
-        <div class="review-author">— Arun T., IT Professional</div>
-        <div class="review-source">WhatsApp Feedback</div>
-      </div>
-    </div>
-  </div>
+<section class="sec" id="reviews">
+<div class="ctn">
+<h2 class="sec-title reveal">What Our <span style="color:var(--fire)">Customers</span> Say</h2>
+<p class="sec-sub reveal">Don't take our word for it. Here's what Kondapur loves about us.</p>
+<div class="reviews-wrap reveal">
+<div class="reviews-track" id="reviewsTrack">
+<div class="review-slide">
+<div class="review-card">
+<div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+<p class="review-text">"Best biryani in Kondapur! The dum is perfect and portions are super generous. My go-to for lunch every week."</p>
+<div class="review-author">Ravi K.</div>
+<div class="review-source">Google Review</div>
+</div>
+</div>
+<div class="review-slide">
+<div class="review-card">
+<div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+<p class="review-text">"Ordered the couple pack for date night. The chicken 65 was incredible and biryani was on another level."</p>
+<div class="review-author">Priya S.</div>
+<div class="review-source">Zomato Review</div>
+</div>
+</div>
+<div class="review-slide">
+<div class="review-card">
+<div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+<p class="review-text">"We order office packs every Friday for our team. Consistent quality, great taste, WhatsApp ordering is so convenient."</p>
+<div class="review-author">Arun T.</div>
+<div class="review-source">WhatsApp Review</div>
+</div>
+</div>
+</div>
+<div class="review-dots" id="reviewDots">
+<button class="review-dot active" data-idx="0"></button>
+<button class="review-dot" data-idx="1"></button>
+<button class="review-dot" data-idx="2"></button>
+</div>
+<div class="review-arrows">
+<button class="review-arrow" id="revPrev">&#8592;</button>
+<button class="review-arrow" id="revNext">&#8594;</button>
+</div>
+</div>
+</div>
 </section>
 
 <!-- LOCATION -->
-<section class="location" id="location">
-  <div class="container">
-    <h2 class="section-title">Visit Us</h2>
-    <p class="section-sub">Come taste the fire!</p>
-    <div class="location-grid">
-      <div class="loc-info">
-        <h3>Pothuraju Biryani</h3>
-        <div class="loc-detail">
-          <span class="loc-icon">&#128205;</span>
-          <div class="loc-text"><strong>Address</strong>Plot 182C/211C, PR Residency, Raghavendra Colony, Circle 20, Kondapur, Hyderabad, Telangana 500084</div>
-        </div>
-        <div class="loc-detail">
-          <span class="loc-icon">&#128222;</span>
-          <div class="loc-text"><strong>Phone / WhatsApp</strong><a href="tel:+919640034646">96400 34646</a></div>
-        </div>
-        <div class="loc-detail">
-          <span class="loc-icon">&#128336;</span>
-          <div class="loc-text"><strong>Hours</strong>Open Daily: 11:00 AM - 12:00 AM</div>
-        </div>
-        <div class="loc-detail">
-          <span class="loc-icon">&#127860;</span>
-          <div class="loc-text"><strong>Service</strong>Dine-in | Takeaway | Delivery</div>
-        </div>
-        <div class="loc-detail">
-          <span class="loc-icon">&#128241;</span>
-          <div class="loc-text"><strong>Also Available On</strong>Swiggy | Zomato</div>
-        </div>
-        <div class="loc-detail" style="margin-top:15px;padding-top:15px;border-top:2px solid var(--gold)">
-          <span class="loc-icon">&#127775;</span>
-          <div class="loc-text"><strong>Branch 2: PothuRaju King of Kitchens</strong>, Hyderabad | Also on Swiggy & Zomato</div>
-        </div>
-      </div>
-      <div class="loc-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.5!2d78.3534!3d17.4611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb939d5c1e76c7%3A0x51c78b6f9a6c8f4d!2sPothuraju%20Biryani!5e0!3m2!1sen!2sin!4v1" allowfullscreen loading="lazy"></iframe>
-      </div>
-    </div>
-  </div>
+<section class="sec sec-cream" id="location">
+<div class="ctn">
+<h2 class="sec-title reveal">Find <span style="color:var(--fire)">Us</span></h2>
+<p class="sec-sub reveal">Visit us in Kondapur, Hyderabad. We're right where the hunger is.</p>
+<div class="loc-grid reveal">
+<div class="loc-map">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.2!2d78.3528!3d17.4611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDI3JzQwLjAiTiA3OMKwMjEnMTAuMSJF!5e0!3m2!1sen!2sin!4v1" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+<div class="loc-info">
+<h3>Pothuraju Biryani</h3>
+<div class="loc-row">
+<div class="loc-icon">&#128205;</div>
+<div class="loc-detail">
+<strong>Address</strong>
+Plot 182C/211C, PR Residency, Raghavendra Colony, Circle 20, Kondapur, Hyderabad, Telangana 500084
+</div>
+</div>
+<div class="loc-row">
+<div class="loc-icon">&#128222;</div>
+<div class="loc-detail">
+<strong>Phone / WhatsApp</strong>
+<a href="tel:+919640034646" style="color:var(--fire);font-weight:600">96400 34646</a>
+</div>
+</div>
+<div class="loc-row">
+<div class="loc-icon">&#128336;</div>
+<div class="loc-detail">
+<strong>Hours</strong>
+Open Daily: 11:00 AM - 12:00 AM
+</div>
+</div>
+<div class="loc-row">
+<div class="loc-icon">&#127869;</div>
+<div class="loc-detail">
+<strong>Service</strong>
+Dine-in | Takeaway | Delivery
+</div>
+</div>
+<div class="loc-badges">
+<div class="loc-badge" style="border-color:var(--orange);color:var(--orange);font-weight:700">&#9733; Also on Swiggy</div>
+<div class="loc-badge" style="border-color:var(--fire);color:var(--fire);font-weight:700">&#9733; Also on Zomato</div>
+</div>
+</div>
+</div>
+</div>
 </section>
 
-<!-- ORDER SECTION -->
-<section class="order-section" id="order">
-  <h2>Ready to Order?</h2>
-  <p>Skip the wait. Order directly and get 10% off!</p>
-  <div class="order-phone">96400 34646</div>
-  <div class="order-btns">
-    <a href="https://wa.me/919640034646?text=Hi%20Pothuraju!%20I'd%20like%20to%20order" class="btn btn-wa">&#128172; Order on WhatsApp</a>
-    <a href="tel:+919640034646" class="btn btn-call">&#128222; Call to Order</a>
-  </div>
-  <p class="order-note">Free delivery within 2km | Dine-in and takeaway available</p>
+<!-- FINAL CTA -->
+<section class="final-cta">
+<div class="ctn">
+<h2 class="reveal">Ready to Taste the <span style="color:var(--fire)">Legend</span>?</h2>
+<p class="reveal">The dum is calling. Don't keep it waiting.</p>
+<div class="final-phone reveal">96400 34646</div>
+<div class="final-btns reveal">
+<a href="https://wa.me/919640034646?text=Hi!%20I%20want%20to%20place%20an%20order." target="_blank" class="btn btn-wa" style="font-size:17px;padding:16px 36px">&#128172; WhatsApp Order</a>
+<a href="tel:+919640034646" class="btn btn-outline" style="font-size:17px;padding:16px 36px">&#9742; Call Now</a>
+</div>
+</div>
 </section>
 
 <!-- FOOTER -->
 <footer class="footer">
-  <div class="footer-brand">POTHURAJU</div>
-  <div class="footer-tag">THE DUM GOD OF BIRYANI</div>
-  <div class="footer-links">
-    <a href="#menu">Menu</a>
-    <a href="#combos">Combos</a>
-    <a href="#reviews">Reviews</a>
-    <a href="#location">Location</a>
-    <a href="https://wa.me/919640034646">WhatsApp</a>
-  </div>
-  <div class="footer-apps">Also on Swiggy & Zomato — search "Pothuraju Biryani"</div>
-  <div class="footer-copy">&copy; 2026 Pothuraju Biryani. All rights reserved. | pothurajubiryani.shop</div>
+<div class="ctn">
+<div class="footer-grid">
+<div>
+<div class="footer-brand">POTHURAJU BIRYANI</div>
+<div class="footer-tagline">The Dum God of Biryani</div>
+<p class="footer-desc">Authentic Hyderabadi Dum Biryani crafted with tradition, served with pride. Kondapur's favorite biryani destination since day one.</p>
+</div>
+<div>
+<h4>Quick Links</h4>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#menu">Menu</a></li>
+<li><a href="#combos">Combos</a></li>
+<li><a href="#reviews">Reviews</a></li>
+<li><a href="#location">Location</a></li>
+</ul>
+</div>
+<div>
+<h4>Contact</h4>
+<ul>
+<li><a href="tel:+919640034646">&#128222; 96400 34646</a></li>
+<li><a href="https://wa.me/919640034646" target="_blank">&#128172; WhatsApp</a></li>
+<li><a href="#location">&#128205; Kondapur, Hyderabad</a></li>
+<li style="margin-top:12px;color:rgba(255,255,255,.25);font-size:11px">Open Daily: 11 AM - 12 AM</li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+&copy; 2026 Pothuraju Biryani. All rights reserved. | Also on Swiggy &amp; Zomato
+</div>
+</div>
 </footer>
 
 <!-- FLOATING BUTTONS -->
 <div class="float-btns">
-  <a href="https://wa.me/919640034646?text=Hi%20Pothuraju!%20I'd%20like%20to%20order" class="float-wa" title="Order on WhatsApp">&#128172;</a>
-  <a href="tel:+919640034646" class="float-call" title="Call to order">&#128222;</a>
+<a href="tel:+919640034646" class="float-btn float-call" title="Call Us">&#9742;</a>
+<a href="https://wa.me/919640034646" target="_blank" class="float-btn float-wa" title="WhatsApp">&#128172;</a>
+</div>
+
+<!-- CART FLOAT -->
+<button class="cart-float" id="cartFloat" title="Your Cart">
+&#128722;
+<span class="cart-badge" id="cartBadge"></span>
+</button>
+
+<!-- CART OVERLAY -->
+<div class="cart-overlay" id="cartOverlay"></div>
+
+<!-- CART PANEL -->
+<div class="cart-panel" id="cartPanel">
+<div class="cart-header">
+<h3>&#128722; Your Order</h3>
+<button class="cart-close" id="cartClose">&times;</button>
+</div>
+<div class="cart-body" id="cartBody">
+<div class="cart-empty">Your cart is empty. Add items from the menu!</div>
+</div>
+<div class="cart-footer" id="cartFooter" style="display:none">
+<div class="cart-total"><span>Total</span><span id="cartTotal">&#8377;0</span></div>
+<button class="cart-checkout" id="cartCheckout">&#128172; Checkout via WhatsApp</button>
+</div>
 </div>
 
 <script>
-// Navbar scroll effect
-window.addEventListener('scroll',()=>{
-  document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>50);
-});
+// ===== MENU DATA =====
+const MENU={
+biryani:[
+{n:"Chicken Dum Biryani",p:249,h:149,b:"BESTSELLER",bc:"badge-best",t:"nv"},
+{n:"Mutton Dum Biryani",p:349,h:199,b:"PREMIUM",bc:"badge-prem",t:"nv"},
+{n:"Boneless Chicken Biryani",p:299,h:179,b:"SPECIAL",bc:"badge-special",t:"nv"},
+{n:"Chicken Fry Piece Biryani",p:279,h:159,b:"NEW",bc:"badge-new",t:"nv"},
+{n:"Egg Biryani",p:199,h:119,b:"",bc:"",t:"nv"},
+{n:"Veg Dum Biryani",p:179,h:109,b:"",bc:"",t:"veg"}
+],
+pulao:[
+{n:"Chicken Pulao",p:199,h:119,b:"",bc:"",t:"nv"},
+{n:"Egg Pulao",p:169,h:99,b:"",bc:"",t:"nv"},
+{n:"Veg Pulao",p:149,h:89,b:"",bc:"",t:"veg"}
+],
+chinese:[
+{n:"Chicken 65",p:229,h:0,b:"BESTSELLER",bc:"badge-best",t:"nv"},
+{n:"Chicken Manchurian",p:219,h:0,b:"",bc:"",t:"nv"},
+{n:"Chilli Chicken",p:229,h:0,b:"",bc:"",t:"nv"},
+{n:"Dragon Chicken",p:249,h:0,b:"SPICY",bc:"badge-spicy",t:"nv"},
+{n:"Veg Manchurian",p:179,h:0,b:"",bc:"",t:"veg"},
+{n:"Paneer 65",p:199,h:0,b:"",bc:"",t:"veg"},
+{n:"Chicken Fried Rice",p:199,h:0,b:"",bc:"",t:"nv"},
+{n:"Veg Fried Rice",p:149,h:0,b:"",bc:"",t:"veg"}
+],
+sides:[
+{n:"Raita",p:39,h:0,b:"",bc:"",t:"veg"},
+{n:"Salan (Gravy)",p:49,h:0,b:"",bc:"",t:"veg"},
+{n:"Buttermilk / Lassi",p:49,h:0,b:"",bc:"",t:"veg"},
+{n:"Soft Drink (300ml)",p:40,h:0,b:"",bc:"",t:"veg"},
+{n:"Water Bottle (1L)",p:20,h:0,b:"",bc:"",t:"veg"}
+]
+};
 
-// Menu tab switching
-function showCategory(cat,el){
-  document.querySelectorAll('.menu-category').forEach(c=>c.classList.remove('active'));
-  document.querySelectorAll('.menu-tab').forEach(t=>t.classList.remove('active'));
-  document.getElementById('cat-'+cat).classList.add('active');
-  el.classList.add('active');
+// ===== CART STATE =====
+let cart={};
+
+// ===== RENDER MENU =====
+function renderMenu(){
+Object.keys(MENU).forEach(cat=>{
+const panel=document.getElementById('panel-'+cat);
+if(!panel)return;
+const grid=panel.querySelector('.menu-grid');
+if(!grid)return;
+grid.innerHTML='';
+MENU[cat].forEach((item,i)=>{
+const key=cat+'-'+i;
+const qty=cart[key]||0;
+const typeBadge=item.t==='veg'?'<span class="badge badge-veg">VEG</span>':'<span class="badge badge-nv">NON-VEG</span>';
+const specialBadge=item.b?'<span class="badge '+item.bc+'">'+item.b+'</span>':'';
+const halfPrice=item.h?'<small>Half &#8377;'+item.h+'</small>':'';
+let controls='';
+if(qty>0){
+controls='<div class="qty-wrap"><button class="qty-btn" onclick="changeQty(\''+key+'\',-1)">-</button><div class="qty-val">'+qty+'</div><button class="qty-btn" onclick="changeQty(\''+key+'\',1)">+</button></div>';
+}else{
+controls='<button class="add-btn" onclick="addItem(\''+key+'\')">ADD +</button>';
+}
+grid.innerHTML+='<div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">'+typeBadge+' '+item.n+' '+specialBadge+'</div><div class="menu-item-price">&#8377;'+item.p+' '+halfPrice+'</div></div><div class="menu-item-right">'+controls+'</div></div>';
+});
+});
 }
 
-// Smooth scroll for anchor links
+function addItem(key){
+cart[key]=1;
+renderMenu();
+updateCartUI();
+}
+
+function changeQty(key,d){
+cart[key]=(cart[key]||0)+d;
+if(cart[key]<=0)delete cart[key];
+renderMenu();
+updateCartUI();
+}
+
+// ===== CART UI =====
+function updateCartUI(){
+const badge=document.getElementById('cartBadge');
+const body=document.getElementById('cartBody');
+const footer=document.getElementById('cartFooter');
+const totalEl=document.getElementById('cartTotal');
+const float=document.getElementById('cartFloat');
+const keys=Object.keys(cart);
+const count=keys.reduce((s,k)=>s+cart[k],0);
+badge.textContent=count>0?count:'';
+badge.style.display=count>0?'flex':'none';
+float.style.display=count>0||cartOpen?'flex':'none';
+if(keys.length===0){
+body.innerHTML='<div class="cart-empty">Your cart is empty. Add items from the menu!</div>';
+footer.style.display='none';
+return;
+}
+let html='';
+let total=0;
+keys.forEach(k=>{
+const parts=k.split('-');
+const cat=parts[0];
+const idx=parseInt(parts[1]);
+const item=MENU[cat][idx];
+const lineTotal=item.p*cart[k];
+total+=lineTotal;
+html+='<div class="cart-item"><div class="cart-item-info"><div class="cart-item-name">'+item.n+'</div><div class="cart-item-price">&#8377;'+item.p+' x '+cart[k]+' = &#8377;'+lineTotal+'</div></div><div class="cart-item-controls"><button class="qty-btn" onclick="changeQty(\''+k+'\',-1)">-</button><span class="qty-val" style="width:24px;font-size:13px">'+cart[k]+'</span><button class="qty-btn" onclick="changeQty(\''+k+'\',1)">+</button></div></div>';
+});
+body.innerHTML=html;
+totalEl.innerHTML='&#8377;'+total;
+footer.style.display='block';
+}
+
+let cartOpen=false;
+function toggleCart(open){
+cartOpen=open;
+document.getElementById('cartPanel').classList.toggle('open',open);
+document.getElementById('cartOverlay').classList.toggle('open',open);
+document.body.style.overflow=open?'hidden':'';
+if(open)updateCartUI();
+}
+
+document.getElementById('cartFloat').addEventListener('click',()=>toggleCart(true));
+document.getElementById('cartClose').addEventListener('click',()=>toggleCart(false));
+document.getElementById('cartOverlay').addEventListener('click',()=>toggleCart(false));
+
+// WhatsApp checkout
+document.getElementById('cartCheckout').addEventListener('click',()=>{
+const keys=Object.keys(cart);
+if(!keys.length)return;
+let msg='Hi! I would like to order:\n\n';
+let total=0;
+keys.forEach(k=>{
+const parts=k.split('-');
+const item=MENU[parts[0]][parseInt(parts[1])];
+const lt=item.p*cart[k];
+total+=lt;
+msg+=cart[k]+'x '+item.n+' - Rs.'+lt+'\n';
+});
+msg+='\nTotal: Rs.'+total+'\n\nPlease confirm availability and delivery time.';
+window.open('https://wa.me/919640034646?text='+encodeURIComponent(msg),'_blank');
+});
+
+// ===== MENU TABS =====
+document.querySelectorAll('.menu-tab').forEach(tab=>{
+tab.addEventListener('click',()=>{
+document.querySelectorAll('.menu-tab').forEach(t=>t.classList.remove('active'));
+document.querySelectorAll('.menu-panel').forEach(p=>p.classList.remove('active'));
+tab.classList.add('active');
+document.getElementById('panel-'+tab.dataset.cat).classList.add('active');
+});
+});
+
+// ===== NAVBAR SCROLL =====
+window.addEventListener('scroll',()=>{
+document.querySelector('.nav').classList.toggle('scrolled',window.scrollY>60);
+});
+
+// ===== HAMBURGER =====
+const hamburger=document.querySelector('.hamburger');
+const navLinks=document.querySelector('.nav-links');
+hamburger.addEventListener('click',()=>{
+hamburger.classList.toggle('open');
+navLinks.classList.toggle('open');
+});
+navLinks.querySelectorAll('a').forEach(a=>{
+a.addEventListener('click',()=>{
+hamburger.classList.remove('open');
+navLinks.classList.remove('open');
+});
+});
+
+// ===== SCROLL ANIMATIONS (IntersectionObserver) =====
+const observer=new IntersectionObserver((entries)=>{
+entries.forEach(e=>{
+if(e.isIntersecting){
+e.target.classList.add('visible');
+observer.unobserve(e.target);
+}
+});
+},{threshold:0.15,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>observer.observe(el));
+
+// ===== ANIMATED COUNTERS =====
+function animateCounter(el){
+const target=parseInt(el.dataset.target);
+const suffix=el.dataset.suffix||'';
+let current=0;
+const step=Math.max(1,Math.floor(target/80));
+const timer=setInterval(()=>{
+current+=step;
+if(current>=target){current=target;clearInterval(timer)}
+el.textContent=current.toLocaleString('en-IN')+suffix;
+},25);
+}
+const counterObserver=new IntersectionObserver((entries)=>{
+entries.forEach(e=>{
+if(e.isIntersecting){
+animateCounter(e.target);
+counterObserver.unobserve(e.target);
+}
+});
+},{threshold:0.5});
+document.querySelectorAll('.stat-num').forEach(el=>counterObserver.observe(el));
+
+// ===== REVIEWS CAROUSEL =====
+let currentReview=0;
+const reviewSlides=document.querySelectorAll('.review-slide');
+const reviewDots=document.querySelectorAll('.review-dot');
+function showReview(idx){
+currentReview=((idx%reviewSlides.length)+reviewSlides.length)%reviewSlides.length;
+document.querySelector('.reviews-track').style.transform='translateX(-'+(currentReview*100)+'%)';
+reviewDots.forEach((d,i)=>d.classList.toggle('active',i===currentReview));
+}
+if(reviewDots.length){
+reviewDots.forEach((d,i)=>d.addEventListener('click',()=>showReview(i)));
+const prevBtn=document.querySelector('.review-prev');
+const nextBtn=document.querySelector('.review-next');
+if(prevBtn)prevBtn.addEventListener('click',()=>showReview(currentReview-1));
+if(nextBtn)nextBtn.addEventListener('click',()=>showReview(currentReview+1));
+setInterval(()=>showReview(currentReview+1),5000);
+}
+
+// ===== PARALLAX on COMBOS =====
+window.addEventListener('scroll',()=>{
+const combos=document.querySelector('.combos-sec');
+if(combos){
+const rect=combos.getBoundingClientRect();
+if(rect.top<window.innerHeight&&rect.bottom>0){
+const offset=(window.innerHeight-rect.top)*0.04;
+combos.style.backgroundPositionY=offset+'px';
+}
+}
+});
+
+// ===== LOADER =====
+window.addEventListener('load',()=>{
+renderMenu();
+updateCartUI();
+setTimeout(()=>{
+document.querySelector('.loader').classList.add('done');
+},800);
+});
+
+// ===== SMOOTH SCROLL =====
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
-  a.addEventListener('click',e=>{
-    e.preventDefault();
-    const target=document.querySelector(a.getAttribute('href'));
-    if(target){target.scrollIntoView({behavior:'smooth',block:'start'})}
-    document.getElementById('navLinks').classList.remove('open');
-  });
+a.addEventListener('click',e=>{
+const href=a.getAttribute('href');
+if(href==='#')return;
+e.preventDefault();
+const target=document.querySelector(href);
+if(target){
+target.scrollIntoView({behavior:'smooth',block:'start'});
+}
+});
 });
 </script>
-
 </body>
 </html>
