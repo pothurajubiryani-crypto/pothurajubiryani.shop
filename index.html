@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Pothuraju Biryani - The Dum God of Biryani. Authentic Hyderabadi Dum Biryani, Pulao & Chinese in Kondapur, Hyderabad. Order on WhatsApp or call 96400 34646.">
+<meta name="keywords" content="biryani kondapur, hyderabad biryani, dum biryani, chicken biryani kondapur, pothuraju biryani, best biryani kondapur, chinese food kondapur">
+<meta property="og:title" content="Pothuraju Biryani - The Dum God of Biryani | Kondapur">
+<meta property="og:description" content="Authentic Hyderabadi Dum Biryani, Pulao & Chinese. Order direct & save 10%!">
+<meta property="og:type" content="restaurant">
+<meta property="og:url" content="https://pothurajubiryani.shop">
+<title>Pothuraju Biryani | The Dum God of Biryani | Kondapur, Hyderabad</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* ==================== RESET & VARIABLES ==================== */
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --fire:#C62828;--fire-dark:#B71C1C;--orange:#E65100;--gold:#FFB300;
+  --dark:#1A1A2E;--dark2:#16213E;--cream:#FFF3E0;--warm:#FFF8F0;
+  --text:#333;--text-light:#666;--text-lighter:#999;
+  --green:#2E7D32;--wa-green:#25D366;
+  --shadow:0 4px 20px rgba(0,0,0,0.08);--shadow-lg:0 8px 40px rgba(0,0,0,0.12);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',sans-serif;color:var(--text);background:#fff;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+
+/* ==================== NAVBAR ==================== */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:1000;padding:12px 0;transition:all 0.3s}
+.navbar.scrolled{background:rgba(26,26,46,0.97);backdrop-filter:blur(10px);box-shadow:0 2px 20px rgba(0,0,0,0.2);padding:8px 0}
+.nav-inner{display:flex;justify-content:space-between;align-items:center;max-width:1100px;margin:0 auto;padding:0 20px}
+.nav-logo{font-family:'Playfair Display',serif;font-size:22px;font-weight:900;color:var(--gold);letter-spacing:1px}
+.nav-logo span{color:var(--cream);font-size:11px;display:block;letter-spacing:3px;font-family:'Poppins',sans-serif;font-weight:400;text-transform:uppercase}
+.nav-links{display:flex;gap:25px;align-items:center}
+.nav-links a{color:rgba(255,255,255,0.7);font-size:13px;font-weight:500;transition:color 0.3s;letter-spacing:0.5px}
+.nav-links a:hover{color:var(--gold)}
+.nav-order{background:var(--wa-green);color:#fff!important;padding:8px 18px;border-radius:25px;font-weight:600;opacity:1!important;transition:transform 0.2s}
+.nav-order:hover{transform:scale(1.05)}
+.nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer}
+.nav-toggle span{width:24px;height:2px;background:var(--gold);transition:0.3s}
+
+/* ==================== HERO ==================== */
+.hero{min-height:100vh;background:linear-gradient(135deg,var(--dark) 0%,#0F0F23 40%,#2D1B0E 100%);display:flex;align-items:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;width:600px;height:600px;background:radial-gradient(circle,rgba(198,40,40,0.12),transparent 70%);top:-100px;right:-100px}
+.hero::after{content:'';position:absolute;width:400px;height:400px;background:radial-gradient(circle,rgba(255,179,0,0.08),transparent 70%);bottom:-50px;left:-50px}
+.hero-content{position:relative;z-index:2;text-align:center;width:100%;padding:120px 20px 80px}
+.hero-badge{display:inline-block;background:rgba(255,179,0,0.1);border:1px solid rgba(255,179,0,0.3);color:var(--gold);padding:6px 20px;border-radius:30px;font-size:12px;letter-spacing:2px;text-transform:uppercase;margin-bottom:25px}
+.hero-logo{width:130px;height:130px;border-radius:50%;border:3px solid var(--gold);background:var(--cream);display:flex;align-items:center;justify-content:center;margin:0 auto 25px;box-shadow:0 0 40px rgba(255,179,0,0.2)}
+.hero-logo span{font-family:'Playfair Display',serif;font-size:44px;font-weight:900;color:var(--fire)}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(42px,8vw,72px);font-weight:900;color:var(--gold);letter-spacing:4px;line-height:1.1;text-shadow:2px 4px 8px rgba(0,0,0,0.3)}
+.hero-tagline{font-size:clamp(14px,2.5vw,18px);color:var(--cream);letter-spacing:6px;text-transform:uppercase;margin:10px 0 30px;font-weight:300}
+.hero-ctas{display:flex;gap:15px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 30px;border-radius:50px;font-weight:600;font-size:15px;transition:all 0.3s;cursor:pointer;border:none}
+.btn-wa{background:var(--wa-green);color:#fff;box-shadow:0 4px 15px rgba(37,211,102,0.3)}
+.btn-wa:hover{transform:translateY(-2px);box-shadow:0 6px 25px rgba(37,211,102,0.4)}
+.btn-call{background:transparent;color:var(--gold);border:2px solid var(--gold)}
+.btn-call:hover{background:var(--gold);color:var(--dark)}
+.btn-menu{background:var(--fire);color:#fff;box-shadow:0 4px 15px rgba(198,40,40,0.3)}
+.btn-menu:hover{transform:translateY(-2px);background:var(--fire-dark)}
+.hero-scroll{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);color:rgba(255,255,255,0.3);font-size:12px;letter-spacing:2px;animation:bounce 2s infinite}
+@keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
+
+/* ==================== OFFER STRIP ==================== */
+.offer-strip{background:linear-gradient(90deg,var(--fire),var(--orange));padding:14px 0;text-align:center;color:#fff;font-size:14px;font-weight:600;letter-spacing:0.5px}
+.offer-strip .highlight{background:rgba(255,255,255,0.2);padding:2px 10px;border-radius:10px;margin:0 4px}
+
+/* ==================== ABOUT ==================== */
+.about{padding:80px 0;background:var(--warm)}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(28px,5vw,38px);font-weight:800;color:var(--dark);text-align:center;margin-bottom:8px}
+.section-sub{text-align:center;color:var(--text-light);font-size:15px;margin-bottom:40px}
+.about-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px;max-width:900px;margin:0 auto}
+.about-card{background:#fff;border-radius:16px;padding:30px 24px;text-align:center;box-shadow:var(--shadow);transition:transform 0.3s}
+.about-card:hover{transform:translateY(-5px)}
+.about-card .icon{font-size:36px;margin-bottom:12px}
+.about-card h3{font-size:16px;font-weight:700;color:var(--dark);margin-bottom:6px}
+.about-card p{font-size:13px;color:var(--text-light);line-height:1.6}
+
+/* ==================== MENU ==================== */
+.menu{padding:80px 0;background:#fff}
+.menu-tabs{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:40px}
+.menu-tab{padding:10px 24px;border-radius:30px;font-size:14px;font-weight:600;cursor:pointer;transition:all 0.3s;border:2px solid #eee;background:#fff;color:var(--text)}
+.menu-tab.active,.menu-tab:hover{background:var(--fire);color:#fff;border-color:var(--fire)}
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;max-width:900px;margin:0 auto}
+.menu-category{display:none}
+.menu-category.active{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;max-width:900px;margin:0 auto}
+.menu-item{display:flex;justify-content:space-between;align-items:flex-start;padding:16px 20px;background:var(--warm);border-radius:12px;transition:transform 0.2s;border:1px solid transparent}
+.menu-item:hover{transform:translateX(5px);border-color:var(--cream)}
+.mi-info{flex:1;padding-right:12px}
+.mi-badge{display:inline-block;font-size:8px;font-weight:700;padding:2px 8px;border-radius:4px;letter-spacing:0.5px;margin-left:6px;vertical-align:middle}
+.badge-best{background:#FFECB3;color:var(--orange)}
+.badge-new{background:#E8F5E9;color:var(--green)}
+.badge-spicy{background:#FFEBEE;color:var(--fire)}
+.badge-premium{background:#F3E5F5;color:#7B1FA2}
+.mi-name{font-weight:600;font-size:15px;color:var(--dark)}
+.mi-desc{font-size:12px;color:var(--text-lighter);margin-top:3px;line-height:1.4}
+.mi-veg{display:inline-block;width:14px;height:14px;border:1.5px solid var(--green);border-radius:2px;position:relative;margin-right:5px;vertical-align:middle}
+.mi-veg::after{content:'';position:absolute;width:7px;height:7px;background:var(--green);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%)}
+.mi-nv{display:inline-block;width:14px;height:14px;border:1.5px solid var(--fire);border-radius:2px;position:relative;margin-right:5px;vertical-align:middle}
+.mi-nv::after{content:'';position:absolute;width:7px;height:7px;background:var(--fire);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%)}
+.mi-price{text-align:right;white-space:nowrap}
+.mi-price .main{font-size:18px;font-weight:700;color:var(--fire)}
+.mi-price .half{font-size:11px;color:var(--text-lighter);display:block}
+
+/* ==================== COMBOS ==================== */
+.combos{padding:80px 0;background:linear-gradient(135deg,var(--dark) 0%,#2D1B0E 100%)}
+.combos .section-title{color:var(--gold)}
+.combos .section-sub{color:rgba(255,255,255,0.5)}
+.combo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;max-width:900px;margin:0 auto}
+.combo-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:24px;position:relative;overflow:hidden;transition:transform 0.3s}
+.combo-card:hover{transform:translateY(-5px);border-color:var(--gold)}
+.combo-card.featured{border-color:var(--gold);background:rgba(255,179,0,0.05)}
+.combo-tag{position:absolute;top:12px;right:12px;background:var(--fire);color:#fff;font-size:9px;font-weight:700;padding:4px 10px;border-radius:12px;letter-spacing:1px}
+.combo-card.featured .combo-tag{background:var(--gold);color:var(--dark)}
+.combo-name{font-family:'Playfair Display',serif;font-size:20px;color:#fff;margin-bottom:6px}
+.combo-items{font-size:13px;color:rgba(255,255,255,0.6);line-height:1.6;margin-bottom:15px}
+.combo-pricing{display:flex;align-items:center;gap:10px}
+.combo-old{text-decoration:line-through;color:rgba(255,255,255,0.3);font-size:15px}
+.combo-new{font-size:32px;font-weight:800;color:var(--gold)}
+.combo-save{background:var(--green);color:#fff;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:600}
+.combo-order{display:inline-flex;align-items:center;gap:6px;background:var(--wa-green);color:#fff;padding:10px 20px;border-radius:25px;font-size:13px;font-weight:600;margin-top:15px;transition:transform 0.2s}
+.combo-order:hover{transform:scale(1.05)}
+
+/* ==================== DIRECT ORDER BANNER ==================== */
+.direct-banner{padding:50px 0;background:linear-gradient(90deg,#E8F5E9,#C8E6C9);text-align:center}
+.direct-banner h2{font-family:'Playfair Display',serif;font-size:28px;color:var(--green);margin-bottom:8px}
+.direct-banner p{font-size:15px;color:#555;margin-bottom:20px}
+.direct-features{display:flex;justify-content:center;gap:30px;flex-wrap:wrap;margin-bottom:20px}
+.direct-feat{font-size:14px;color:var(--green);font-weight:600;display:flex;align-items:center;gap:6px}
+
+/* ==================== REVIEWS ==================== */
+.reviews{padding:80px 0;background:var(--warm)}
+.review-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;max-width:900px;margin:0 auto}
+.review-card{background:#fff;border-radius:16px;padding:24px;box-shadow:var(--shadow)}
+.review-stars{color:var(--gold);font-size:16px;margin-bottom:8px}
+.review-text{font-size:14px;color:var(--text);line-height:1.6;font-style:italic;margin-bottom:12px}
+.review-author{font-size:12px;color:var(--text-lighter)}
+.review-source{font-size:11px;color:var(--fire);font-weight:600}
+
+/* ==================== LOCATION ==================== */
+.location{padding:80px 0;background:#fff}
+.location-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;max-width:900px;margin:0 auto;align-items:center}
+.loc-info h3{font-family:'Playfair Display',serif;font-size:24px;color:var(--dark);margin-bottom:15px}
+.loc-detail{display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid #f0f0f0}
+.loc-detail .loc-icon{font-size:18px;min-width:25px}
+.loc-detail .loc-text{font-size:14px;color:var(--text-light);line-height:1.5}
+.loc-detail .loc-text strong{color:var(--dark);display:block;margin-bottom:2px}
+.loc-map{border-radius:16px;overflow:hidden;height:300px;background:#eee;box-shadow:var(--shadow)}
+.loc-map iframe{width:100%;height:100%;border:0}
+
+/* ==================== ORDER SECTION ==================== */
+.order-section{padding:80px 0;background:linear-gradient(135deg,var(--dark),#2D1B0E);text-align:center}
+.order-section h2{font-family:'Playfair Display',serif;font-size:clamp(28px,5vw,38px);color:var(--gold);margin-bottom:8px}
+.order-section p{color:rgba(255,255,255,0.5);font-size:15px;margin-bottom:30px}
+.order-phone{font-size:clamp(36px,6vw,52px);font-weight:900;color:#fff;letter-spacing:3px;margin-bottom:20px}
+.order-btns{display:flex;gap:15px;justify-content:center;flex-wrap:wrap}
+.order-note{color:rgba(255,255,255,0.3);font-size:12px;margin-top:20px}
+
+/* ==================== FOOTER ==================== */
+.footer{background:var(--dark);padding:40px 0 20px;text-align:center}
+.footer-brand{font-family:'Playfair Display',serif;font-size:24px;color:var(--gold);letter-spacing:2px}
+.footer-tag{color:rgba(255,255,255,0.4);font-size:12px;letter-spacing:3px;margin:5px 0 20px}
+.footer-links{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:20px}
+.footer-links a{color:rgba(255,255,255,0.5);font-size:13px;transition:color 0.3s}
+.footer-links a:hover{color:var(--gold)}
+.footer-social{display:flex;justify-content:center;gap:15px;margin-bottom:20px}
+.footer-social a{width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;font-size:16px;color:rgba(255,255,255,0.5);transition:all 0.3s}
+.footer-social a:hover{border-color:var(--gold);color:var(--gold)}
+.footer-copy{color:rgba(255,255,255,0.2);font-size:11px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.05)}
+.footer-apps{color:rgba(255,255,255,0.4);font-size:12px;margin-bottom:15px}
+
+/* ==================== FLOATING BUTTONS ==================== */
+.float-btns{position:fixed;bottom:20px;right:20px;z-index:999;display:flex;flex-direction:column;gap:10px}
+.float-wa{width:56px;height:56px;border-radius:50%;background:var(--wa-green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:28px;box-shadow:0 4px 15px rgba(37,211,102,0.4);transition:transform 0.3s;cursor:pointer}
+.float-wa:hover{transform:scale(1.1)}
+.float-call{width:56px;height:56px;border-radius:50%;background:var(--fire);color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 4px 15px rgba(198,40,40,0.3);transition:transform 0.3s;cursor:pointer}
+.float-call:hover{transform:scale(1.1)}
+
+/* ==================== RESPONSIVE ==================== */
+@media(max-width:768px){
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(26,26,46,0.98);padding:20px;flex-direction:column;gap:15px;text-align:center}
+  .nav-links.open{display:flex}
+  .nav-toggle{display:flex}
+  .hero-content{padding:100px 20px 60px}
+  .hero-ctas{flex-direction:column;align-items:center}
+  .btn{width:100%;max-width:280px;justify-content:center}
+  .menu-grid,.menu-category.active{grid-template-columns:1fr}
+  .combo-grid{grid-template-columns:1fr}
+  .location-grid{grid-template-columns:1fr}
+  .review-grid{grid-template-columns:1fr}
+  .order-btns{flex-direction:column;align-items:center}
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">POTHURAJU<span>The Dum God of Biryani</span></a>
+    <div class="nav-links" id="navLinks">
+      <a href="#menu">Menu</a>
+      <a href="#combos">Combos</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#location">Visit Us</a>
+      <a href="https://wa.me/919640034646?text=Hi%20Pothuraju!%20I'd%20like%20to%20order" class="nav-order">&#128172; Order Now</a>
+    </div>
+    <div class="nav-toggle" id="navToggle" onclick="document.getElementById('navLinks').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">&#128293; Now Serving in Kondapur</div>
+    <div class="hero-logo"><span>P</span></div>
+    <h1>POTHURAJU</h1>
+    <p class="hero-tagline">The Dum God of Biryani</p>
+    <div class="hero-ctas">
+      <a href="https://wa.me/919640034646?text=Hi%20Pothuraju!%20I'd%20like%20to%20order" class="btn btn-wa">&#128172; Order on WhatsApp</a>
+      <a href="tel:+919640034646" class="btn btn-call">&#128222; Call: 96400 34646</a>
+      <a href="#menu" class="btn btn-menu">&#128214; View Menu</a>
+    </div>
+  </div>
+  <div class="hero-scroll">SCROLL DOWN &#9660;</div>
+</section>
+
+<!-- OFFER STRIP -->
+<div class="offer-strip">
+  &#128293; IT Lunch Combo: Chicken Biryani + Raita + Drink @ just <span class="highlight">&#8377;199</span> | Order Direct & Save 10%! &#128293;
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <h2 class="section-title">Why Pothuraju?</h2>
+    <p class="section-sub">Authentic Hyderabadi Dum Biryani made with love and tradition</p>
+    <div class="about-grid">
+      <div class="about-card">
+        <div class="icon">&#128293;</div>
+        <h3>Authentic Dum</h3>
+        <p>Slow-cooked on dum for hours. Real handi, real fire, real Hyderabadi taste — no shortcuts.</p>
+      </div>
+      <div class="about-card">
+        <div class="icon">&#129385;</div>
+        <h3>Fresh Daily</h3>
+        <p>Fresh chicken, basmati rice, and hand-ground spices every single day. Nothing frozen, nothing stale.</p>
+      </div>
+      <div class="about-card">
+        <div class="icon">&#127835;</div>
+        <h3>20+ Items</h3>
+        <p>Biryanis, Pulaos, Chinese starters — something for every craving, every mood.</p>
+      </div>
+      <div class="about-card">
+        <div class="icon">&#128666;</div>
+        <h3>Fast Delivery</h3>
+        <p>Order on WhatsApp for the fastest delivery. Direct orders get 10% off — no app commissions!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="menu" id="menu">
+  <div class="container">
+    <h2 class="section-title">Our Menu</h2>
+    <p class="section-sub">Prices inclusive of taxes | Prices may vary on delivery apps</p>
+
+    <div class="menu-tabs">
+      <div class="menu-tab active" onclick="showCategory('biryani',this)">&#127835; Biryani</div>
+      <div class="menu-tab" onclick="showCategory('pulao',this)">&#127858; Pulao</div>
+      <div class="menu-tab" onclick="showCategory('chinese',this)">&#127834; Chinese</div>
+      <div class="menu-tab" onclick="showCategory('sides',this)">&#127867; Sides & Drinks</div>
+    </div>
+
+    <!-- BIRYANI -->
+    <div class="menu-category active" id="cat-biryani">
+      <div class="menu-item">
+        <div class="mi-info"><span class="mi-nv"></span><span class="mi-name">Chicken Dum Biryani <span class="mi-badge badge-best">BESTSELLER</span></span><div class="mi-desc">Slow-cooked Hyderabadi dum with tender chicken, saffron rice & secret spice blend</div></div>
+        <div class="mi-price"><div class="main">&#8377;249</div><span class="half">Half &#8377;149</span></div>
+      </div>
+      <div class="menu-item">
+        <div class="mi-info"><span class="mi-nv"></span><span class="mi-name">Mutton Dum Biryani <span class="mi-badge badge-premium">PREMIUM</span></span><div class="mi-desc">Tender mutton pieces slow-cooked with aromatic basmati & whole spices</div></div>
+        <div class="mi-price"><div class="main">&#8377;349</div><span class="half">Half &#8377;199</span></div>
+      </div>
+      <div class="menu-item">
+        <div class="mi-info"><span class="mi-nv"></span><span class="mi-name">Boneless Chicken Biryani <span class="mi-badge badge-new">SPECIAL</span></span><div class="mi-desc">All meat, no bones — pure biryani bliss for the boneless lovers</div></div>
+        <div class="mi-price"><div class="main">&#8377;299</div><span class="half">Half &#8377;179</span></div>
+      </div>
+      <div class="menu-item">
+        <div class="mi-info"><span class="mi-nv"></span><span class="mi-name">Chicken Fry Piece Biryani <span class="mi-badge badge-new">NEW</span></span><div class="mi-desc">Crispy fried chicken pieces layered over fragrant biryani rice</div></div>
+        <div class="mi-price"><div class="main">&#8377;279</div><span class="half">Half &#8377;159</span></div>
+      </div>
+      <div class="menu-item">
+        <div class="mi-info"><span class="mi-nv"></span><span class="mi-name">Egg Biryani</span><div class="mi-desc">Perfectly boiled eggs layered with fragrant dum rice & spices</div></div>
+        <div class="mi-price"><div class="main">&#8377;199</div><span class="half">Half &#8377;119</span></div>
+      </div>
+      <div class="menu-item">
+        <div class="mi-info"><span class="mi-veg"></span><span class="mi-name">Veg Dum Biryani</span><div class="mi-desc">Mixed vegetables & paneer in aromatic dum-cooked basmati rice</div></div>
+        <div class="mi-price"><div class="main">&#8377;179</div><span class="half">Half &#8377;109</span></div>
+      </div>
+    </div>
+
+    <!-- PULAO -->
+    <div class="menu-category" id="cat-pulao">
+      <div class="menu-item">
+        <div class="mi-info"><span class="mi-nv"></span><span class="mi-name">Chicken Pulao</span><div class="mi-desc">Lightly spiced basmati rice with tender chicken pieces</div></div>
+        <div class="mi-price"><div class="main">&#8377;199</div><span class="half">Half &#8377;119</span></div>
+      </div>
+      <div class="menu-item">
+        <div class="mi-info"><span class="mi-nv"></span><span class="mi-name">Egg Pulao</span><div class="mi-desc">Fluffy egg curry with fragrant pulao rice</div></div>
+        <div class="mi-price"><div class="main">&#8377;169</div><span class="half">Half &#8377;99</span></div>
+      </div>
+      <div class="menu-item">
+        <div class="mi-info"><span class="mi-veg"></span><span class="mi-name">Veg Pulao</span><div class="mi-desc">Garden-fresh vegetables in aromatic basmati</div></div>
+        <div class="mi-price"><div class="main">&#8377;149</div><span class="half">Half &#8377;89</span></div>
+      </div>
+    </div>
+
+    <!-- CHINESE -->
+    <div class="menu-category" id="cat-chinese">
+      <div class="menu-item">
+        <div class="mi-info"><span class="mi-nv"></span><span class="mi-name">Chicken 65 <span class="mi-badge badge-best">BESTSELLER</span></span><div class="mi-desc">Hyderabadi-style deep fried spicy chicken with curry leaves</div></div>
+        <div class="mi-price"><div class="main">&#8377;229</div></div>
+      </div>
+      <div class="menu-item">
+        <div class="mi-info"><span class="mi-nv"></span><span class="mi-name">Chicken Manchurian</span><div class="mi-desc">Crispy chicken balls in spicy manchurian sauce</div></div>
+        <div class="mi-price"><div class="main">&#8377;219</div></div>
+      </div>
+      <div class="menu-item">
+        <div class="mi-info"><span class="mi-nv"></span><span class="mi-name">Chilli Chicken</span><div class="mi-desc">Spicy Indo-Chinese chicken with peppers & onions</div></div>
+        <div class="mi-price"><div class="main">&#8377;229</div></div>
+      </div>
+      <div class="menu-item">
+        <div class="mi-info"><span class="mi-nv"></span><span class="mi-name">Dragon Chicken <span class="mi-badge badge-spicy">SPICY</span></span><div class="mi-desc">Extra spicy crispy chicken in fiery dragon sauce</div></div>
+        <div class="mi-price"><div class="main">&#8377;249</div></div>
+      </div>
+      <div class="menu-item">
+        <div class="mi-info"><span class="mi-veg"></span><span class="mi-name">Veg Manchurian</span><div class="mi-desc">Crispy vegetable balls in tangy manchurian gravy</div></div>
+        <div class="mi-price"><div class="main">&#8377;179</div></div>
+      </div>
+      <div class="menu-item">
+        <div class="mi-info"><span class="mi-veg"></span><span class="mi-name">Paneer 65</span><div class="mi-desc">Crispy paneer cubes in spicy masala coating</div></div>
+        <div class="mi-price"><div class="main">&#8377;199</div></div>
+      </div>
+      <div class="menu-item">
+        <div class="mi-info"><span class="mi-nv"></span><span class="mi-name">Chicken Fried Rice</span><div class="mi-desc">Wok-tossed rice with chicken, egg & vegetables</div></div>
+        <div class="mi-price"><div class="main">&#8377;199</div></div>
+      </div>
+      <div class="menu-item">
+        <div class="mi-info"><span class="mi-veg"></span><span class="mi-name">Veg Fried Rice</span><div class="mi-desc">Classic vegetable fried rice with soy & sesame</div></div>
+        <div class="mi-price"><div class="main">&#8377;149</div></div>
+      </div>
+    </div>
+
+    <!-- SIDES -->
+    <div class="menu-category" id="cat-sides">
+      <div class="menu-item">
+        <div class="mi-info"><span class="mi-veg"></span><span class="mi-name">Raita</span><div class="mi-desc">Cool yogurt with onions, tomatoes & spices</div></div>
+        <div class="mi-price"><div class="main">&#8377;39</div></div>
+      </div>
+      <div class="menu-item">
+        <div class="mi-info"><span class="mi-veg"></span><span class="mi-name">Salan (Gravy)</span><div class="mi-desc">Traditional Hyderabadi peanut & sesame gravy</div></div>
+        <div class="mi-price"><div class="main">&#8377;49</div></div>
+      </div>
+      <div class="menu-item">
+        <div class="mi-info"><span class="mi-veg"></span><span class="mi-name">Buttermilk / Lassi</span><div class="mi-desc">Refreshing cooling drink</div></div>
+        <div class="mi-price"><div class="main">&#8377;49</div></div>
+      </div>
+      <div class="menu-item">
+        <div class="mi-info"><span class="mi-veg"></span><span class="mi-name">Soft Drink (300ml)</span></div>
+        <div class="mi-price"><div class="main">&#8377;40</div></div>
+      </div>
+      <div class="menu-item">
+        <div class="mi-info"><span class="mi-veg"></span><span class="mi-name">Water Bottle (1L)</span></div>
+        <div class="mi-price"><div class="main">&#8377;20</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMBOS -->
+<section class="combos" id="combos">
+  <div class="container">
+    <h2 class="section-title">Value Combos</h2>
+    <p class="section-sub">More food, better prices — order smart!</p>
+    <div class="combo-grid">
+      <div class="combo-card featured">
+        <div class="combo-tag">BEST VALUE</div>
+        <div class="combo-name">IT Lunch Combo</div>
+        <div class="combo-items">Chicken Biryani + Raita + Soft Drink</div>
+        <div class="combo-pricing">
+          <span class="combo-old">&#8377;328</span>
+          <span class="combo-new">&#8377;199</span>
+          <span class="combo-save">SAVE &#8377;129</span>
+        </div>
+        <a href="https://wa.me/919640034646?text=Hi!%20I'd%20like%20to%20order%20the%20IT%20Lunch%20Combo%20(₹199)" class="combo-order">&#128172; Order This Combo</a>
+      </div>
+      <div class="combo-card">
+        <div class="combo-tag">FOR TWO</div>
+        <div class="combo-name">Couple Pack</div>
+        <div class="combo-items">2 Chicken Biryani + 1 Chicken 65 + 2 Drinks</div>
+        <div class="combo-pricing">
+          <span class="combo-old">&#8377;807</span>
+          <span class="combo-new">&#8377;499</span>
+          <span class="combo-save">SAVE &#8377;308</span>
+        </div>
+        <a href="https://wa.me/919640034646?text=Hi!%20I'd%20like%20to%20order%20the%20Couple%20Pack%20(₹499)" class="combo-order">&#128172; Order This Combo</a>
+      </div>
+      <div class="combo-card">
+        <div class="combo-tag">OFFICE</div>
+        <div class="combo-name">Office Pack (5)</div>
+        <div class="combo-items">5 Chicken Biryani + 2 Starters + Raita</div>
+        <div class="combo-pricing">
+          <span class="combo-old">&#8377;1,742</span>
+          <span class="combo-new">&#8377;999</span>
+          <span class="combo-save">SAVE &#8377;743</span>
+        </div>
+        <a href="https://wa.me/919640034646?text=Hi!%20I'd%20like%20to%20order%20the%20Office%20Pack%20(₹999)" class="combo-order">&#128172; Order This Combo</a>
+      </div>
+      <div class="combo-card">
+        <div class="combo-tag">PARTY</div>
+        <div class="combo-name">Party Pack (10)</div>
+        <div class="combo-items">10 Chicken Biryani + 4 Starters + 10 Drinks</div>
+        <div class="combo-pricing">
+          <span class="combo-old">&#8377;3,806</span>
+          <span class="combo-new">&#8377;1,899</span>
+          <span class="combo-save">SAVE &#8377;1,907</span>
+        </div>
+        <a href="https://wa.me/919640034646?text=Hi!%20I'd%20like%20to%20order%20the%20Party%20Pack%20(₹1899)" class="combo-order">&#128172; Order This Combo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIRECT ORDER BANNER -->
+<div class="direct-banner">
+  <h2>Order Direct & Save 10%!</h2>
+  <p>Skip the apps. Order directly on WhatsApp or call us. Better price, same great food.</p>
+  <div class="direct-features">
+    <div class="direct-feat">&#10003; No App Commission</div>
+    <div class="direct-feat">&#10003; 10% Cheaper</div>
+    <div class="direct-feat">&#10003; Faster Delivery</div>
+    <div class="direct-feat">&#10003; Direct Support</div>
+  </div>
+  <a href="https://wa.me/919640034646?text=Hi%20Pothuraju!%20I'd%20like%20to%20order" class="btn btn-wa">&#128172; Order on WhatsApp</a>
+</div>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <h2 class="section-title">What Our Customers Say</h2>
+    <p class="section-sub">Real reviews from real biryani lovers</p>
+    <div class="review-grid">
+      <div class="review-card">
+        <div class="review-stars">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
+        <div class="review-text">"Best biryani in Kondapur! The dum is perfect and the portions are super generous. My go-to for lunch every week."</div>
+        <div class="review-author">— Ravi K.</div>
+        <div class="review-source">Google Review</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
+        <div class="review-text">"Ordered the couple pack for date night. The chicken 65 was incredible and biryani was on another level. Will order again!"</div>
+        <div class="review-author">— Priya S.</div>
+        <div class="review-source">Zomato Review</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
+        <div class="review-text">"We order office packs every Friday for our team. Consistent quality, great taste, and the WhatsApp ordering is so convenient."</div>
+        <div class="review-author">— Arun T., IT Professional</div>
+        <div class="review-source">WhatsApp Feedback</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="location" id="location">
+  <div class="container">
+    <h2 class="section-title">Visit Us</h2>
+    <p class="section-sub">Come taste the fire!</p>
+    <div class="location-grid">
+      <div class="loc-info">
+        <h3>Pothuraju Biryani</h3>
+        <div class="loc-detail">
+          <span class="loc-icon">&#128205;</span>
+          <div class="loc-text"><strong>Address</strong>Kondapur, Hyderabad, Telangana</div>
+        </div>
+        <div class="loc-detail">
+          <span class="loc-icon">&#128222;</span>
+          <div class="loc-text"><strong>Phone / WhatsApp</strong><a href="tel:+919640034646">96400 34646</a></div>
+        </div>
+        <div class="loc-detail">
+          <span class="loc-icon">&#128336;</span>
+          <div class="loc-text"><strong>Hours</strong>Open Daily: 11:00 AM - 11:00 PM</div>
+        </div>
+        <div class="loc-detail">
+          <span class="loc-icon">&#127860;</span>
+          <div class="loc-text"><strong>Service</strong>Dine-in | Takeaway | Delivery</div>
+        </div>
+        <div class="loc-detail">
+          <span class="loc-icon">&#128241;</span>
+          <div class="loc-text"><strong>Also Available On</strong>Swiggy | Zomato</div>
+        </div>
+      </div>
+      <div class="loc-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15224.305854177383!2d78.35!3d17.46!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93000000000%3A0x0!2sKondapur%2C%20Hyderabad!5e0!3m2!1sen!2sin!4v1" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ORDER SECTION -->
+<section class="order-section" id="order">
+  <h2>Ready to Order?</h2>
+  <p>Skip the wait. Order directly and get 10% off!</p>
+  <div class="order-phone">96400 34646</div>
+  <div class="order-btns">
+    <a href="https://wa.me/919640034646?text=Hi%20Pothuraju!%20I'd%20like%20to%20order" class="btn btn-wa">&#128172; Order on WhatsApp</a>
+    <a href="tel:+919640034646" class="btn btn-call">&#128222; Call to Order</a>
+  </div>
+  <p class="order-note">Free delivery within 2km | Dine-in and takeaway available</p>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-brand">POTHURAJU</div>
+  <div class="footer-tag">THE DUM GOD OF BIRYANI</div>
+  <div class="footer-links">
+    <a href="#menu">Menu</a>
+    <a href="#combos">Combos</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#location">Location</a>
+    <a href="https://wa.me/919640034646">WhatsApp</a>
+  </div>
+  <div class="footer-apps">Also on Swiggy & Zomato — search "Pothuraju Biryani"</div>
+  <div class="footer-copy">&copy; 2026 Pothuraju Biryani. All rights reserved. | pothurajubiryani.shop</div>
+</footer>
+
+<!-- FLOATING BUTTONS -->
+<div class="float-btns">
+  <a href="https://wa.me/919640034646?text=Hi%20Pothuraju!%20I'd%20like%20to%20order" class="float-wa" title="Order on WhatsApp">&#128172;</a>
+  <a href="tel:+919640034646" class="float-call" title="Call to order">&#128222;</a>
+</div>
+
+<script>
+// Navbar scroll effect
+window.addEventListener('scroll',()=>{
+  document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>50);
+});
+
+// Menu tab switching
+function showCategory(cat,el){
+  document.querySelectorAll('.menu-category').forEach(c=>c.classList.remove('active'));
+  document.querySelectorAll('.menu-tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('cat-'+cat).classList.add('active');
+  el.classList.add('active');
+}
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    e.preventDefault();
+    const target=document.querySelector(a.getAttribute('href'));
+    if(target){target.scrollIntoView({behavior:'smooth',block:'start'})}
+    document.getElementById('navLinks').classList.remove('open');
+  });
+});
+</script>
+
+</body>
+</html>
