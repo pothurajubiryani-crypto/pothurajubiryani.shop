@@ -58,7 +58,7 @@ img{max-width:100%;display:block}
 }
 
 /* ===== HERO ===== */
-.hero{min-height:100vh;background:linear-gradient(160deg,#0a0a1a 0%,var(--dark) 30%,#1a0d0d 60%,#0f0a05 100%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;text-align:center}
+.hero{min-height:100vh;background:linear-gradient(160deg,rgba(10,10,26,.92) 0%,rgba(26,26,46,.88) 30%,rgba(26,13,13,.9) 60%,rgba(15,10,5,.92) 100%),url('https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=1400&h=800&fit=crop&q=80') center/cover no-repeat;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;text-align:center}
 .hero-bg{position:absolute;inset:0;overflow:hidden}
 .hero-bg::before{content:'';position:absolute;width:700px;height:700px;background:radial-gradient(circle,rgba(198,40,40,.15),transparent 65%);top:-150px;right:-150px;animation:heroGlow 6s ease infinite alternate}
 .hero-bg::after{content:'';position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(255,179,0,.08),transparent 65%);bottom:-100px;left:-100px;animation:heroGlow 8s ease infinite alternate-reverse}
@@ -146,8 +146,9 @@ img{max-width:100%;display:block}
 .menu-panel{display:none;animation:fadeTab .4s ease}
 .menu-panel.active{display:block}
 @keyframes fadeTab{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-.menu-item{background:#fff;border-radius:14px;padding:22px 24px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 2px 12px rgba(0,0,0,.06);border:1px solid rgba(0,0,0,.04);transition:transform .25s,box-shadow .25s;position:relative;overflow:hidden}
+.menu-item{background:#fff;border-radius:14px;padding:16px;display:flex;align-items:center;gap:16px;box-shadow:0 2px 12px rgba(0,0,0,.06);border:1px solid rgba(0,0,0,.04);transition:transform .25s,box-shadow .25s;position:relative;overflow:hidden}
 .menu-item:hover{transform:translateY(-3px);box-shadow:var(--sh)}
+.menu-item-img{width:80px;height:80px;border-radius:12px;object-fit:cover;flex-shrink:0;box-shadow:0 2px 8px rgba(0,0,0,.1)}
 .menu-item-left{flex:1;min-width:0}
 .menu-item-name{font-weight:700;font-size:15px;color:var(--dark);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .badge{font-size:9px;padding:3px 8px;border-radius:20px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;white-space:nowrap}
@@ -172,7 +173,9 @@ img{max-width:100%;display:block}
 .combos-sec{background:linear-gradient(160deg,#0a0a1a,#1a0d0d,var(--dark));position:relative;overflow:hidden}
 .combos-sec::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='30' cy='30' r='1' fill='rgba(255,179,0,.04)'/%3E%3C/svg%3E");pointer-events:none}
 .combos-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
-.combo-card{background:rgba(255,255,255,.04);backdrop-filter:blur(8px);border:1px solid rgba(255,179,0,.12);border-radius:18px;padding:30px 24px;position:relative;overflow:hidden;transition:transform .3s,border-color .3s}
+.combo-card{background:rgba(255,255,255,.04);backdrop-filter:blur(8px);border:1px solid rgba(255,179,0,.12);border-radius:18px;padding:0;position:relative;overflow:hidden;transition:transform .3s,border-color .3s}
+.combo-img{width:100%;height:180px;object-fit:cover;display:block}
+.combo-card-body{padding:24px 24px 28px}
 .combo-card:hover{transform:translateY(-4px);border-color:rgba(255,179,0,.3)}
 .combo-badge{position:absolute;top:16px;right:16px;background:var(--gold);color:var(--dark);font-size:10px;font-weight:800;padding:4px 12px;border-radius:20px;letter-spacing:.5px}
 .combo-name{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--gold);margin-bottom:10px}
@@ -294,6 +297,9 @@ img{max-width:100%;display:block}
 .hero-btns .btn{padding:12px 24px;font-size:13px}
 .direct-perks{gap:16px}
 .why-grid{grid-template-columns:1fr 1fr}
+.menu-item-img{width:64px;height:64px;border-radius:10px}
+.menu-item{padding:12px;gap:12px}
+.combo-img{height:150px}
 }
 @media(max-width:400px){.why-grid{grid-template-columns:1fr}}
 </style>
@@ -303,7 +309,7 @@ img{max-width:100%;display:block}
 <!-- LOADER -->
 <div class="loader" id="loader">
 <div class="loader-logo">
-<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAB4AHgDASIAAhEBAxEB/8QAGwABAAIDAQEAAAAAAAAAAAAAAAUGAQMEAgf/xAA6EAACAQMDAgMEBwcEAwAAAAABAgMABBEFEiExQRNRYZQicYEGFSNCkaGxJDIzYnLB0TRDUvCi4fH/xAAYAQADAQEAAAAAAAAAAAAAAAAAAQIDFP/EACcRAAICAQMDBAIDAAAAAAAAAAABAhESAyExE0FRBGGh8HGRweHx/9oADAMBAAIRAxEAPwC20pSuI6BSlQGt3rvcexxuyIihpShwWJ6LnsMcn5Um6VsaTbpE7WKqdjMbK/gaHKpJII3QE4YE4z8Qe9WWW4CXMUQwSx94eQpKSaspwadG+tIuo2nWKM7ickkdBUTr2rRW0ghyZHAyY0OMH+Y9vh1qFi+klzA5MUdvjuuw/rmipN+xUYXGy5GYC5WE/eUkVtqC0fU4NSvt7ExTkH7Jz1/pPcfnUnazGWecMeVbAHkKVtOmS4+DqpSlWQKUpQApSlAClKxQAqqapIiapeuzAKHUZ+CDNTV7fyC4MFqVBjGZZCu7HkoGRk9z5CobSYAdRilvVEySMTC//Jjk72U8884/+UpRtUVCWLs36Pp0tzdRXdwhjhjO6NW4MnscdgPzrujcrPdSfvTqrGNT3PNezd+FfytKCwHujHauKaU7pZ9vKhpAPgCRXO5q0o9mbqLpuXdEJpVj7a4mvYbmZJG5ZOBknksc5PPlXZf6Pamcw2sdxBL0Qup8KQ4zgHzrE13Da38cMtlculuCfEVcmRs5z/TnNdGmaxBd6lta2nilfO1yThh2BHbp+VdrRzqe/JXEke2nSRSUeJwc+RB5B/OrxbHdqsjJ+6c/hVX+qM3pErnbJcDIHdSSfxwKs1jdRReK0uQzHPA7KufVauO5um5W67HXbTGW5nyeEICj0rqqM07c0005Hu4P49a6rCUzQF2OWLHNLTnaVkakabo6aUpWpkKUpQApSsUAVh3uGt3aOJHimuGVXL58Qkk5Ze3A+PFbtJtFVluAuILXd7x4aWQDBOOwGT8zXXHbQnWruQRgMnhkY4G4qctjpn161peVbNrq2mdY45j40TN0PQMvx6H505N1sOPCs3akoNyGT7yZNaZgsYDuUUEch2Cgj50hinmcbFliUjmaQAEDyVTzn1I48q64bO1UB44Y2J53sNzH1yea5lo28pbG/UpYx3IaWOO9jWITyCaDiGVX2GSM+p4OOh+Ge9b7Yw6bC8UMj3V3Ly+X3H0BPYCpSW1SbKzgSxnkLIAdp9DUdgvFpNqSu3xHyIolUAZ8z54rqb7GUY7ldlu72z1Fy8xkaMsB95cHqMVNabdNfW67zCJCxIjThgvqCc1C2cHtd9BAct4jjcT3HU/3q5XNnDcx7ZEGRyrDgqfQ9qicVNUzVrptJM0w3ggtWi2Hec4PbmtukMcyp24NcAZoJfDvMq+cLKw9yTy57N8eCelSumwmKEuwIZz0PYVzxjNTSfCHKUXB1yzspWKzXScwpSlACsUpQBGn7LWplPSeJXX1K5B/UV7ng8W4tpOPsXLf+JH96239obqNDE4jnibfG5GQD3B9CODXKbLUZsmW8hh/lijLfmTTHmWzPV/cpDaykyBMKcsTgLxWjTNRt5rOL7WJAsajDOA2cc5B/wCmtkOj23tH7VLJdyoNw8XG1fUKOKhY9Yt7XToEihWW4jTZvZfdXHGc9/lQqopXJ0kTd9fQWMfjysWJGEQdWPp/mqffXkt5cNLM2WPYdEHYCvFxcy3MrTTSFmPV28vIDyrzFE8siRxIWdjhEHUnzNB1Qgobv79/wktAZLeaa7m/2l2IoGSzHsPkPzqb0nW4NRjwTslHVCef/YrjuYk0XRGUsDLtOSO7t/38BWqOwW30uKzKI8zHap7iVupB6+6P09aG0c8m3JssMixXCNE+1wR7y9eDWnT5mtrj2CZiwwWgcnJKjqp9R+nwr3bW8VnbiOPoOSx5LHzJ7mtFgPbdRe8P8GAGOL+ZvvH5dPxoIlwS1KhdFv5bu/neRWRLgCSKPrsReNx8i3l6VNUNUQnZmlKUhiuGXWdOhlaOW9hR0OGUtyDXbVF17EWsX5VRwwOPUqM00VGOTqy5Q6haTxPLDcwvGnLMHGF+PlXONe0s5/boePWqLgOYmIxuHvAd+/NY3+KJlYDC9KNjTo+/4/Vlrk12yN3HLHdRq37r88EZ/wAVUmeMythzjcSvPGM8VlZma3eTAyDxRQZrZsYBLUoxxstLjF3t4/s474y2TIc+uDXRbX72e428+xm6sFG74ZxWpwVaAHrnmkf+rkHpVFu28X5/i/Jl7hr6dEuLk7WbBklJIUedWq1m062iF09+txtAjWRyPdHkAOmcVU4S4tsoNzZPWvNyu5oxgBz1xT70Yyg8c/x28lnOr2mouVlvUtbUHB5xJJ8P+I5evwqN1XVz7a0em3rxWkaqiLGxVeBzjHao6fDRSKOq4rlh/jJ8aI8WZ6sHGajd2do1i/gI8O+mPwf/ADV4t9b06cxol5EZJMALnkk9vjVEyfEn9AP0rr0EBtQ08Hn7Yf3obsp6ONu/Pw6L/SlKgzFUXXZB9cX7JhsOB8wozV6qMk+j2mzXEk8tv4jyMWbc7YyfTNNV3KhJwdooSzlplaTgDy7V7LRxrIQ4Yv0Aq/LoWlr0sYPmuaqX0o0g6femaGMC1lOV2jhD3X09KpU2C1ZxW+5FI6i2dCfeJ4FA6+ylM+9nOKWkCzylHk8MYznGe4/zXQume/ta4iHu7gR0645q8TPqv4o0vMuIipyU6ivfjQqzSKSWYdK9HTWQDfPCDuAIzyMnGay+mFUdzMgVRnB/e+YpYFL1Ek7pfdjQsoS3ChsODmvReI3CybuAOeO9dH1YnibPal3bS3IHGCBg8+v4V4GmOxO2eE4yDzjBGD+hFPAS15UlXFfB4W4VmcPtCnoQOtYj8IrH7yqyHn1rXdW/s7qu9XyM5Xp1qwfRTRFuA93ewK8BXbGrjO492qXFIteok3urIRJFaWUZxuGATUhoMZ+trGNSGZXLHHYAHJq0yfRzSpOtmi/0kj9DXRY6XZ6dn2SBYy3VuST8zU7FdVtNNfW7OulKVJmZrFZrFACvMsSTRtHKiujDBVhkGvVKAKvqP0NR2L6fKI8/7UnI+R61A3Ogala532bsB96Mbx+VfRqVSmyXBHyp4njOHjZfRlIrxx6V9YIz15+NefCTOdi5/pFVmTgfLY4ZJSBHE7nyVSakrX6OandY/ZjEnnKdoHy6/lX0IcdOKUsx4Fe0z6I21sRJeN7TIOduMIPl3+dWEAAAAYA6AUpUttlJJClKUhmaVilAGaxSlAClKUAKUpQApSlAClKUAKUpQBmsUpQBmlKUAf/Z" alt="Pothuraju Biryani">
+<img src="data:image/jpeg;base64,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" alt="Pothuraju Biryani">
 </div>
 </div>
 
@@ -337,7 +343,7 @@ img{max-width:100%;display:block}
 </div>
 <div class="hero-content">
 <div class="hero-logo-wrap">
-<img src="data:image/jpeg;base64,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" alt="Pothuraju Biryani Logo">
+<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAB4AHgDASIAAhEBAxEB/8QAGwABAAIDAQEAAAAAAAAAAAAAAAUGAQMEAgf/xAA6EAACAQMDAgMEBwcEAwAAAAABAgMABBEFEiExQRNRYRQicYEGFSNCkaGxJDIzYnLB0TRDUvCi4fH/xAAYAQADAQEAAAAAAAAAAAAAAAAAAQIDBP/EACcRAAICAQMDBAIDAAAAAAAAAAABAhESAyExE0FRBGGh8HGRweHx/9oADAMBAAIRAxEAPwC20pSuI6BSlQWt3rvcexxuyIihpShwWJ6LnsMcn5Um6VsaTbpE7WKqdjMbK/gaHKpJII3QE4YE4z8Qe9WWW4CXMUQwSx94eQpKSaspwadG+tIuo2nWKM7ickkdBUTr2rRW0ghyZHAyY0OMH+Y9vh1qFi+klzA5MUdvjuuw/rmipN+xUYXGy5GYC5WE/eUkVtqC0fU4NSvt7ExTkH7Jz1/pPcfnEnazGWecMeVbAHkKVtOmS4+DqpSlWQKUpQApSlAClKxQBGn7LWplPSeJXX1K5B/UV7ng8W4tpOPsXLf+JH96239obqNDE4jnibfG5GQD3B9CODXKbLUZsmW8hh/lijLfmTTGnWzPV/cpDaykyBMKcsTgLxWjTNRt5rOL7WJAsajDOA2cc5B/wCmtkOj23tH7VLJdyoNw8XG1fUKOKhY9Yt7XToEihWW4jTZvZfdXHGc9/lQqopXJ0kTd9fQWMfjysWJGEQdWPp/mqffXkt5cNLM2WPYdEHYCvFxcy3MrTTSFmPV28vIDyrzFE8siRxIWdjhEHUnzNB1Qgobv79/wktAZLeaa7m/2l2IoGSzHsPkPzqb0nW4NRjwTslHVCef/YrjuYk0XRGUsDLtOSO7t/38BWqOwW30uKzKI8zHap7iVupB6+6P09aG0c8m3JssMixXCNE+1wR7y9eDWnT5mtrj2CZiwwWgcnJKjqp9R+nwr3bW8VnbiOPoOSx5LHzJ7mtFgPbdRe8P8MAGOL+ZvvH5dPxoIlwS1KhdFv5bu/neRWRLgCSKPrsReNx8i3l6VNUNUQnZmlKUhiuGXWdOhlaOW9hR0OGUtyDXbVF17EWsX5VRwwOPUqM00VGOTqy5Q6haTxPLDcwvGnLMHGF+PlXONe0s5/boePWqLgOYmIxuHvAd+/NY3+KJlYDC9KNjTo+/4/Vlrk12yN3HLHdRq37r88EZ/wAVUmeMythzjcSvPGM8VlZma3eTAyDxRQZrZsYBLUoxxstLjF3t4/s874y2TIc+uDXRbX72e428+xm6sFG74ZxWpwVaAHrnmkf+rkHpVFu28X5/i/Jl7hr6dEuLk7WbBklJIUedWq1m062iF09+txtAjWRyPdHkAOmcVU4S4tsoNzZPWvNyu5oxgBz1xT70Yyg8c/x28lnOr2mouVlvUtbUHB5xIR8P+I9evwqN1XVz7a0em3rxWkaqiLGxVeBzjHao6fDRSKOq4rlh/jJ8aI8WZ6sHGajd2do1i/gI8O+mPwf/ADV4t9b06cxol5EZJMALnkk9vjVEyfEn9AP0rr0EBtQ08Hn7Yf3obsp6ONu/Pw6L/SlKgzFUXXZB9cX7JhsOB8wozV6qMk+j2mzXEk8tv4jyMWbc7YyfTNNV3KhJwdooSzlplaTgDy7V7LRxrIQ4Yv0Aq/LoWlr0sYPmuaqX0o0g6femaGMC1lOV2jhD3X09KpU2C1ZxW+5FI6i2dCfeJ4FA6+ylM+9nOKWkCzylHk8MYznGe4/zXQume/ta4iHu7gR0645q8TPqv4o0vMuIipyU6ivfjQqzSKSWYdK9HTWQDfPCDuAIzyMnGay+mFUdzMgVRnB/e+YpYFL1Ek7pfdjQsoS3ChsODmvReI3CybuAOeO9dH1YnibPal3bS3IHGCBg8+v4V4GmOxO2eE4yDzjBGD+hFPAS15UlXFfB4W4VmcPtCnoQOtYj8IrH7yqyHn1rXdW/s7qu9XyM5Xp1qwfRTRFuA93ewK8BXbGrjO492qXFIteok3urIRJFaWUZxuGATUhoMZ+trGNSGZXLHHYAHJq0yfRzSpOtmi/0kj9DXRY6XZ6dn2SBYy3VuST8zU7FdVtNNfW7OulKVJmZrFZrFACvMsSTRtHKiujDBVhkGvVKAKvqP0NR2L6fKI8/7UnI+R61A3Ogala532bsB96Mbx+VfRqVSmyXBHyp4njOHjZfRlIrxx6V9YIz15+NefCTOdi5/pFVmTgfLY4ZJSBHE7nyVSakrX6OandY/ZjEnnKdoHy6/lX0IcdOKUsx4Fe0z6I21sRJeN7TIOduMIPl3+dWEAAAAYA6AUpUttlJJClKUhmaVilAGaxSlAClKUAKUpQApSlAClKUAKUpQBmsUpQBmlKUAf/Z" alt="Pothuraju Biryani Logo">
 </div>
 <h1 class="hero-title">POTHURAJU</h1>
 <div class="hero-biryani">BIRYANI</div>
@@ -428,6 +434,8 @@ img{max-width:100%;display:block}
 <div class="combos-grid">
 
 <div class="combo-card reveal" style="transition-delay:.1s">
+<img class="combo-img" src="https://images.unsplash.com/photo-1633945274405-b6c8069047b0?w=600&h=360&fit=crop&q=80" alt="IT Lunch Combo" loading="lazy">
+<div class="combo-card-body">
 <div class="combo-badge">BEST VALUE</div>
 <div class="combo-name">IT Lunch Combo</div>
 <div class="combo-desc">Chicken Biryani + Raita + Soft Drink<br>Perfect for your lunch break.</div>
@@ -435,8 +443,11 @@ img{max-width:100%;display:block}
 <div class="combo-save">SAVE &#8377;129</div>
 <a href="https://wa.me/919640034646?text=Hi!%20I%20want%20to%20order%20the%20IT%20Lunch%20Combo%20(Chicken%20Biryani%20%2B%20Raita%20%2B%20Soft%20Drink)%20%40%20%E2%82%B9199" target="_blank" class="combo-order">&#128172; Order on WhatsApp</a>
 </div>
+</div>
 
 <div class="combo-card reveal" style="transition-delay:.2s">
+<img class="combo-img" src="https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?w=600&h=360&fit=crop&q=80" alt="Couple Pack" loading="lazy">
+<div class="combo-card-body">
 <div class="combo-badge">FOR TWO</div>
 <div class="combo-name">Couple Pack</div>
 <div class="combo-desc">2 Chicken Biryani + 1 Chicken 65 + 2 Drinks<br>Date night, sorted.</div>
@@ -444,8 +455,11 @@ img{max-width:100%;display:block}
 <div class="combo-save">SAVE &#8377;308</div>
 <a href="https://wa.me/919640034646?text=Hi!%20I%20want%20to%20order%20the%20Couple%20Pack%20(2%20Chicken%20Biryani%20%2B%201%20Chicken%2065%20%2B%202%20Drinks)%20%40%20%E2%82%B9499" target="_blank" class="combo-order">&#128172; Order on WhatsApp</a>
 </div>
+</div>
 
 <div class="combo-card reveal" style="transition-delay:.3s">
+<img class="combo-img" src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&h=360&fit=crop&q=80" alt="Office Pack" loading="lazy">
+<div class="combo-card-body">
 <div class="combo-badge">OFFICE</div>
 <div class="combo-name">Office Pack (5)</div>
 <div class="combo-desc">5 Chicken Biryani + 2 Starters + Raita<br>Friday lunch for the squad.</div>
@@ -453,14 +467,18 @@ img{max-width:100%;display:block}
 <div class="combo-save">SAVE &#8377;743</div>
 <a href="https://wa.me/919640034646?text=Hi!%20I%20want%20to%20order%20the%20Office%20Pack%20(5%20Chicken%20Biryani%20%2B%202%20Starters%20%2B%20Raita)%20%40%20%E2%82%B9999" target="_blank" class="combo-order">&#128172; Order on WhatsApp</a>
 </div>
+</div>
 
 <div class="combo-card reveal" style="transition-delay:.4s">
+<img class="combo-img" src="https://images.unsplash.com/photo-1599043513900-ed6fe01d3833?w=600&h=360&fit=crop&q=80" alt="Party Pack" loading="lazy">
+<div class="combo-card-body">
 <div class="combo-badge">PARTY</div>
 <div class="combo-name">Party Pack (10)</div>
 <div class="combo-desc">10 Chicken Biryani + 4 Starters + 10 Drinks<br>Go big or go home.</div>
 <div class="combo-pricing"><span class="combo-price">&#8377;1,899</span><span class="combo-old">&#8377;3,806</span></div>
 <div class="combo-save">SAVE &#8377;1,907</div>
 <a href="https://wa.me/919640034646?text=Hi!%20I%20want%20to%20order%20the%20Party%20Pack%20(10%20Chicken%20Biryani%20%2B%204%20Starters%20%2B%2010%20Drinks)%20%40%20%E2%82%B91899" target="_blank" class="combo-order">&#128172; Order on WhatsApp</a>
+</div>
 </div>
 
 </div>
@@ -662,36 +680,37 @@ Dine-in | Takeaway | Delivery
 
 <script>
 // ===== MENU DATA =====
+const U='https://images.unsplash.com/';
 const MENU={
 biryani:[
-{n:"Chicken Dum Biryani",p:249,h:149,b:"BESTSELLER",bc:"badge-best",t:"nv"},
-{n:"Mutton Dum Biryani",p:349,h:199,b:"PREMIUM",bc:"badge-prem",t:"nv"},
-{n:"Boneless Chicken Biryani",p:299,h:179,b:"SPECIAL",bc:"badge-special",t:"nv"},
-{n:"Chicken Fry Piece Biryani",p:279,h:159,b:"NEW",bc:"badge-new",t:"nv"},
-{n:"Egg Biryani",p:199,h:119,b:"",bc:"",t:"nv"},
-{n:"Veg Dum Biryani",p:179,h:109,b:"",bc:"",t:"veg"}
+{n:"Chicken Dum Biryani",p:249,h:149,b:"BESTSELLER",bc:"badge-best",t:"nv",img:U+"photo-1563379091339-03b21ab4a4f8?w=200&h=200&fit=crop&q=80"},
+{n:"Mutton Dum Biryani",p:349,h:199,b:"PREMIUM",bc:"badge-prem",t:"nv",img:U+"photo-1633945274405-b6c8069047b0?w=200&h=200&fit=crop&q=80"},
+{n:"Boneless Chicken Biryani",p:299,h:179,b:"SPECIAL",bc:"badge-special",t:"nv",img:U+"photo-1631515243349-e0cb75fb8d3a?w=200&h=200&fit=crop&q=80"},
+{n:"Chicken Fry Piece Biryani",p:279,h:159,b:"NEW",bc:"badge-new",t:"nv",img:U+"photo-1697155406055-2db32d47ca07?w=200&h=200&fit=crop&q=80"},
+{n:"Egg Biryani",p:199,h:119,b:"",bc:"",t:"nv",img:U+"photo-1589302168068-964664d93dc0?w=200&h=200&fit=crop&q=80"},
+{n:"Veg Dum Biryani",p:179,h:109,b:"",bc:"",t:"veg",img:U+"photo-1630851840633-f96999247032?w=200&h=200&fit=crop&q=80"}
 ],
 pulao:[
-{n:"Chicken Pulao",p:199,h:119,b:"",bc:"",t:"nv"},
-{n:"Egg Pulao",p:169,h:99,b:"",bc:"",t:"nv"},
-{n:"Veg Pulao",p:149,h:89,b:"",bc:"",t:"veg"}
+{n:"Chicken Pulao",p:199,h:119,b:"",bc:"",t:"nv",img:U+"photo-1603133872878-684f208fb84b?w=200&h=200&fit=crop&q=80"},
+{n:"Egg Pulao",p:169,h:99,b:"",bc:"",t:"nv",img:U+"photo-1540100716001-4b432820e37f?w=200&h=200&fit=crop&q=80"},
+{n:"Veg Pulao",p:149,h:89,b:"",bc:"",t:"veg",img:U+"photo-1584269600464-37b1b58a9fe7?w=200&h=200&fit=crop&q=80"}
 ],
 chinese:[
-{n:"Chicken 65",p:229,h:0,b:"BESTSELLER",bc:"badge-best",t:"nv"},
-{n:"Chicken Manchurian",p:219,h:0,b:"",bc:"",t:"nv"},
-{n:"Chilli Chicken",p:229,h:0,b:"",bc:"",t:"nv"},
-{n:"Dragon Chicken",p:249,h:0,b:"SPICY",bc:"badge-spicy",t:"nv"},
-{n:"Veg Manchurian",p:179,h:0,b:"",bc:"",t:"veg"},
-{n:"Paneer 65",p:199,h:0,b:"",bc:"",t:"veg"},
-{n:"Chicken Fried Rice",p:199,h:0,b:"",bc:"",t:"nv"},
-{n:"Veg Fried Rice",p:149,h:0,b:"",bc:"",t:"veg"}
+{n:"Chicken 65",p:229,h:0,b:"BESTSELLER",bc:"badge-best",t:"nv",img:U+"photo-1635685296916-95acaf58471f?w=200&h=200&fit=crop&q=80"},
+{n:"Chicken Manchurian",p:219,h:0,b:"",bc:"",t:"nv",img:U+"photo-1652731889375-a47b3c8449df?w=200&h=200&fit=crop&q=80"},
+{n:"Chilli Chicken",p:229,h:0,b:"",bc:"",t:"nv",img:U+"photo-1602811379863-3687f23b8dcc?w=200&h=200&fit=crop&q=80"},
+{n:"Dragon Chicken",p:249,h:0,b:"SPICY",bc:"badge-spicy",t:"nv",img:U+"photo-1714611446765-3e85644ea4ae?w=200&h=200&fit=crop&q=80"},
+{n:"Veg Manchurian",p:179,h:0,b:"",bc:"",t:"veg",img:U+"photo-1529690678884-189e81f34ef6?w=200&h=200&fit=crop&q=80"},
+{n:"Paneer 65",p:199,h:0,b:"",bc:"",t:"veg",img:U+"photo-1554906216-ecef3551283b?w=200&h=200&fit=crop&q=80"},
+{n:"Chicken Fried Rice",p:199,h:0,b:"",bc:"",t:"nv",img:U+"photo-1666190092689-e3968aa0c32c?w=200&h=200&fit=crop&q=80"},
+{n:"Veg Fried Rice",p:149,h:0,b:"",bc:"",t:"veg",img:U+"photo-1723691802798-fa6efc67b2c9?w=200&h=200&fit=crop&q=80"}
 ],
 sides:[
-{n:"Raita",p:39,h:0,b:"",bc:"",t:"veg"},
-{n:"Salan (Gravy)",p:49,h:0,b:"",bc:"",t:"veg"},
-{n:"Buttermilk / Lassi",p:49,h:0,b:"",bc:"",t:"veg"},
-{n:"Soft Drink (300ml)",p:40,h:0,b:"",bc:"",t:"veg"},
-{n:"Water Bottle (1L)",p:20,h:0,b:"",bc:"",t:"veg"}
+{n:"Raita",p:39,h:0,b:"",bc:"",t:"veg",img:U+"photo-1630409346699-79481a79db52?w=200&h=200&fit=crop&q=80"},
+{n:"Salan (Gravy)",p:49,h:0,b:"",bc:"",t:"veg",img:U+"photo-1589729346953-167da1cc9978?w=200&h=200&fit=crop&q=80"},
+{n:"Buttermilk / Lassi",p:49,h:0,b:"",bc:"",t:"veg",img:U+"photo-1579585381306-240cc44c6a66?w=200&h=200&fit=crop&q=80"},
+{n:"Soft Drink (300ml)",p:40,h:0,b:"",bc:"",t:"veg",img:U+"photo-1691175595365-211c15192433?w=200&h=200&fit=crop&q=80"},
+{n:"Water Bottle (1L)",p:20,h:0,b:"",bc:"",t:"veg",img:U+"photo-1559839734-2b71ea197ec2?w=200&h=200&fit=crop&q=80"}
 ]
 };
 
@@ -718,7 +737,8 @@ controls='<div class="qty-wrap"><button class="qty-btn" onclick="changeQty(\''+k
 }else{
 controls='<button class="add-btn" onclick="addItem(\''+key+'\')">ADD +</button>';
 }
-grid.innerHTML+='<div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">'+typeBadge+' '+item.n+' '+specialBadge+'</div><div class="menu-item-price">&#8377;'+item.p+' '+halfPrice+'</div></div><div class="menu-item-right">'+controls+'</div></div>';
+const imgTag=item.img?'<img class="menu-item-img" src="'+item.img+'" alt="'+item.n+'" loading="lazy">':'';
+grid.innerHTML+='<div class="menu-item">'+imgTag+'<div class="menu-item-left"><div class="menu-item-name">'+typeBadge+' '+item.n+' '+specialBadge+'</div><div class="menu-item-price">&#8377;'+item.p+' '+halfPrice+'</div></div><div class="menu-item-right">'+controls+'</div></div>';
 });
 });
 }
@@ -920,4 +940,4 @@ el.dataset.suffix=el.dataset.count>=1000?'+':'+';
 });
 </script>
 </body>
-</html> 
+</html>
