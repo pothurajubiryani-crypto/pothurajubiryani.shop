@@ -179,7 +179,7 @@ img{max-width:100%;display:block}
 .combos-sec{background:linear-gradient(160deg,#0a0a1a,#1a0d0d,var(--dark));position:relative;overflow:hidden}
 .combos-sec::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='30' cy='30' r='1' fill='rgba(255,179,0,.04)'/%3E%3C/svg%3E");pointer-events:none}
 .combos-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
-.combo-card{background:rgba(255,255,255,.04);backdrop-filter:blur(8px);border:1px solid rgba(255,179,0,.12);border-radius:18px;padding:0;position:relative;overflow:hidden;transition:transform .3s,border-color .3s}
+.combo-card{background:rgba(255,255,255,.04);backdrop-filter:blur(8px);border:1px solid rgba(255,179,0,.12);border-radius:18px;padding:0;position:relative;overflow:hidden;transition:transform .3s,border-color .3s
 .combo-img{width:100%;height:180px;object-fit:cover;display:block}
 .combo-card-body{padding:24px 24px 28px}
 .combo-card:hover{transform:translateY(-4px);border-color:rgba(255,179,0,.3)}
@@ -315,7 +315,7 @@ img{max-width:100%;display:block}
 <!-- LOADER -->
 <div class="loader" id="loader">
 <div class="loader-logo">
-<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAB4AHgDASIAAhEBAxEB/8QAGwABAAIDAQEAAAAAAAAAAAAAAAUGAQMEAgf/xAA6EAACAQMDAgMEBwcEAwAAAAABAgMABBEFEiExQRNRYRQicYEGFSNCkaGxJDIzYnLB0TRDUvCi4fH/xAAYAQADAQEAAAAAAAAAAAAAAAAAAQIDFP/EACcRAAICAQMDBAIDAAAAAAAAAAABAhESAyExE0FRBGGh8HGRweHx/9oADAMBAAIRAxEAPwC20pSuI6BSlQGt3rvcexxuyIihpShwWJ6LnsMcn5Um6VsaTbpE7WKqdjMbK/gaHKpJII3QE4YE4z8Qe9WWW4CXMUQwSx94eQpKSaspwadG+tIuo2nWKM7ickkdBUTr2rRW0ghyZHAyY0OMH+Y9vh1qFi+klzA5MUdvjuuw/rmipN+xUYXGy5GYC5WE/eUkVtqC0fU4NSvt7ExTkH7Jz1/pPcfnEnazGWecMeVbAHkKVtOmS4+DqpSlWQKUpQApSlAClKxQBGn7LWplPSeJXX1K5B/UV7ng8W4tpOPsXLf+JH96239obqNDE4jnibfG5GQD3B9CODXKbLUZsmW8hh/lijLfmTTGnWzPV/cpDaykyBMKcsTgLxWjTNRt5rOL7WJAsajDOA2cc5B/wCmtkOj23tH7VLJdyoNw8XG1fUKOKhY9Yt7XToEihWW4jTZvZfdXHGc9/lQqopXJ0kTd9fQWMfjysWJGEQdWPp/mqffXkt5cNLM2WPYdEHYCvFxcy3MrTTSFmPV28vIDyrzFE8siRxIWdjhEHUnzNB1Qgobv79/wktAZLeaa7m/2l2IoGSzHsPkPzqb0nW4NRjwTslHVCef/YrjuYk0XRGUsDLtOSO7t/38BWqOwW30uKzKI8zHap7iVupB6+6P09aG0c8m3JssMixXCNE+1wR7y9eDWnT5mtrj2CZiwwWgcnJKjqp9R+nwr3bW8VnbiOPoOSx5LHzJ7mtFgPbdRe8P8MAGOL+ZvvH5dPxoIlwS1KhdFv5bu/neRWRLgCSKPrsReNx8i3l6VNUNUQnZmlKUhiuGXWdOhlaOW5hR0OGUtyDXbVF17EWsX5VRwwOPUqM00VGOTqy5Q6haTxPLDcwvGnLMHGF+PlXONe0s5/boePWqLgOYmIxuHvAd+/NY3+KJlYDC9KNjTo+/4/Vlrk12yN3HLHdRq37r88EZ/wAVUmeMythzjcSvPGM4VlZma3eTAyDxRQZrZsYBLUoxxstLjF3t4/s474y2TIc+uDXRbX72e428+xm6sFG74ZxWpwVaAHrnmkf+rkHpVFu28X5/i/Jl7hr6dEuLk7WbBklJIUedWq1m062iF09+txtAjWRyPdHkAOmcVU4S4tsoNzZPWvNyu5oxgBz1xT70Yyg8c/x28lnOr2mouVlvUtbUHB5xJJ8P+I9evwqN1XVz7a0em3rxWkaqiLGxVeBzjHao6fDRSKOq4rlh/jJ8aI8WZ6sHGajd2do1i/gI8O+mPwf/ADV4t9b06cxol5EZJMALnkk9vjVEyfEn9AP0rr0EBtQ08Hn7Yf3obsp6ONu/Pw6L/SlKgzFUXXZB9cX7JhsOB8wozV6qMk+j2mzXEk8tv4jyMWbc7YyfTNNV3KhJwdooSzlplaTgDy7V7LRxrIQ4Yv0Aq/LoWlr0sYPmuaqX0o0g6femaGMC1lOV2jhD3X09KpU2C1ZxW+5FI6i2dCfeJ4FA6+ylM+9nOKWkCzylHk8MYznGe4/zXQume/ta4iHu7gR0645q8TPqv4o0vMuIipyU6ivfjQqzSKSWYdK9HTWQDfPCDuAIzyMnGay+mFUdzMgVRnB/e+YpYFL1Ek7pfdjQsoS3ChsODmvReI3CybuAOeO9dH1YnibPal3bS3IHGCBg8+v4V4GmOxO2eE4yDzjBGD+hFPAS15UlXFfB4W4VmcPtCnoQOtYj8IrH7yqyHn1rXdW/s7qu9XyM5Xp1qwfRTRFuA93ewK8BXbGrjO492qXFIteok3urIRJFaWUZxuGATUhoMZ+trGNSGZXLHHYAHJq0yfRzSpOtmi/0kj9DXRY6XZ6dn2SBYy3VuST8zU7FdVtNNfW7OulKVJmZrFZrFACvMsSTRtHKiujDBVhkGvVKAKvqP0NR2L6fKI8/7UnI+R61A3Ogala532bsB96Mbx+VfRqVSmyXBHyp4njOHjZfRlIrxx6V9YIz15+NefCTOdi5/pFVmTgfLY4ZJSBHE7nyVSakrX6OandY/ZjEnnKdoHy6/lX0IcdOKUsx4Fe0z6I21sRJeN7TIOduMIPl3+dWEAAAAYA6AUpUttlJJClKUhmaVilAGaxSlAClKUAKUpQApSlAClKUAKUpQBmsUpQBmlKUAf/Z" alt="Pothuraju Biryani">
+<img src="data:image/jpeg;base64,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" alt="Pothuraju Biryani">
 </div>
 </div>
 
@@ -349,641 +349,201 @@ img{max-width:100%;display:block}
 </div>
 <div class="hero-content">
 <div class="hero-logo-wrap">
-<img src="data:image/jpeg;base64,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" alt="Pothuraju Biryani Logo">
-</div>
-<h1 class="hero-title">POTHURAJU</h1>
-<div class="hero-biryani">BIRYANI</div>
-<p class="hero-tagline"><span>The Dum God of Biryani</span></p>
-<div class="hero-btns">
-<a href="https://wa.me/919640034646" target="_blank" class="btn btn-wa">&#128172; Order on WhatsApp</a>
-<a href="tel:+919640034646" class="btn btn-outline">&#9742; Call Now</a>
-<a href="#menu" class="btn btn-fire">&#9776; View Menu</a>
-</div>
-</div>
-<div class="scroll-hint">SCROLL</div>
-</section>
+<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAB4AHgDASIAAhEBAxEB/8QAGwABAAIDAQEAAAAAAAAAAAAAAAUGAQMEAgf/xAA6EAACAQMDAgMEBwcEAwAAAAABAgMABBEFEiExQRNRYRQicYEGFSNCkaGxJDIzYnLB0TRDUvCi4fH/xAAYAQADAQEAAAAAAAAAAAAAAAAAAQIDFP/EACcRAAICAQMDBAIDAAAAAAAAAAABAhESAyExE0FRBGGh8HGRweHx/9oADAMBAAIRAxEAPwC20pSuI6BSlQGt3rvcexxuyIihpShwWJ6LnsMcn5Um6VsaTbpE7WKqdjMbK/gaHKpJII3QE4YE4z8Qe9WWW4CXMUQwSx94eQpKSaspwadG+tIuo2nWKM7ickkdBUTr2rRW0ghyZHAyY0OMH+Y9vh1qFi+klzA5MUdvjuuw/rmipN+xUYXGy5GYC5WE/eUkVtqC0fU4NSvt7ExTkH7Jz1/pPcfnEnazGWecMeVbAHkKVtOmS4+DqpSlWQKUpQApSlAClKxQBGn7LWplPSeJXX1K5B/UV7ng8W4tpOPsXLf+JH96239obqNDE4jnibfG5GQD3B9CODXKbLUZsmW8hh/lijLfmTTGnWzPV/cpDaykyBMKcsTgLxWjTNRt5rOL7WJAsajDOA2cc5B/wCmtkOj23tH7VLJdyoNw8XG1fUKOKhY9Yt7XToEihWW4jTZvZfdXHGc9/lQqopXJ0kTd9fQWMfjysWJGEQdWPp/mqffXkt5cNLM2WPYdEHYCvFxcy3MrTTSFmPV28vIDyrzFE8siRxIWdjhEHUnzNB1Qgobv79/wktAZLeaa7m/2l2IoGSzHsPkPzqb0nW4NRjwTslHVCef/YrjuYk0XRGUsDLtOSO7t/38BWqOwW30uKzKI8zHap7iVupB6+6P09aG0c8m3JssMixXCNE+1wR7y9eDWnT5mtrj2CZiwwWgcnJKjqp9R+nwr3bW8VnbiOPoOSx5LHzJ7mtFgPbdRe8P8MAGOL+ZvvH5dPxoIlwS1KhdFv5bu/neRWRLgCSKPrsReNx8i3l6VNUNUQnZmlKUhiuGXWdOhlaOW9hR0OGUtyDXbVF17EWsX5VRwwOPUqM00VGOTqy5Q6haTxPLDcwvGnLMHGF+PlXONe0s5/boePWqLgOYmIxuHvAd+/NY3+KJlYDC9KNjTo+/4/Vlrk12yN3HLHdRq37r88EZ/wAVUmeMythzjcSvPGM8VlZma3eTAyDxRQZrZsYBLUoxxstLjF3t4/s874y2TIc+uDXRbX72e428+xm6sFG74ZxWpwVaAHrnmkf+rkHpVFu28X5/i/Jl7hr6dEuLk7WbBklJIUedWq1m062iF09+txtAjWRyPdHkAOmcVU4S4tsoNzZPWvNyu5oxgBz1xT70Yyg8c/x28lnOr2mouVlvUtbUHB5xJJ8P+I9evwqN1XVz7a0em3rxWkaqiLGxVeBzjHao6fDRSKOq4rlh/jJ8aI8WZ6sHGajd2do1i/gI8O+mPwf/ADV4t9b06cxol5EZJMALnkk9vjVEyfEn9AP0rr0EBtQ08Hn7Yf3obsp6ONu/Pw6L/SlKgzFUXXZB9cX7JhsOB8wozV6qMk+j2mzXEk8tv4jyMWbc7YyfTNNV3KhJwdooSzlplaTgDy7V7LRxrIQ4Yv0Aq/LoWlr0sYPmuaqX0o0g6femaGMC1lOV2jhD3X09KpU2C1ZxW+5FI6i2dCfeJ4FA6+ylM+9nOKWkCzylHk8MYznGe4/zXQume/ta4iHu7gR0645q8TPqv4o0vMuIipyU6ivfjQqzSKSWYdK5HTWQDfPCDuAIzyMnGay+mFUdzMgVRnB/e+YpYFL1Ek7pfdjQsoS3ChsODmvReI3CybuAOeO9dH1YnibPal3bS3IHGCBg8+v4V4GmOxO2eE4yDzjBGD+hFPAS15UlXFfB4W4VmcPtCnoQOtYj8IrH7yqyHn1rXdW/s7qu9XyM5Xp1qwfRTRFuA93ewK8BXbGrjO492qXFIteok3urIRJFaWUZxuGATUhoMZ+trGNSGZXLHHYAHJq0yfRzSpOtmi/0kj9DXRY6XZ6dn2SBYy3VuST8zU7FdVtNNfW7OulKVJmZrNYrTQArzLEk0bRyorowwVYZBr1SgCr6j9DUdi+nyiPP+wJyPkOtQNzoGpWud9mnA/ejG8flX0alUpslwR8qeJ4zh42X0ZSK8celfWCM9eFXnwkznYuf6RVZk4Hy2OGSUgRxO58lUmpK1+jmp3WP2YxJ5ynaB8uv5R9CHHTilLMeBXtM+iNtbESXje0yDnbjCD5d/nVhAAAAYA6AUpUttlJJClKUhmaVilAGaxSlAClKUAKUpQApSlAClKUAKUpQBmsUpQBmlKUAf/ZPÝ\ÔÕÚ]ZÑÝÐRÝTÒNÍÕ[JÔPLÓÙØ[MLÌÐMX
+ÕUÛ^V\Ò\VR^MJÓYÕÙMKÜUÙMÐMÛUØZÜØ[KÖ[ÙÒMÛXÙÒÕ\ÞLL\ÔSÕSÙSRTÊÙÑPPPPVPMU\]ÛÕZXU[QØ^ÛPÛÕPRÕ\P\ÛPÛÕPRÕ\P\Õ\P[ÕPYÖ[HÝ\ZH\X[HÙÛÈÙ]HÛ\ÜÏH\Ë]]HÕTROÚO]Û\ÜÏH\ËX\X[HTPSOÙ]Û\ÜÏH\Ë]YÛ[HÜ[H[HÛÙÙ\X[OÜÜ[Ü]Û\ÜÏH\ËXÈHYHÎËÝØKYKÎLNMÍ\Ù]HØ[ÈÛ\ÜÏH]ØHÌLMÌÈÜ\ÛÚ]Ð\ØOHYH[ÎLNMÍÛ\ÜÏH[Ý][HÎMÍÈØ[ÝÏØOHYHÛY[HÛ\ÜÏHY\HÎMÍÍÈY]ÈY[OØOÙ]Ù]]Û\ÜÏHØÜÛZ[ÐÔÓÙ]ÜÙXÝ[ÛKKHÑTÕTKO]Û\ÜÏHÙ\\Ý\]Û\ÜÏHÙ\]XÚÈÜ[ÌLLÎÈU[ÚÛÛXÎØÚXÚÙ[\X[H
+ÈZ]H
+È[È\ÝÎÍÍÎÌNNOØ	Üß	ÜÈÜ\\XÝ	[\ÈØ]HL	HH	Üß	ÜÈ	ÌLLÎÈU[ÚÛÛXÎØÚXÚÙ[\X[H
+ÈZ]H
+È[È\ÝÎÍÍÎÌNNOØ	Üß	ÜÈÜ\\XÝ	[\ÈØ]HL	HH	Üß	ÜÈ	ÌLLÎÈU[ÚÛÛXÎØÚXÚÙ[\X[H
+ÈZ]H
+È[È\ÝÎÍÍÎÌNNOØ	Üß	ÜÈÜ\\XÝ	[\ÈØ]HL	HOÜÜ[Ü[ÌLLÎÈU[ÚÛÛXÎØÚXÚÙ[\X[H
+ÈZ]H
+È[È\ÝÎÍÍÎÌNNOØ	Üß	ÜÈÜ\\XÝ	[\ÈØ]HL	HH	Üß	ÜÈ	ÌLLÎÈU[ÚÛÛXÎØÚXÚÙ[\X[H
+ÈZ]H
+È[È\ÝÎÍÍÎÌNNOØ	Üß	ÜÈÜ\\XÝ	[\ÈØ]HL	HH	Üß	ÜÈ	ÌLLÎÈU[ÚÛÛXÎØÚXÚÙ[\X[H
+ÈZ]H
+È[È\ÝÎÍÍÎÌNNOØ	Üß	ÜÈÜ\\XÝ	[\ÈØ]HL	HOÜÜ[Ù]Ù]KKHÒHÕTRHKOÙXÝ[ÛÛ\ÜÏHÙXÈYHXÝ]]Û\ÜÏHÝÛ\ÜÏHÙXË]]H]X[ÚHÜ[Ý[OHÛÛÜ\KY\JHÝ\ZOÜÜ[ÏÚÛ\ÜÏHÙXË\ÝX]X[]\HÜZ[[ÈHÝÜHÙY][ÛÛÝËXÛÛÚÙY\XÝ[Û[H[ÛÛ\ÛZ\Ú[È\ÝZ]Ù]ÜÜ]Û\ÜÏHÚKYÜY]Û\ÜÏHÚKXØ\]X[Ý[OH[Ú][ÛY[^N\È]Û\ÜÏHÚKZXÛÛXÌHÌLLÎÏÙ]Ï]][XÈ[OÚÏÛÝËXÛÛÚÙYÝ\ÛØ[[ÙX[Y[\ËÈÚÜÝ]ËÈ\ÜÝ\HÛÛÚÙ\Ë\Ý\KY][Û[[KÜÙ]]Û\ÜÏHÚKXØ\]X[Ý[OH[Ú][ÛY[^NÈ]Û\ÜÏHÚKZXÛÛXÌÌLÎÎÏÙ]Ï\ÚZ[OÚÏ]\H[ÜYY[ÛÝ\ÙY\ÚXXÚ[Ü[ËÈÞ[YX]È^K[ÛXÙKXYH\ÚÙ\Y\ÚÜÙ]]Û\ÜÏHÚKXØ\]X[Ý[OH[Ú][ÛY[^NÜÈ]Û\ÜÏHÚKZXÛÛXÌÈÌLÎNÏÙ]Ï
+È][\ÏÚÏÛHÞX[]]Û[HÈY\HYÛÛÚXÚÙ[HÝ\]YY[H]ÛÝ\È]\HÜ][ËÜÙ]]Û\ÜÏHÚKXØ\]X[Ý[OH[Ú][ÛY[^NÈ]Û\ÜÏHÚKZXÛÛXÍÎNNÏÙ]Ï\Ý[]\OÚÏÛÛ\\[]\Y\È[[\ÌZ[]\ËÝ\[[Ý\^	ÜÈ^ËÜ\XHÚ]Ð\ÜÙ]Ù]Ù]ÜÙXÝ[ÛKKHQSHKOÙXÝ[ÛÛ\ÜÏHÙXÈÙXËXÜX[HYHY[H]Û\ÜÏHÝÛ\ÜÏHÙXË]]H]X[Ý\Ü[Ý[OHÛÛÜ\KY\JHY[OÜÜ[ÚÛ\ÜÏHÙXË\ÝX]X[ÜYYÚ]\ÜÚ[ÛÙ\YÚ]YK\
+ÈÈY][\ÈÈ[Ý\Ø\Ü]Û\ÜÏHY[K]XÈ]X[]ÛÛ\ÜÏHY[K]XXÝ]H]K]XH\X[HÌLÎÍNÈ\X[OØ]Û]ÛÛ\ÜÏHY[K]X]K]XH[[ÈÌLÎNÈ[[ÏØ]Û]ÛÛ\ÜÏHY[K]X]K]XHÚ[\ÙHÌLLÍÎNÈÚ[\ÙOØ]Û]ÛÛ\ÜÏHY[K]X]K]XHÚY\ÈÌLLÎÈÚY\È	[ÜÏØ]ÛÙ]KKH\X[HKO]Û\ÜÏHY[K\[[XÝ]HYH[[X\X[H]K\[[H\X[H]Û\ÜÏHY[KYÜYYHY[P\X[HÙ]Ù]KKH[[ÈKO]Û\ÜÏHY[K\[[YH[[\[[È]K\[[H[[È]Û\ÜÏHY[KYÜYYHY[T[[ÈÙ]Ù]KKHÚ[\ÙHKO]Û\ÜÏHY[K\[[YH[[XÚ[\ÙH]K\[[HÚ[\ÙH]Û\ÜÏHY[KYÜYYHY[PÚ[\ÙHÙ]Ù]KKHÚY\ÈKO]Û\ÜÏHY[K\[[YH[[\ÚY\È]K\[[HÚY\È]Û\ÜÏHY[KYÜYYHY[TÚY\ÈÙ]Ù]Ù]ÜÙXÝ[ÛKKHÓÓPÔÈKOÙXÝ[ÛÛ\ÜÏHÙXÈÛÛXÜË\ÙXÈÙXËY\ÈYHÛÛXÜÈ]Û\ÜÏHÝÛ\ÜÏHÙXË]]H]X[Ý[OHÛÛÜ\KYÛÛ
+H[YHÜ[Ý[OHÛÛÜÙÛÛXÜÏÜÜ[ÚÛ\ÜÏHÙXË\ÝX]X[X^[][H]ÜX^[][HØ][ÜËXØ]\ÙHÜX]\X[HÚÝ[Ý\[Ý\Ø[]Ü]Û\ÜÏHÛÛXÜËYÜY]Û\ÜÏHÛÛXËXØ\]X[Ý[OH[Ú][ÛY[^N\È[YÈÛ\ÜÏHÛÛXËZ[YÈÜÏHÎËÚ[XYÙ\Ë[Ü\ÚÛÛKÜÝËLMÌÎMLÍKXÎLØÝÏM	LÍ	]XÜÜ	ON[HU[ÚÛÛXÈØY[ÏH^H]Û\ÜÏHÛÛXËXØ\XÙH]Û\ÜÏHÛÛXËXYÙHTÕSQOÙ]]Û\ÜÏHÛÛXË[[YHU[ÚÛÛXÏÙ]]Û\ÜÏHÛÛXËY\ØÈÚXÚÙ[\X[H
+ÈZ]H
+ÈÛÙ[Ï\XÝÜ[Ý\[ÚXZËÙ]]Û\ÜÏHÛÛXË\XÚ[ÈÜ[Û\ÜÏHÛÛXË\XÙHÎÍÍÎÌNNOÜÜ[Ü[Û\ÜÏHÛÛXË[ÛÎÍÍÎÌÌÜÜ[Ù]]Û\ÜÏHÛÛXË\Ø]HÐUH	ÎÍÍÎÌLOÙ]HYHÎËÝØKYKÎLNMÍÝ^RHILILØ[	LÉLÜ\LILU	L[Ú	LÛÛXÉL
+ÚXÚÙ[L\X[IL	LLZ]IL	LLÛÙ	L[ÊIL	M	L	QLNPLNNH\Ù]HØ[ÈÛ\ÜÏHÛÛXË[Ü\ÌLMÌÈÜ\ÛÚ]Ð\ØOÙ]Ù]]Û\ÜÏHÛÛXËXØ\]X[Ý[OH[Ú][ÛY[^NÈ[YÈÛ\ÜÏHÛÛXËZ[YÈÜÏHÎËÚ[XYÙ\Ë[Ü\ÚÛÛKÜÝËLMÌMLMLÌÍKYLØÍYØOÝÏM	LÍ	]XÜÜ	ON[HÛÝ\HXÚÈØY[ÏH^H]Û\ÜÏHÛÛXËXØ\XÙH]Û\ÜÏHÛÛXËXYÙHÔÓÏÙ]]Û\ÜÏHÛÛXË[[YHÛÝ\HXÚÏÙ]]Û\ÜÏHÛÛXËY\ØÈÚXÚÙ[\X[H
+ÈHÚXÚÙ[H
+È[ÜÏ]HYÚÛÜYÙ]]Û\ÜÏHÛÛXË\XÚ[ÈÜ[Û\ÜÏHÛÛXË\XÙHÎÍÍÎÍNOÜÜ[Ü[Û\ÜÏHÛÛXË[ÛÎÍÍÎÎÏÜÜ[Ù]]Û\ÜÏHÛÛXË\Ø]HÐUH	ÎÍÍÎÌÌÙ]HYHÎËÝØKYKÎLNMÍÝ^RHILILØ[	LÉLÜ\LILÛÝ\ILXÚÉL
+LÚXÚÙ[L\X[IL	LLILÚXÚÙ[LIL	LLL[ÜÊIL	M	L	QLNPMNH\Ù]HØ[ÈÛ\ÜÏHÛÛXË[Ü\ÌLMÌÈÜ\ÛÚ]Ð\ØOÙ]Ù]]Û\ÜÏHÛÛXËXØ\]X[Ý[OH[Ú][ÛY[^NÜÈ[YÈÛ\ÜÏHÛÛXËZ[YÈÜÏHÎËÚ[XYÙ\Ë[Ü\ÚÛÛKÜÝËLMMMNLÎMNMMNØØMXYOÝÏM	LÍ	]XÜÜ	ON[HÙXÙHXÚÈØY[ÏH^H]Û\ÜÏHÛÛXËXØ\XÙH]Û\ÜÏHÛÛXËXYÙHÑPÑOÙ]]Û\ÜÏHÛÛXË[[YHÙXÙHXÚÈ
+JOÙ]]Û\ÜÏHÛÛXËY\ØÈHÚXÚÙ[\X[H
+ÈÝ\\È
+ÈZ]OY^H[ÚÜHÜ]XYÙ]]Û\ÜÏHÛÛXË\XÚ[ÈÜ[Û\ÜÏHÛÛXË\XÙHÎÍÍÎÎNNOÜÜ[Ü[Û\ÜÏHÛÛXË[ÛÎÍÍÎÌKÍÜÜ[Ù]]Û\ÜÏHÛÛXË\Ø]HÐUH	ÎÍÍÎÍÍÏÙ]HYHÎËÝØKYKÎLNMÍÝ^RHILILØ[	LÉLÜ\LILÙXÙILXÚÉL
+ILÚXÚÙ[L\X[IL	LLLÝ\\ÉL	LLZ]JIL	M	L	QLNPNNNH\Ù]HØ[ÈÛ\ÜÏHÛÛXË[Ü\ÌLMÌÈÜ\ÛÚ]Ð\ØOÙ]Ù]]Û\ÜÏHÛÛXËXØ\]X[Ý[OH[Ú][ÛY[^NÈ[YÈÛ\ÜÏHÛÛXËZ[YÈÜÏHÎËÚ[XYÙ\Ë[Ü\ÚÛÛKÜÝËLMNNLÍLLÎLYYLYÎÌÏÝÏM	LÍ	]XÜÜ	ON[H\HXÚÈØY[ÏH^H]Û\ÜÏHÛÛXËXØ\XÙH]Û\ÜÏHÛÛXËXYÙHTOÙ]]Û\ÜÏHÛÛXË[[YH\HXÚÈ
+L
+OÙ]]Û\ÜÏHÛÛXËY\ØÈLÚXÚÙ[\X[H
+ÈÝ\\È
+ÈL[ÜÏÛÈYÈÜÛÈÛYKÙ]]Û\ÜÏHÛÛXË\XÚ[ÈÜ[Û\ÜÏHÛÛXË\XÙHÎÍÍÎÌKNOÜÜ[Ü[Û\ÜÏHÛÛXË[ÛÎÍÍÎÌËÜÜ[Ù]]Û\ÜÏHÛÛXË\Ø]HÐUH	ÎÍÍÎÌKLÏÙ]HYHÎËÝØKYKÎLNMÍÝ^RHILILØ[	LÉLÜ\LIL\ILXÚÉL
+L	LÚXÚÙ[L\X[IL	LL	LÝ\\ÉL	LLL	L[ÜÊIL	M	L	QLNPLNNH\Ù]HØ[ÈÛ\ÜÏHÛÛXË[Ü\ÌLMÌÈÜ\ÛÚ]Ð\ØOÙ]Ù]Ù]KKHÝ]ÈKO]Û\ÜÏHÝ]Ë\ÝÈ]X[]Û\ÜÏHÝ]Z][H]Û\ÜÏHÝ][[H]KXÛÝ[HLÙ]]Û\ÜÏHÝ][X[\X[\ÈÙ\YÙ]Ù]]Û\ÜÏHÝ]Z][H]Û\ÜÏHÝ][[H]KXÛÝ[HÙ]]Û\ÜÏHÝ][X[\HÝ\ÝÛY\ÏÙ]Ù]]Û\ÜÏHÝ]Z][H]Û\ÜÏHÝ][[H]KXÛÝ[HÙ]]Û\ÜÏHÝ][X[Y[H][\ÏÙ]Ù]]Û\ÜÏHÝ]Z][H]Û\ÜÏHÝ][[H]KXÛÝ[HÌÙ]]Û\ÜÏHÝ][X[Z[[]\OÙ]Ù]Ù]Ù]ÜÙXÝ[ÛKKHTPÕÔTSTKOÙXÝ[ÛÛ\ÜÏH\XÝX[\Ý[OHÜXÚ]NNÝ[ÙÜNÛNÈ]Û\ÜÏHÝ\XÝZ[\Ü\\XÝ	Ø]H[OL	OÙ[OÚ]Û\ÜÏH\XÝ\\ÜÈ]Û\ÜÏH\XÝ\\È]Û\ÜÏHZXÛÛÌLÎÏÙ]È\ÛÛ[Z\ÜÚ[ÛÙ]]Û\ÜÏH\XÝ\\È]Û\ÜÏHZXÛÛÌLMÍÏÙ]L	HÚX\\Ù]]Û\ÜÏH\XÝ\\È]Û\ÜÏHZXÛÛÎNNÏÙ]\Ý\[]\OÙ]]Û\ÜÏH\XÝ\\È]Û\ÜÏHZXÛÛÌLÏÙ]\XÝÝ\ÜÙ]Ù]HYHÎËÝØKYKÎLNMÍÝ^RHILILØ[	LÉLXÙILIL\XÝ	LÜ\\Ù]HØ[ÈÛ\ÜÏH]ØHÝ[OHÛ\Ú^NMÜÜY[ÎMÌLMÌÈÜ\ÛÚ]Ð\ÝÏØOÙ]ÜÙXÝ[ÛKKHUQUÔÈKOÙXÝ[ÛÛ\ÜÏHÙXÈYH]Y]ÜÈ]Û\ÜÏHÝÛ\ÜÏHÙXË]]H]X[Ú]Ý\Ü[Ý[OHÛÛÜ\KY\JHÝ\ÝÛY\ÏÜÜ[Ø^OÚÛ\ÜÏHÙXË\ÝX]X[ÛÝZÙHÝ\ÛÜÜ]\IÜÈÚ]ÛÛ\\Ý\ÈXÝ]\ËÜ]Û\ÜÏH]Y]ÜË]Ü\]X[]Û\ÜÏH]Y]ÜË]XÚÈYH]Y]ÜÕXÚÈ]Û\ÜÏH]Y]Ë\ÛYH]Û\ÜÏH]Y]ËXØ\]Û\ÜÏH]Y]Ë\Ý\ÈÎMÌÌÎÉÎMÌÌÎÉÎMÌÌÎÉÎMÌÌÎÉÎMÌÌÎÏÙ]Û\ÜÏH]Y]Ë]^\Ý\X[H[ÛÛ\\HH[H\È\XÝ[Ü[ÛÈ\HÝ\\Ù[\Ý\Ë^HÛË]ÈÜ[Ú]\HÙYZËÜ]Û\ÜÏH]Y]ËX]]Ü]HËÙ]]Û\ÜÏH]Y]Ë\ÛÝ\ÙHÛÛÙÛH]Y]ÏÙ]Ù]Ù]]Û\ÜÏH]Y]Ë\ÛYH]Û\ÜÏH]Y]ËXØ\]Û\ÜÏH]Y]Ë\Ý\ÈÎMÌÌÎÉÎMÌÌÎÉÎMÌÌÎÉÎMÌÌÎÉÎMÌÌÎÏÙ]Û\ÜÏH]Y]Ë]^Ü\YHÛÝ\HXÚÈÜ]HYÚHÚXÚÙ[HØ\È[ÜYXH[\X[HØ\ÈÛ[Ý\][Ü]Û\ÜÏH]Y]ËX]]Ü^XHËÙ]]Û\ÜÏH]Y]Ë\ÛÝ\ÙHÛX]È]Y]ÏÙ]Ù]Ù]]Û\ÜÏH]Y]Ë\ÛYH]Û\ÜÏH]Y]ËXØ\]Û\ÜÏH]Y]Ë\Ý\ÈÎMÌÌÎÉÎMÌÌÎÉÎMÌÌÎÉÎMÌÌÎÉÎMÌÌÎÏÙ]Û\ÜÏH]Y]Ë]^ÙHÜ\ÙXÙHXÚÜÈ]\HY^HÜÝ\X[KÛÛÚ\Ý[]X[]KÜX]\ÝKÚ]Ð\Ü\[È\ÈÛÈÛÛ[Y[Ü]Û\ÜÏH]Y]ËX]]Ü\[Ù]]Û\ÜÏH]Y]Ë\ÛÝ\ÙHÚ]Ð\]Y]ÏÙ]Ù]Ù]Ù]]Û\ÜÏH]Y]ËYÝÈYH]Y]ÑÝÈ]ÛÛ\ÜÏH]Y]ËYÝXÝ]H]KZYHØ]Û]ÛÛ\ÜÏH]Y]ËYÝ]KZYHHØ]Û]ÛÛ\ÜÏH]Y]ËYÝ]KZYHØ]ÛÙ]]Û\ÜÏH]Y]ËX\ÝÜÈ]ÛÛ\ÜÏH]Y]ËX\ÝÈYH]]ÎNLÏØ]Û]ÛÛ\ÜÏH]Y]ËX\ÝÈYH]^ÎNMÏØ]ÛÙ]Ù]Ù]ÜÙXÝ[ÛKKHÐÐUSÓKOÙXÝ[ÛÛ\ÜÏHÙXÈÙXËXÜX[HYHØØ][Û]Û\ÜÏHÝÛ\ÜÏHÙXË]]H]X[[Ü[Ý[OHÛÛÜ\KY\JH\ÏÜÜ[ÚÛ\ÜÏHÙXË\ÝX]X[\Ú]\È[ÛÛ\\Y\XYÙIÜHYÚÚ\HH[Ù\\ËÜ]Û\ÜÏHØËYÜY]X[]Û\ÜÏHØË[X\Y[YHÜÏHÎËÝÝÝËÛÛÙÛKÛÛKÛX\ËÙ[XYÜHL[LNL[LLL[LÈLYÎLÎÍLLÙMËLHLLÈLYLLÙLÛLLZLLLMÍMLËHLÛLÈL[LL\Ì	LÐLLUÜÑLÒ]ÓZUPLÓÓRÝÓZ[U]STÒMYLLÛLL\Ù[LÚ[MH[ÝÙ[ØÜY[ØY[ÏH^HY\\ÛXÞOHË\Y\\]Ú[YÝÛÜYHÚY[YOÙ]]Û\ÜÏHØËZ[ÈÏÝ\ZH\X[OÚÏ]Û\ÜÏHØË\ÝÈ]Û\ÜÏHØËZXÛÛÌLNÏÙ]]Û\ÜÏHØËY]Z[ÝÛÏY\ÜÏÜÝÛÏÝNËÌLPË\ÚY[ÞKYÚ][HÛÛÛKÚ\ÛHÛÛ\\Y\XY[[Ø[HLÙ]Ù]]Û\ÜÏHØË\ÝÈ]Û\ÜÏHØËZXÛÛÌLÏÙ]]Û\ÜÏHØËY]Z[ÝÛÏÛHÈÚ]Ð\ÜÝÛÏHYH[ÎLNMÍÝ[OHÛÛÜ\KY\JNÙÛ]ÙZYÚMÍØOÙ]Ù]]Û\ÜÏHØË\ÝÈ]Û\ÜÏHØËZXÛÛÌLÌÍÏÙ]]Û\ÜÏHØËY]Z[ÝÛÏÝ\ÏÜÝÛÏÜ[Z[NLNSHHLSBÙ]Ù]]Û\ÜÏHØË\ÝÈ]Û\ÜÏHØËZXÛÛÌLÎNÏÙ]]Û\ÜÏHØËY]Z[ÝÛÏÙ\XÙOÜÝÛÏ[KZ[ZÙX]Ø^H[]\BÙ]Ù]]Û\ÜÏHØËXYÙ\È]Û\ÜÏHØËXYÙHÝ[OHÜ\XÛÛÜ\K[Ü[ÙJNØÛÛÜ\K[Ü[ÙJNÙÛ]ÙZYÚÌÎMÌÌÎÈ[ÛÈÛÝÚYÙÞOÙ]]Û\ÜÏHØËXYÙHÝ[OHÜ\XÛÛÜ\KY\JNØÛÛÜ\KY\JNÙÛ]ÙZYÚÌÎMÌÌÎÈ[ÛÈÛÛX]ÏÙ]Ù]Ù]Ù]Ù]ÜÙXÝ[ÛKKHSSÕHKOÙXÝ[ÛÛ\ÜÏH[[XÝH]Û\ÜÏHÝÛ\ÜÏH]X[XYHÈ\ÝHHÜ[Ý[OHÛÛÜ\KY\JHYÙ[ÜÜ[ÏÚÛ\ÜÏH]X[H[H\ÈØ[[ËÛÝÙY\]ØZ][ËÜ]Û\ÜÏH[[\ÛH]X[MÍÙ]]Û\ÜÏH[[XÈ]X[HYHÎËÝØKYKÎLNMÍÝ^RHILILØ[	LÉLXÙIL[LÜ\\Ù]HØ[ÈÛ\ÜÏH]ØHÝ[OHÛ\Ú^NMÜÜY[ÎMÍÌLMÌÈÚ]Ð\Ü\ØOHYH[ÎLNMÍÛ\ÜÏH[Ý][HÝ[OHÛ\Ú^NMÜÜY[ÎMÍÎMÍÈØ[ÝÏØOÙ]Ù]ÜÙXÝ[ÛKKHÓÕTKOÛÝ\Û\ÜÏHÛÝ\]Û\ÜÏHÝ]Û\ÜÏHÛÝ\YÜY]]Û\ÜÏHÛÝ\X[ÕTRHTPSOÙ]]Û\ÜÏHÛÝ\]YÛ[HH[HÛÙÙ\X[OÙ]Û\ÜÏHÛÝ\Y\ØÈ]][XÈY\XYH[H\X[HÜYYÚ]Y][ÛÙ\YÚ]YKÛÛ\\ÜÈ]Ü]H\X[H\Ý[][ÛÚ[ÙH^HÛKÜÙ]]]ZXÚÈ[ÜÏÚ[OHYHØXÝ]XÝ]ØOÛOOHYHÛY[HY[OØOÛOOHYHØÛÛXÜÈÛÛXÜÏØOÛOOHYHÜ]Y]ÜÈ]Y]ÜÏØOÛOOHYHÛØØ][ÛØØ][ÛØOÛOÝ[Ù]]ÛÛXÝÚ[OHYH[ÎLNMÍÌLÈMÍØOÛOOHYHÎËÝØKYKÎLNMÍ\Ù]HØ[ÈÌLMÌÈÚ]Ð\ØOÛOOHYHÛØØ][ÛÌLNÈÛÛ\\Y\XYØOÛOHÝ[OHX\Ú[]ÜLØÛÛÜØJMKMKMKJNÙÛ\Ú^NL\Ü[Z[NLHSHHLSOÛOÝ[Ù]Ù]]Û\ÜÏHÛÝ\XÝÛHÛÜNÈÝ\ZH\X[K[YÚÈ\Ù\Y[ÛÈÛÝÚYÙÞH	[\ÈÛX]ÂÙ]Ù]ÙÛÝ\KKHÐUSÈUÓÈKO]Û\ÜÏHØ]XÈHYH[ÎLNMÍÛ\ÜÏHØ]XØ]XØ[]OHØ[\ÈÎMÍÏØOHYHÎËÝØKYKÎLNMÍ\Ù]HØ[ÈÛ\ÜÏHØ]XØ]]ØH]OHÚ]Ð\ÌLMÌÏØOÙ]KKHÐTÐUKO]ÛÛ\ÜÏHØ\YØ]YHØ\Ø]]OH[Ý\Ø\ÌLÌÂÜ[Û\ÜÏHØ\XYÙHYHØ\YÙHÜÜ[Ø]ÛKKHÐTÕTVHKO]Û\ÜÏHØ\[Ý\^HYHØ\Ý\^HÙ]KKHÐTSSKO]Û\ÜÏHØ\\[[YHØ\[[]Û\ÜÏHØ\ZXY\ÏÌLÌÈ[Ý\Ü\ÚÏ]ÛÛ\ÜÏHØ\XÛÜÙHYHØ\ÛÜÙH[Y\ÎÏØ]ÛÙ]]Û\ÜÏHØ\XÙHYHØ\ÙH]Û\ÜÏHØ\Y[\H[Ý\Ø\\È[\KY][\ÈÛHHY[HOÙ]Ù]]Û\ÜÏHØ\YÛÝ\YHØ\ÛÝ\Ý[OH\Ü^NÛH]Û\ÜÏHØ\]Ý[Ü[Ý[ÜÜ[Ü[YHØ\Ý[ÎÍÍÎÌÜÜ[Ù]]ÛÛ\ÜÏHØ\XÚXÚÛÝ]YHØ\ÚXÚÛÝ]ÌLMÌÈÚXÚÛÝ]XHÚ]Ð\Ø]ÛÙ]Ù]ØÜ\ËÈOOOOHQSHUHOOOOBÛÛÝOIÚÎËÚ[XYÙ\Ë[Ü\ÚÛÛKÉÎÂÛÛÝQSO^Â\X[NÂÛÚXÚÙ[[H\X[HKMKTÕÑSTÎYÙKX\Ý[YÎJÈÝËLMMÌÍÎLLLÌÎKLØXXMÝÏL	L	]XÜÜ	ONKÛ]]Û[H\X[HÍKNNKSRUSHÎYÙK\[H[YÎJÈÝËLMÌÎMLÍKXÎLØÝÏL	L	]XÜÜ	ONKÛÛ[\ÜÈÚXÚÙ[\X[HNKMÎKÔPÒPSÎYÙK\ÜXÚX[[YÎJÈÝËLMÌMLMLÌÍKYLØÍYØOÝÏL	L	]XÜÜ	ONKÛÚXÚÙ[HYXÙH\X[HÎKMNKUÈÎYÙK[]È[YÎJÈÝËLMMÌMMMMKLÌØØLÏÝÏL	L	]XÜÜ	ONKÛYÙÈ\X[HNNKLNKÎ[YÎJÈÝËLMNLÌMNMLÙÌÝÏL	L	]XÜÜ	ONKÛYÈ[H\X[HMÎKLKÎYÈ[YÎJÈÝËLMÌLNÌËYMNNLÌÌÝÏL	L	]XÜÜ	ONBK[[ÎÂÛÚXÚÙ[[[ÈNNKLNKÎ[YÎJÈÝËLMÌLÌÎÌÎMÝÏL	L	]XÜÜ	ONKÛYÙÈ[[ÈMKNKÎ[YÎJÈÝËLMMLÌMKMÌLÍÙÝÏL	L	]XÜÜ	ONKÛYÈ[[ÈMKKÎYÈ[YÎJÈÝËLMNMLÍØXNNYMÏÝÏL	L	]XÜÜ	ONBKÚ[\ÙNÂÛÚXÚÙ[HKTÕÑSTÎYÙKX\Ý[YÎJÈÝËLMÍMLMLMNMXXØYNÌYÝÏL	L	]XÜÜ	ONKÛÚXÚÙ[X[Ú\X[NKÎ[YÎJÈÝËLMLÌÌNLÍÍKXMØØÎYÝÏL	L	]XÜÜ	ONKÛÚ[HÚXÚÙ[KÎ[YÎJÈÝËLMLLÍÎNËLÍÙØØÏÝÏL	L	]XÜÜ	ONKÛYÛÛÚXÚÙ[KÔPÖHÎYÙK\ÜXÞH[YÎJÈÝËLMÌMLMÍKLÙNMXMYOÝÏL	L	]XÜÜ	ONKÛYÈX[Ú\X[MÎKÎYÈ[YÎJÈÝËLMLMLÎLNYNYÍYÝÏL	L	]XÜÜ	ONKÛ[Y\HNNKÎYÈ[YÎJÈÝËLMMMLMYXÙYÍMLLØÝÏL	L	]XÜÜ	ONKÛÚXÚÙ[YYXÙHNNKÎ[YÎJÈÝËLMNLLKYLÎMXLÌÌÏÝÏL	L	]XÜÜ	ONKÛYÈYYXÙHMKÎYÈ[YÎJÈÝËLMÌÍLNÎNYMYÍØÎOÝÏL	L	]XÜÜ	ONBKÚY\ÎÂÛZ]HÎKÎYÈ[YÎJÈÝËLMÌLÍNKMÎMXMÎYLÝÏL	L	]XÜÜ	ONKÛØ[[
+Ü]JHKÎYÈ[YÎJÈÝËLMNMÌLÍMLËLMÙLXØÎNMÎÝÏL	L	]XÜÜ	ONKÛ]\Z[ÈÈ\ÜÚHKÎYÈ[YÎJÈÝËLMMÎMNLÎLÌLØÍÍMÝÏL	L	]XÜÜ	ONKÛÛÙ[È
+Ì[
+HÎYÈ[YÎJÈÝËLMLLMÍMNMLÍKLLXÌMLNLÌÏÝÏL	L	]XÜÜ	ONKÛØ]\ÝH
+S
+HÎYÈ[YÎJÈÝËLMMNNÎMÌÍLÌYXLNMÙXÌÝÏL	L	]XÜÜ	ONBBNÂËÈOOOOHÐTÕUHOOOOB]Ø\^ßNÂËÈOOOOHSTQSHOOOOB[Ý[Û[\Y[J
+^ÂØXÝÙ^\ÊQSJKÜXXÚ
+Ø]OÂÛÛÝ[[YØÝ[Y[Ù][[Y[RY
+	Ü[[IÊØØ]
+NÂY\[[
+\]\ÂÛÛÝÜY\[[]Y\TÙ[XÝÜ	ËY[KYÜY	ÊNÂYYÜY
+\]\ÂÜY[\SIÉÎÂQSVØØ]KÜXXÚ
 
-<!-- OFFER STRIP -->
-<div class="offer-strip">
-<div class="offer-track">
-<span>&#128293; <b>IT Lunch Combo:</b> Chicken Biryani + Raita + Drink @ just <b>&#8377;199</b> &nbsp;|&nbsp; Order Direct &amp; Save 10%! &nbsp;|&nbsp; &#128293; <b>IT Lunch Combo:</b> Chicken Biryani + Raita + Drink @ just <b>&#8377;199</b> &nbsp;|&nbsp; Order Direct &amp; Save 10%! &nbsp;|&nbsp; &#128293; <b>IT Lunch Combo:</b> Chicken Biryani + Raita + Drink @ just <b>&#8377;199</b> &nbsp;|&nbsp; Order Direct &amp; Save 10%!</span>
-<span>&#128293; <b>IT Lunch Combo:</b> Chicken Biryani + Raita + Drink @ just <b>&#8377;199</b> &nbsp;|&nbsp; Order Direct &amp; Save 10%! &nbsp;|&nbsp; &#128293; <b>IT Lunch Combo:</b> Chicken Biryani + Raita + Drink @ just <b>&#8377;199</b> &nbsp;|&nbsp; Order Direct &amp; Save 10%! &nbsp;|&nbsp; &#128293; <b>IT Lunch Combo:</b> Chicken Biryani + Raita + Drink @ just <b>&#8377;199</b> &nbsp;|&nbsp; Order Direct &amp; Save 10%!</span>
-</div>
-</div>
+][KJOOÂÛÛÝÙ^OXØ]
+ÉËIÊÚNÂÛÛÝ]OXØ\ÚÙ^W_ÂÛÛÝ\PYÙOZ][KOOIÝYÉÏÉÏÜ[Û\ÜÏHYÙHYÙK]YÈQÏÜÜ[ÎÏÜ[Û\ÜÏHYÙHYÙK[ÓUQÏÜÜ[ÎÂÛÛÝÜXÚX[YÙOZ][KÉÏÜ[Û\ÜÏHYÙH	ÊÚ][KÊÉÈÊÚ][KÉÏÜÜ[ÎÉÎÂÛÛÝ[XÙOZ][KÉÏÛX[[	ÎÍÍÎÉÊÚ][K
+ÉÏÜÛX[ÎÉÎÂ]ÛÛÛÏIÉÎÂY]O
+^ÂÛÛÛÏIÏ]Û\ÜÏH]K]Ü\]ÛÛ\ÜÏH]KXÛÛXÚÏHÚ[ÙT]J	ÉÊÚÙ^JÉ×	ËLJHOØ]Û]Û\ÜÏH]K][ÊÜ]JÉÏÙ]]ÛÛ\ÜÏH]KXÛÛXÚÏHÚ[ÙT]J	ÉÊÚÙ^JÉ×	ËJHÏØ]ÛÙ]ÎÂY[Ù^ÂÛÛÛÏIÏ]ÛÛ\ÜÏHYXÛÛXÚÏHY][J	ÉÊÚÙ^JÉ×	ÊHQ
+ÏØ]ÛÎÂBÛÛÝ[YÕYÏZ][K[YÏÉÏ[YÈÛ\ÜÏHY[KZ][KZ[YÈÜÏHÊÚ][K[YÊÉÈ[HÊÚ][KÉÈØY[ÏH^HÎÉÎÂÜY[\S
+ÏIÏ]Û\ÜÏHY[KZ][HÊÚ[YÕYÊÉÏ]Û\ÜÏHY[KZ][K[Y]Û\ÜÏHY[KZ][K[[YHÊÝ\PYÙJÉÈ	ÊÚ][KÉÈ	ÊÜÜXÚX[YÙJÉÏÙ]]Û\ÜÏHY[KZ][K\XÙHÎÍÍÎÉÊÚ][K
+ÉÈ	ÊÚ[XÙJÉÏÙ]Ù]]Û\ÜÏHY[KZ][K\YÚÊØÛÛÛÊÉÏÙ]Ù]ÎÂJNÂJNÂB[Ý[ÛY][JÙ^J^ÂØ\ÚÙ^WOLNÂ[\Y[J
+NÂ\]PØ\RJ
+NÂB[Ý[ÛÚ[ÙT]JÙ^K
+^ÂØ\ÚÙ^WOJØ\ÚÙ^W_
+JÙÂYØ\ÚÙ^WOL
+Y[]HØ\ÚÙ^WNÂ[\Y[J
+NÂ\]PØ\RJ
+NÂBËÈOOOOHÐTRHOOOOB[Ý[Û\]PØ\RJ
+^ÂÛÛÝYÙOYØÝ[Y[Ù][[Y[RY
+	ØØ\YÙIÊNÂÛÛÝÙOYØÝ[Y[Ù][[Y[RY
+	ØØ\ÙIÊNÂÛÛÝÛÝ\YØÝ[Y[Ù][[Y[RY
+	ØØ\ÛÝ\ÊNÂÛÛÝÝ[[YØÝ[Y[Ù][[Y[RY
+	ØØ\Ý[	ÊNÂÛÛÝØ]YØÝ[Y[Ù][[Y[RY
+	ØØ\Ø]	ÊNÂÛÛÝÙ^\ÏSØXÝÙ^\ÊØ\
+NÂÛÛÝÛÝ[ZÙ^\ËYXÙJ
+ËÊOOÊØØ\Ú×K
+NÂYÙK^ÛÛ[XÛÝ[ØÛÝ[ÉÎÂYÙKÝ[K\Ü^OXÛÝ[ÉÙ^	ÎÛÛIÎÂØ]Ý[K\Ü^OXÛÝ[Ø\Ü[ÉÙ^	ÎÛÛIÎÂYÙ^\Ë[ÝOOL
+^ÂÙK[\SIÏ]Û\ÜÏHØ\Y[\H[Ý\Ø\\È[\KY][\ÈÛHHY[HOÙ]ÎÂÛÝ\Ý[K\Ü^OIÛÛIÎÂ]\ÂB][IÉÎÂ]Ý[LÂÙ^\ËÜXXÚ
+ÏOÂÛÛÝ\ÏZËÜ]
+	ËIÊNÂÛÛÝØ]\\ÖÌNÂÛÛÝY\\ÙR[
+\ÖÌWJNÂÛÛÝ][OSQSVØØ]VÚYNÂÛÛÝ[UÝ[Z][K
+Ø\Ú×NÂÝ[
+Ï[[UÝ[Â[
+ÏIÏ]Û\ÜÏHØ\Z][H]Û\ÜÏHØ\Z][KZ[È]Û\ÜÏHØ\Z][K[[YHÊÚ][KÉÏÙ]]Û\ÜÏHØ\Z][K\XÙHÎÍÍÎÉÊÚ][K
+ÉÈ	ÊØØ\Ú×JÉÈH	ÎÍÍÎÉÊÛ[UÝ[
+ÉÏÙ]Ù]]Û\ÜÏHØ\Z][KXÛÛÛÈ]ÛÛ\ÜÏH]KXÛÛXÚÏHÚ[ÙT]J	ÉÊÚÊÉ×	ËLJHOØ]ÛÜ[Û\ÜÏH]K][Ý[OHÚYÙÛ\Ú^NLÜÊØØ\Ú×JÉÏÜÜ[]ÛÛ\ÜÏH]KXÛÛXÚÏHÚ[ÙT]J	ÉÊÚÊÉ×	ËJHÏØ]ÛÙ]Ù]ÎÂJNÂÙK[\SZ[ÂÝ[[[\SIÉÎÍÍÎÉÊÝÝ[ÂÛÝ\Ý[K\Ü^OIØØÚÉÎÂB]Ø\Ü[Y[ÙNÂ[Ý[ÛÙÙÛPØ\
+Ü[^ÂØ\Ü[[Ü[ÂØÝ[Y[Ù][[Y[RY
+	ØØ\[[	ÊKÛ\ÜÓ\ÝÙÙÛJ	ÛÜ[ËÜ[NÂØÝ[Y[Ù][[Y[RY
+	ØØ\Ý\^IÊKÛ\ÜÓ\ÝÙÙÛJ	ÛÜ[ËÜ[NÂØÝ[Y[ÙKÝ[KÝ\ÝÏ[Ü[ÉÚY[ÎÉÎÂYÜ[]\]PØ\RJ
+NÂBØÝ[Y[Ù][[Y[RY
+	ØØ\Ø]	ÊKY][\Ý[\	ØÛXÚÉË
 
-<!-- WHY POTHURAJU -->
-<section class="sec" id="about">
-<div class="ctn">
-<h2 class="sec-title reveal">Why <span style="color:var(--fire)">Pothuraju</span>?</h2>
-<p class="sec-sub reveal">Every grain tells a story of tradition, slow-cooked perfection, and the uncompromising pursuit of flavor.</p>
-<div class="why-grid">
-<div class="why-card reveal" style="transition-delay:.1s">
-<div class="why-icon ic1">&#128293;</div>
-<h3>Authentic Dum</h3>
-<p>Slow-cooked over coal in sealed handis. No shortcuts, no pressure cookers. Just pure, traditional dum.</p>
-</div>
-<div class="why-card reveal" style="transition-delay:.2s">
-<div class="why-icon ic2">&#127807;</div>
-<h3>Fresh Daily</h3>
-<p>Every ingredient sourced fresh each morning. No frozen meat, no day-old rice. Made fresh, served fresh.</p>
-</div>
-<div class="why-card reveal" style="transition-delay:.3s">
-<div class="why-icon ic3">&#127869;</div>
-<h3>20+ Items</h3>
-<p>From royal Mutton Dum to fiery Dragon Chicken. A curated menu that covers every craving.</p>
-</div>
-<div class="why-card reveal" style="transition-delay:.4s">
-<div class="why-icon ic4">&#9889;</div>
-<h3>Fast Delivery</h3>
-<p>Kondapur deliveries in under 30 minutes. Hotter than your ex's texts. Order via WhatsApp.</p>
-</div>
-</div>
-</div>
-</section>
+OOÙÙÛPØ\
+YJJNÂØÝ[Y[Ù][[Y[RY
+	ØØ\ÛÜÙIÊKY][\Ý[\	ØÛXÚÉË
 
-<!-- MENU -->
-<section class="sec sec-cream" id="menu">
-<div class="ctn">
-<h2 class="sec-title reveal">Our <span style="color:var(--fire)">Menu</span></h2>
-<p class="sec-sub reveal">Crafted with passion, served with pride. Tap + to add items to your cart.</p>
-<div class="menu-tabs reveal">
-<button class="menu-tab active" data-tab="biryani">&#127835; Biryani</button>
-<button class="menu-tab" data-tab="pulao">&#127858; Pulao</button>
-<button class="menu-tab" data-tab="chinese">&#129379; Chinese</button>
-<button class="menu-tab" data-tab="sides">&#129380; Sides & Drinks</button>
-</div>
+OOÙÙÛPØ\
+[ÙJJNÂØÝ[Y[Ù][[Y[RY
+	ØØ\Ý\^IÊKY][\Ý[\	ØÛXÚÉË
 
-<!-- Biryani -->
-<div class="menu-panel active" id="panel-biryani" data-panel="biryani">
-<div class="menu-grid" id="menuBiryani"></div>
-</div>
-<!-- Pulao -->
-<div class="menu-panel" id="panel-pulao" data-panel="pulao">
-<div class="menu-grid" id="menuPulao"></div>
-</div>
-<!-- Chinese -->
-<div class="menu-panel" id="panel-chinese" data-panel="chinese">
-<div class="menu-grid" id="menuChinese"></div>
-</div>
-<!-- Sides -->
-<div class="menu-panel" id="panel-sides" data-panel="sides">
-<div class="menu-grid" id="menuSides"></div>
-</div>
-</div>
-</section>
+OOÙÙÛPØ\
+[ÙJJNÂËÈÚ]Ð\ÚXÚÛÝ]ØÝ[Y[Ù][[Y[RY
+	ØØ\ÚXÚÛÝ]	ÊKY][\Ý[\	ØÛXÚÉË
 
-<!-- COMBOS -->
-<section class="sec combos-sec sec-dark" id="combos">
-<div class="ctn">
-<h2 class="sec-title reveal" style="color:var(--gold)">Value <span style="color:#fff">Combos</span></h2>
-<p class="sec-sub reveal">Maximum flavor, maximum savings. Because great biryani shouldn't burn your wallet.</p>
-<div class="combos-grid">
+OOÂÛÛÝÙ^\ÏSØXÝÙ^\ÊØ\
+NÂYZÙ^\Ë[Ý
+\]\Â]\ÙÏIÒHHHÛÝ[ZÙHÈÜ\ÎÂ]Ý[LÂÙ^\ËÜXXÚ
+ÏOÂÛÛÝ\ÏZËÜ]
+	ËIÊNÂÛÛÝ][OSQSVÜ\ÖÌWVÜ\ÙR[
+\ÖÌWJWNÂÛÛÝZ][K
+Ø\Ú×NÂÝ[
+Ï[Â\ÙÊÏXØ\Ú×JÉÞ	ÊÚ][KÉÈHËÊÛ
+É×ÎÂJNÂ\ÙÊÏI×Ý[ËÊÝÝ[
+É×X\ÙHÛÛ\H]Z[X[]H[[]\H[YKÎÂÚ[ÝËÜ[	ÚÎËÝØKYKÎLNMÍÝ^IÊÙ[ÛÙUTPÛÛ\Û[
+\ÙÊK	×Ø[ÉÊNÂJNÂËÈOOOOHQSHPÈOOOOBØÝ[Y[]Y\TÙ[XÝÜ[
+	ËY[K]XÊKÜXXÚ
+XOÂXY][\Ý[\	ØÛXÚÉË
 
-<div class="combo-card reveal" style="transition-delay:.1s">
-<img class="combo-img" src="https://images.unsplash.com/photo-1633945274405-b6c8069047b0?w=600&h=360&fit=crop&q=80" alt="IT Lunch Combo" loading="lazy">
-<div class="combo-card-body">
-<div class="combo-badge">BEST VALUE</div>
-<div class="combo-name">IT Lunch Combo</div>
-<div class="combo-desc">Chicken Biryani + Raita + Soft Drink<br>Perfect for your lunch break.</div>
-<div class="combo-pricing"><span class="combo-price">&#8377;199</span><span class="combo-old">&#8377;328</span></div>
-<div class="combo-save">SAVE &#8377;129</div>
-<a href="https://wa.me/919640034646?text=Hi!%20I%20want%20to%20order%20the%20IT%20Lunch%20Combo%20(Chicken%20Biryani%20%2B%20Raita%20%2B%20Soft%20Drink)%20%40%20%E2%82%B9199" target="_blank" class="combo-order">&#128172; Order on WhatsApp</a>
-</div>
-</div>
+OOÂØÝ[Y[]Y\TÙ[XÝÜ[
+	ËY[K]XÊKÜXXÚ
+OÛ\ÜÓ\Ý[[ÝJ	ØXÝ]IÊJNÂØÝ[Y[]Y\TÙ[XÝÜ[
+	ËY[K\[[	ÊKÜXXÚ
+OÛ\ÜÓ\Ý[[ÝJ	ØXÝ]IÊJNÂXÛ\ÜÓ\ÝY
+	ØXÝ]IÊNÂØÝ[Y[Ù][[Y[RY
+	Ü[[IÊÝX]\Ù]XKÛ\ÜÓ\ÝY
+	ØXÝ]IÊNÂJNÂJNÂËÈOOOOHUTÐÔÓOOOOBÚ[ÝËY][\Ý[\	ÜØÜÛ	Ë
 
-<div class="combo-card reveal" style="transition-delay:.2s">
-<img class="combo-img" src="https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?w=600&h=360&fit=crop&q=80" alt="Couple Pack" loading="lazy">
-<div class="combo-card-body">
-<div class="combo-badge">FOR TWO</div>
-<div class="combo-name">Couple Pack</div>
-<div class="combo-desc">2 Chicken Biryani + 1 Chicken 65 + 2 Drinks<br>Date night, sorted.</div>
-<div class="combo-pricing"><span class="combo-price">&#8377;499</span><span class="combo-old">&#8377;807</span></div>
-<div class="combo-save">SAVE &#8377;308</div>
-<a href="https://wa.me/919640034646?text=Hi!%20I%20want%20to%20order%20the%20Couple%20Pack%20(2%20Chicken%20Biryani%20%2B%201%20Chicken%2065%20%2B%202%20Drinks)%20%40%20%E2%82%B9499" target="_blank" class="combo-order">&#128172; Order on WhatsApp</a>
-</div>
-</div>
+OOÂØÝ[Y[]Y\TÙ[XÝÜ	Ë]ÊKÛ\ÜÓ\ÝÙÙÛJ	ÜØÜÛY	ËÚ[ÝËØÜÛO
+NÂJNÂËÈOOOOHSPTÑTOOOOBÛÛÝ[X\Ù\YØÝ[Y[]Y\TÙ[XÝÜ	Ë[X\Ù\ÊNÂÛÛÝ][ÜÏYØÝ[Y[]Y\TÙ[XÝÜ	Ë][[ÜÉÊNÂ[X\Ù\Y][\Ý[\	ØÛXÚÉË
 
-<div class="combo-card reveal" style="transition-delay:.3s">
-<img class="combo-img" src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&h=360&fit=crop&q=80" alt="Office Pack" loading="lazy">
-<div class="combo-card-body">
-<div class="combo-badge">OFFICE</div>
-<div class="combo-name">Office Pack (5)</div>
-<div class="combo-desc">5 Chicken Biryani + 2 Starters + Raita<br>Friday lunch for the squad.</div>
-<div class="combo-pricing"><span class="combo-price">&#8377;999</span><span class="combo-old">&#8377;1,742</span></div>
-<div class="combo-save">SAVE &#8377;743</div>
-<a href="https://wa.me/919640034646?text=Hi!%20I%20want%20to%20order%20the%20Office%20Pack%20(5%20Chicken%20Biryani%20%2B%202%20Starters%20%2B%20Raita)%20%40%20%E2%82%B9999" target="_blank" class="combo-order">&#128172; Order on WhatsApp</a>
-</div>
-</div>
+OOÂ[X\Ù\Û\ÜÓ\ÝÙÙÛJ	ÛÜ[ÊNÂ][ÜËÛ\ÜÓ\ÝÙÙÛJ	ÛÜ[ÊNÂJNÂ][ÜË]Y\TÙ[XÝÜ[
+	ØIÊKÜXXÚ
+OOÂKY][\Ý[\	ØÛXÚÉË
 
-<div class="combo-card reveal" style="transition-delay:.4s">
-<img class="combo-img" src="https://images.unsplash.com/photo-1599043513900-ed6fe01d3833?w=600&h=360&fit=crop&q=80" alt="Party Pack" loading="lazy">
-<div class="combo-card-body">
-<div class="combo-badge">PARTY</div>
-<div class="combo-name">Party Pack (10)</div>
-<div class="combo-desc">10 Chicken Biryani + 4 Starters + 10 Drinks<br>Go big or go home.</div>
-<div class="combo-pricing"><span class="combo-price">&#8377;1,899</span><span class="combo-old">&#8377;3,806</span></div>
-<div class="combo-save">SAVE &#8377;1,907</div>
-<a href="https://wa.me/919640034646?text=Hi!%20I%20want%20to%20order%20the%20Party%20Pack%20(10%20Chicken%20Biryani%20%2B%204%20Starters%20%2B%2010%20Drinks)%20%40%20%E2%82%B91899" target="_blank" class="combo-order">&#128172; Order on WhatsApp</a>
-</div>
-</div>
+OOÂ[X\Ù\Û\ÜÓ\Ý[[ÝJ	ÛÜ[ÊNÂ][ÜËÛ\ÜÓ\Ý[[ÝJ	ÛÜ[ÊNÂJNÂJNÂËÈOOOOHÐÔÓSSPUSÓÈ
+[\ÙXÝ[ÛØÙ\\HOOOOBÛÛÝØÙ\\[]È[\ÙXÝ[ÛØÙ\\
+[Y\ÊOOÂ[Y\ËÜXXÚ
+OOÂYK\Ò[\ÙXÝ[Ê^ÂK\Ù]Û\ÜÓ\ÝY
+	Ý\ÚXIÊNÂØÙ\\[ØÙ\JK\Ù]
+NÂBJNÂKÝ\ÚÛMKÛÝX\Ú[ÌM	ßJNÂØÝ[Y[]Y\TÙ[XÝÜ[
+	Ë]X[]X[[Y]X[\YÚ	ÊKÜXXÚ
+[OØÙ\\ØÙ\J[
+JNÂËÈOOOOHSSPUQÓÕSTÈOOOOB[Ý[Û[[X]PÛÝ[\[
+^ÂÛÛÝ\Ù]\\ÙR[
+[]\Ù]\Ù]
+NÂÛÛÝÝY^Y[]\Ù]ÝY^	ÉÎÂ]Ý\[LÂÛÛÝÝ\SX]X^
+KX]ÛÜ\Ù]Î
+JNÂÛÛÝ[Y\\Ù][\[
 
-</div>
 
-<!-- Stats -->
-<div class="stats-row reveal">
-<div class="stat-item"><div class="stat-num" data-count="50000">0</div><div class="stat-label">Biryanis Served</div></div>
-<div class="stat-item"><div class="stat-num" data-count="4800">0</div><div class="stat-label">Happy Customers</div></div>
-<div class="stat-item"><div class="stat-num" data-count="20">0</div><div class="stat-label">Menu Items</div></div>
-<div class="stat-item"><div class="stat-num" data-count="30">0</div><div class="stat-label">Min Delivery</div></div>
-</div>
-</div>
-</section>
+OOÂÝ\[
+Ï\Ý\ÂYÝ\[]\Ù]
+^ØÝ\[]\Ù]ØÛX\[\[
+[Y\_B[^ÛÛ[XÝ\[ÓØØ[TÝ[Ê	Ù[RSÊJÜÝY^ÂKJNÂBÛÛÝÛÝ[\ØÙ\\[]È[\ÙXÝ[ÛØÙ\\
+[Y\ÊOOÂ[Y\ËÜXXÚ
+OOÂYK\Ò[\ÙXÝ[Ê^Â[[X]PÛÝ[\K\Ù]
+NÂÛÝ[\ØÙ\\[ØÙ\JK\Ù]
+NÂBJNÂKÝ\ÚÛ_JNÂØÝ[Y[]Y\TÙ[XÝÜ[
+	ËÝ][[IÊKÜXXÚ
+[OÛÝ[\ØÙ\\ØÙ\J[
+JNÂËÈOOOOHUQUÔÈÐTÕTÑSOOOOB]Ý\[]Y]ÏLÂÛÛÝ]Y]ÔÛY\ÏYØÝ[Y[]Y\TÙ[XÝÜ[
+	Ë]Y]Ë\ÛYIÊNÂÛÛÝ]Y]ÑÝÏYØÝ[Y[]Y\TÙ[XÝÜ[
+	Ë]Y]ËYÝ	ÊNÂ[Ý[ÛÚÝÔ]Y]ÊY
+^ÂÝ\[]Y]ÏJ
+Y	\]Y]ÔÛY\Ë[Ý
+JÜ]Y]ÔÛY\Ë[Ý
+I\]Y]ÔÛY\Ë[ÝÂØÝ[Y[]Y\TÙ[XÝÜ	Ë]Y]ÜË]XÚÉÊKÝ[K[ÙÜOIÝ[Û]V
+IÊÊÝ\[]Y]ÊL
+JÉÉJIÎÂ]Y]ÑÝËÜXXÚ
 
-<!-- DIRECT ORDER BANNER -->
-<section class="direct-banner reveal">
-<div class="ctn direct-inner">
-<h2>Order Direct & Save <em>10%</em></h2>
-<div class="direct-perks">
-<div class="direct-perk"><div class="dp-icon">&#10003;</div>No App Commission</div>
-<div class="direct-perk"><div class="dp-icon">&#128176;</div>10% Cheaper</div>
-<div class="direct-perk"><div class="dp-icon">&#9889;</div>Faster Delivery</div>
-<div class="direct-perk"><div class="dp-icon">&#128222;</div>Direct Support</div>
-</div>
-<a href="https://wa.me/919640034646?text=Hi!%20I%20want%20to%20place%20a%20direct%20order." target="_blank" class="btn btn-wa" style="font-size:17px;padding:16px 40px">&#128172; Order on WhatsApp Now</a>
-</div>
-</section>
+JOOÛ\ÜÓ\ÝÙÙÛJ	ØXÝ]IËOOOXÝ\[]Y]ÊJNÂBY]Y]ÑÝË[Ý
+^Â]Y]ÑÝËÜXXÚ
 
-<!-- REVIEWS -->
-<section class="sec" id="reviews">
-<div class="ctn">
-<h2 class="sec-title reveal">What Our <span style="color:var(--fire)">Customers</span> Say</h2>
-<p class="sec-sub reveal">Don't take our word for it. Here's what Kondapur loves about us.</p>
-<div class="reviews-wrap reveal">
-<div class="reviews-track" id="reviewsTrack">
-<div class="review-slide">
-<div class="review-card">
-<div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-<p class="review-text">"Best biryani in Kondapur! The dum is perfect and portions are super generous. My go-to for lunch every week."</p>
-<div class="review-author">Ravi K.</div>
-<div class="review-source">Google Review</div>
-</div>
-</div>
-<div class="review-slide">
-<div class="review-card">
-<div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-<p class="review-text">"Ordered the couple pack for date night. The chicken 65 was incredible and biryani was on another level."</p>
-<div class="review-author">Priya S.</div>
-<div class="review-source">Zomato Review</div>
-</div>
-</div>
-<div class="review-slide">
-<div class="review-card">
-<div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-<p class="review-text">"We order office packs every Friday for our team. Consistent quality, great taste, WhatsApp ordering is so convenient."</p>
-<div class="review-author">Arun T.</div>
-<div class="review-source">WhatsApp Review</div>
-</div>
-</div>
-</div>
-<div class="review-dots" id="reviewDots">
-<button class="review-dot active" data-idx="0"></button>
-<button class="review-dot" data-idx="1"></button>
-<button class="review-dot" data-idx="2"></button>
-</div>
-<div class="review-arrows">
-<button class="review-arrow" id="revPrev">&#8592;</button>
-<button class="review-arrow" id="revNext">&#8594;</button>
-</div>
-</div>
-</div>
-</section>
+JOOY][\Ý[\	ØÛXÚÉË
 
-<!-- LOCATION -->
-<section class="sec sec-cream" id="location">
-<div class="ctn">
-<h2 class="sec-title reveal">Find <span style="color:var(--fire)">Us</span></h2>
-<p class="sec-sub reveal">Visit us in Kondapur, Hyderabad. We're right where the hunger is.</p>
-<div class="loc-grid reveal">
-<div class="loc-map">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.2!2d78.3528!3d17.4611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDI3JzQwLjAiTiA3OMKwMjEnMTAuMSJF!5e0!3m2!1sen!2sin!4v1" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div>
-<div class="loc-info">
-<h3>Pothuraju Biryani</h3>
-<div class="loc-row">
-<div class="loc-icon">&#128205;</div>
-<div class="loc-detail">
-<strong>Address</strong>
-Plot 182C/211C, PR Residency, Raghavendra Colony, Circle 20, Kondapur, Hyderabad, Telangana 500084
-</div>
-</div>
-<div class="loc-row">
-<div class="loc-icon">&#128222;</div>
-<div class="loc-detail">
-<strong>Phone / WhatsApp</strong>
-<a href="tel:+919640034646" style="color:var(--fire);font-weight:600">96400 34646</a>
-</div>
-</div>
-<div class="loc-row">
-<div class="loc-icon">&#128336;</div>
-<div class="loc-detail">
-<strong>Hours</strong>
-Open Daily: 11:00 AM - 12:00 AM
-</div>
-</div>
-<div class="loc-row">
-<div class="loc-icon">&#127869;</div>
-<div class="loc-detail">
-<strong>Service</strong>
-Dine-in | Takeaway | Delivery
-</div>
-</div>
-<div class="loc-badges">
-<div class="loc-badge" style="border-color:var(--orange);color:var(--orange);font-weight:700">&#9733; Also on Swiggy</div>
-<div class="loc-badge" style="border-color:var(--fire);color:var(--fire);font-weight:700">&#9733; Also on Zomato</div>
-</div>
-</div>
-</div>
-</div>
-</section>
+OOÚÝÔ]Y]ÊJJJNÂÛÛÝ]YØÝ[Y[]Y\TÙ[XÝÜ	Ë]Y]Ë\]ÊNÂÛÛÝ^YØÝ[Y[]Y\TÙ[XÝÜ	Ë]Y]Ë[^	ÊNÂY]\]Y][\Ý[\	ØÛXÚÉË
 
-<!-- FINAL CTA -->
-<section class="final-cta">
-<div class="ctn">
-<h2 class="reveal">Ready to Taste the <span style="color:var(--fire)">Legend</span>?</h2>
-<p class="reveal">The dum is calling. Don't keep it waiting.</p>
-<div class="final-phone reveal">96400 34646</div>
-<div class="final-btns reveal">
-<a href="https://wa.me/919640034646?text=Hi!%20I%20want%20to%20place%20an%20order." target="_blank" class="btn btn-wa" style="font-size:17px;padding:16px 36px">&#128172; WhatsApp Order</a>
-<a href="tel:+919640034646" class="btn btn-outline" style="font-size:17px;padding:16px 36px">&#9742; Call Now</a>
-</div>
-</div>
-</section>
+OOÚÝÔ]Y]ÊÝ\[]Y]ËLJJNÂY^[^Y][\Ý[\	ØÛXÚÉË
 
-<!-- FOOTER -->
-<footer class="footer">
-<div class="ctn">
-<div class="footer-grid">
-<div>
-<div class="footer-brand">POTHURAJU BIRYANI</div>
-<div class="footer-tagline">The Dum God of Biryani</div>
-<p class="footer-desc">Authentic Hyderabadi Dum Biryani crafted with tradition, served with pride. Kondapur's favorite biryani destination since day one.</p>
-</div>
-<div>
-<h4>Quick Links</h4>
-<ul>
-<li><a href="#about">About</a></li>
-<li><a href="#menu">Menu</a></li>
-<li><a href="#combos">Combos</a></li>
-<li><a href="#reviews">Reviews</a></li>
-<li><a href="#location">Location</a></li>
-</ul>
-</div>
-<div>
-<h4>Contact</h4>
-<ul>
-<li><a href="tel:+919640034646">&#128222; 96400 34646</a></li>
-<li><a href="https://wa.me/919640034646" target="_blank">&#128172; WhatsApp</a></li>
-<li><a href="#location">&#128205; Kondapur, Hyderabad</a></li>
-<li style="margin-top:12px;color:rgba(255,255,255,.25);font-size:11px">Open Daily: 11 AM - 12 AM</li>
-</ul>
-</div>
-</div>
-<div class="footer-bottom">
-&copy; 2026 Pothuraju Biryani. All rights reserved. | Also on Swiggy &amp; Zomato
-</div>
-</div>
-</footer>
+OOÚÝÔ]Y]ÊÝ\[]Y]ÊÌJJNÂÙ][\[
 
-<!-- FLOATING BUTTONS -->
-<div class="float-btns">
-<a href="tel:+919640034646" class="float-btn float-call" title="Call Us">&#9742;</a>
-<a href="https://wa.me/919640034646" target="_blank" class="float-btn float-wa" title="WhatsApp">&#128172;</a>
-</div>
 
-<!-- CART FLOAT -->
-<button class="cart-float" id="cartFloat" title="Your Cart">
-&#128722;
-<span class="cart-badge" id="cartBadge"></span>
-</button>
+OOÚÝÔ]Y]ÊÝ\[]Y]ÊÌJKL
+NÂBËÈOOOOHTSVÛÓÓPÔÈOOOOBÚ[ÝËY][\Ý[\	ÜØÜÛ	Ë
 
-<!-- CART OVERLAY -->
-<div class="cart-overlay" id="cartOverlay"></div>
+OOÂÛÛÝÛÛXÜÏYØÝ[Y[]Y\TÙ[XÝÜ	ËÛÛXÜË\ÙXÉÊNÂYÛÛXÜÊ^ÂÛÛÝXÝXÛÛXÜËÙ]Ý[[ÐÛY[XÝ
 
-<!-- CART PANEL -->
-<div class="cart-panel" id="cartPanel">
-<div class="cart-header">
-<h3>&#128722; Your Order</h3>
-<button class="cart-close" id="cartClose">&times;</button>
-</div>
-<div class="cart-body" id="cartBody">
-<div class="cart-empty">Your cart is empty. Add items from the menu!</div>
-</div>
-<div class="cart-footer" id="cartFooter" style="display:none">
-<div class="cart-total"><span>Total</span><span id="cartTotal">&#8377;0</span></div>
-<button class="cart-checkout" id="cartCheckout">&#128172; Checkout via WhatsApp</button>
-</div>
-</div>
+NÂYXÝÜÚ[ÝË[\ZYÚ	XÝÝÛO
+^ÂÛÛÝÙÙ]JÚ[ÝË[\ZYÚ\XÝÜ
+JÂÛÛXÜËÝ[KXÚÙÜÝ[ÜÚ][ÛO[ÙÙ]
+ÉÜ	ÎÂBBJNÂËÈOOOOHÐQTOOOOBÚ[ÝËY][\Ý[\	ÛØY	Ë
 
-<script>
-// ===== MENU DATA =====
-const U='https://images.unsplash.com/';
-const MENU={
-biryani:[
-{n:"Chicken Dum Biryani",p:249,h:149,b:"BESTSELLER",bc:"badge-best",t:"nv",img:U+"photo-1563379091339-03b21ab4a4f8?w=200&h=200&fit=crop&q=80"},
-{n:"Mutton Dum Biryani",p:349,h:199,b:"PREMIUM",bc:"badge-prem",t:"nv",img:U+"photo-1633945274405-b6c8069047b0?w=200&h=200&fit=crop&q=80"},
-{n:"Boneless Chicken Biryani",p:299,h:179,b:"SPECIAL",bc:"badge-special",t:"nv",img:U+"photo-1631515243349-e0cb75fb8d3a?w=200&h=200&fit=crop&q=80"},
-{n:"Chicken Fry Piece Biryani",p:279,h:159,b:"NEW",bc:"badge-new",t:"nv",img:U+"photo-1697155406055-2db32d47ca07?w=200&h=200&fit=crop&q=80"},
-{n:"Egg Biryani",p:199,h:119,b:"",bc:"",t:"nv",img:U+"photo-1589302168068-964664d93dc0?w=200&h=200&fit=crop&q=80"},
-{n:"Veg Dum Biryani",p:179,h:109,b:"",bc:"",t:"veg",img:U+"photo-1630851840633-f96999247032?w=200&h=200&fit=crop&q=80"}
-],
-pulao:[
-{n:"Chicken Pulao",p:199,h:119,b:"",bc:"",t:"nv",img:U+"photo-1603133872878-684f208fb84b?w=200&h=200&fit=crop&q=80"},
-{n:"Egg Pulao",p:169,h:99,b:"",bc:"",t:"nv",img:U+"photo-1540100716001-4b432820e37f?w=200&h=200&fit=crop&q=80"},
-{n:"Veg Pulao",p:149,h:89,b:"",bc:"",t:"veg",img:U+"photo-1584269600464-37b1b58a9fe7?w=200&h=200&fit=crop&q=80"}
-],
-chinese:[
-{n:"Chicken 65",p:229,h:0,b:"BESTSELLER",bc:"badge-best",t:"nv",img:U+"photo-1635685296916-95acaf58471f?w=200&h=200&fit=crop&q=80"},
-{n:"Chicken Manchurian",p:219,h:0,b:"",bc:"",t:"nv",img:U+"photo-1652731889375-a47b3c8449df?w=200&h=200&fit=crop&q=80"},
-{n:"Chilli Chicken",p:229,h:0,b:"",bc:"",t:"nv",img:U+"photo-1602811379863-3687f23b8dcc?w=200&h=200&fit=crop&q=80"},
-{n:"Dragon Chicken",p:249,h:0,b:"SPICY",bc:"badge-spicy",t:"nv",img:U+"photo-1714611446765-3e85644ea4ae?w=200&h=200&fit=crop&q=80"},
-{n:"Veg Manchurian",p:179,h:0,b:"",bc:"",t:"veg",img:U+"photo-1529690678884-189e81f34ef6?w=200&h=200&fit=crop&q=80"},
-{n:"Paneer 65",p:199,h:0,b:"",bc:"",t:"veg",img:U+"photo-1554906216-ecef3551283b?w=200&h=200&fit=crop&q=80"},
-{n:"Chicken Fried Rice",p:199,h:0,b:"",bc:"",t:"nv",img:U+"photo-1666190092689-e3968aa0c32c?w=200&h=200&fit=crop&q=80"},
-{n:"Veg Fried Rice",p:149,h:0,b:"",bc:"",t:"veg",img:U+"photo-1723691802798-fa6efc67b2c9?w=200&h=200&fit=crop&q=80"}
-],
-sides:[
-{n:"Raita",p:39,h:0,b:"",bc:"",t:"veg",img:U+"photo-1630409346699-79481a79db52?w=200&h=200&fit=crop&q=80"},
-{n:"Salan (Gravy)",p:49,h:0,b:"",bc:"",t:"veg",img:U+"photo-1589729346953-167da1cc9978?w=200&h=200&fit=crop&q=80"},
-{n:"Buttermilk / Lassi",p:49,h:0,b:"",bc:"",t:"veg",img:U+"photo-1579585381306-240cc44c6a66?w=200&h=200&fit=crop&q=80"},
-{n:"Soft Drink (300ml)",p:40,h:0,b:"",bc:"",t:"veg",img:U+"photo-1691175595365-211c15192433?w=200&h=200&fit=crop&q=80"},
-{n:"Water Bottle (1L)",p:20,h:0,b:"",bc:"",t:"veg",img:U+"photo-1559839734-2b71ea197ec2?w=200&h=200&fit=crop&q=80"}
-]
-};
+OOÂ[\Y[J
+NÂ\]PØ\RJ
+NÂÙ][Y[Ý]
 
-// ===== CART STATE =====
-let cart={};
 
-// ===== RENDER MENU =====
-function renderMenu(){
-Object.keys(MENU).forEach(cat=>{
-const panel=document.getElementById('panel-'+cat);
-if(!panel)return;
-const grid=panel.querySelector('.menu-grid');
-if(!grid)return;
-grid.innerHTML='';
-MENU[cat].forEach((item,i)=>{
-const key=cat+'-'+i;
-const qty=cart[key]||0;
-const typeBadge=item.t==='veg'?'<span class="badge badge-veg">VEG</span>':'<span class="badge badge-nv">NON-VEG</span>';
-const specialBadge=item.b?'<span class="badge '+item.bc+'">'+item.b+'</span>':'';
-const halfPrice=item.h?'<small>Half &#8377;'+item.h+'</small>':'';
-let controls='';
-if(qty>0){
-controls='<div class="qty-wrap"><button class="qty-btn" onclick="changeQty(\''+key+'\',-1)">-</button><div class="qty-val">'+qty+'</div><button class="qty-btn" onclick="changeQty(\''+key+'\',1)">+</button></div>';
-}else{
-controls='<button class="add-btn" onclick="addItem(\''+key+'\')">ADD +</button>';
-}
-const imgTag=item.img?'<img class="menu-item-img" src="'+item.img+'" alt="'+item.n+'" loading="lazy">':'';
-grid.innerHTML+='<div class="menu-item">'+imgTag+'<div class="menu-item-left"><div class="menu-item-name">'+typeBadge+' '+item.n+' '+specialBadge+'</div><div class="menu-item-price">&#8377;'+item.p+' '+halfPrice+'</div></div><div class="menu-item-right">'+controls+'</div></div>';
-});
-});
-}
+OOÂØÝ[Y[]Y\TÙ[XÝÜ	ËØY\ÊKÛ\ÜÓ\ÝY
+	ÙÛIÊNÂK
+NÂJNÂËÈOOOOHÓSÓÕÐÔÓOOOOBØÝ[Y[]Y\TÙ[XÝÜ[
+	ØVÚYHÈIÊKÜXXÚ
+OOÂKY][\Ý[\	ØÛXÚÉËOOÂÛÛÝYXKÙ]]X]J	ÚYÊNÂYYOOIÈÉÊ\]\ÂK][Y][
 
-function addItem(key){
-cart[key]=1;
-renderMenu();
-updateCartUI();
-}
-
-function changeQty(key,d){
-cart[key]=(cart[key]||0)+d;
-if(cart[key]<=0)delete cart[key];
-renderMenu();
-updateCartUI();
-}
-
-// ===== CART UI =====
-function updateCartUI(){
-const badge=document.getElementById('cartBadge');
-const body=document.getElementById('cartBody');
-const footer=document.getElementById('cartFooter');
-const totalEl=document.getElementById('cartTotal');
-const float=document.getElementById('cartFloat');
-const keys=Object.keys(cart);
-const count=keys.reduce((s,k)=>s+cart[k],0);
-badge.textContent=count>0?count:'';
-badge.style.display=count>0?'flex':'none';
-float.style.display=count>0||cartOpen?'flex':'none';
-if(keys.length===0){
-body.innerHTML='<div class="cart-empty">Your cart is empty. Add items from the menu!</div>';
-footer.style.display='none';
-return;
-}
-let html='';
-let total=0;
-keys.forEach(k=>{
-const parts=k.split('-');
-const cat=parts[0];
-const idx=parseInt(parts[1]);
-const item=MENU[cat][idx];
-const lineTotal=item.p*cart[k];
-total+=lineTotal;
-html+='<div class="cart-item"><div class="cart-item-info"><div class="cart-item-name">'+item.n+'</div><div class="cart-item-price">&#8377;'+item.p+' x '+cart[k]+' = &#8377;'+lineTotal+'</div></div><div class="cart-item-controls"><button class="qty-btn" onclick="changeQty(\''+k+'\',-1)">-</button><span class="qty-val" style="width:24px;font-size:13px">'+cart[k]+'</span><button class="qty-btn" onclick="changeQty(\''+k+'\',1)">+</button></div></div>';
-});
-body.innerHTML=html;
-totalEl.innerHTML='&#8377;'+total;
-footer.style.display='block';
-}
-
-let cartOpen=false;
-function toggleCart(open){
-cartOpen=open;
-document.getElementById('cartPanel').classList.toggle('open',open);
-document.getElementById('cartOverlay').classList.toggle('open',open);
-document.body.style.overflow=open?'hidden':'';
-if(open)updateCartUI();
-}
-
-document.getElementById('cartFloat').addEventListener('click',()=>toggleCart(true));
-document.getElementById('cartClose').addEventListener('click',()=>toggleCart(false));
-document.getElementById('cartOverlay').addEventListener('click',()=>toggleCart(false));
-
-// WhatsApp checkout
-document.getElementById('cartCheckout').addEventListener('click',()=>{
-const keys=Object.keys(cart);
-if(!keys.length)return;
-let msg='Hi! I would like to order:\n\n';
-let total=0;
-keys.forEach(k=>{
-const parts=k.split('-');
-const item=MENU[parts[0]][parseInt(parts[1])];
-const lt=item.p*cart[k];
-total+=lt;
-msg+=cart[k]+'x '+item.n+' - Rs.'+lt+'\n';
-});
-msg+='\nTotal: Rs.'+total+'\n\nPlease confirm availability and delivery time.';
-window.open('https://wa.me/919640034646?text='+encodeURIComponent(msg),'_blank');
-});
-
-// ===== MENU TABS =====
-document.querySelectorAll('.menu-tab').forEach(tab=>{
-tab.addEventListener('click',()=>{
-document.querySelectorAll('.menu-tab').forEach(t=>t.classList.remove('active'));
-document.querySelectorAll('.menu-panel').forEach(p=>p.classList.remove('active'));
-tab.classList.add('active');
-document.getElementById('panel-'+tab.dataset.tab).classList.add('active');
-});
-});
-
-// ===== NAVBAR SCROLL =====
-window.addEventListener('scroll',()=>{
-document.querySelector('.nav').classList.toggle('scrolled',window.scrollY>60);
-});
-
-// ===== HAMBURGER =====
-const hamburger=document.querySelector('.hamburger');
-const navLinks=document.querySelector('.nav-links');
-hamburger.addEventListener('click',()=>{
-hamburger.classList.toggle('open');
-navLinks.classList.toggle('open');
-});
-navLinks.querySelectorAll('a').forEach(a=>{
-a.addEventListener('click',()=>{
-hamburger.classList.remove('open');
-navLinks.classList.remove('open');
-});
-});
-
-// ===== SCROLL ANIMATIONS (IntersectionObserver) =====
-const observer=new IntersectionObserver((entries)=>{
-entries.forEach(e=>{
-if(e.isIntersecting){
-e.target.classList.add('visible');
-observer.unobserve(e.target);
-}
-});
-},{threshold:0.15,rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>observer.observe(el));
-
-// ===== ANIMATED COUNTERS =====
-function animateCounter(el){
-const target=parseInt(el.dataset.target);
-const suffix=el.dataset.suffix||'';
-let current=0;
-const step=Math.max(1,Math.floor(target/80));
-const timer=setInterval(()=>{
-current+=step;
-if(current>=target){current=target;clearInterval(timer)}
-el.textContent=current.toLocaleString('en-IN')+suffix;
-},25);
-}
-const counterObserver=new IntersectionObserver((entries)=>{
-entries.forEach(e=>{
-if(e.isIntersecting){
-animateCounter(e.target);
-counterObserver.unobserve(e.target);
-}
-});
-},{threshold:0.5});
-document.querySelectorAll('.stat-num').forEach(el=>counterObserver.observe(el));
-
-// ===== REVIEWS CAROUSEL =====
-let currentReview=0;
-const reviewSlides=document.querySelectorAll('.review-slide');
-const reviewDots=document.querySelectorAll('.review-dot');
-function showReview(idx){
-currentReview=((idx%reviewSlides.length)+reviewSlides.length)%reviewSlides.length;
-document.querySelector('.reviews-track').style.transform='translateX(-'+(currentReview*100)+'%)';
-reviewDots.forEach((d,i)=>d.classList.toggle('active',i===currentReview));
-}
-if(reviewDots.length){
-reviewDots.forEach((d,i)=>d.addEventListener('click',()=>showReview(i)));
-const prevBtn=document.querySelector('.review-prev');
-const nextBtn=document.querySelector('.review-next');
-if(prevBtn)prevBtn.addEventListener('click',()=>showReview(currentReview-1));
-if(nextBtn)nextBtn.addEventListener('click',()=>showReview(currentReview+1));
-setInterval(()=>showReview(currentReview+1),5000);
-}
-
-// ===== PARALLAX on COMBOS =====
-window.addEventListener('scroll',()=>{
-const combos=document.querySelector('.combos-sec');
-if(combos){
-const rect=combos.getBoundingClientRect();
-if(rect.top<window.innerHeight&&rect.bottom>0){
-const offset=(window.innerHeight-rect.top)*0.04;
-combos.style.backgroundPositionY=offset+'px';
-}
-}
-});
-
-// ===== LOADER =====
-window.addEventListener('load',()=>{
-renderMenu();
-updateCartUI();
-setTimeout(()=>{
-document.querySelector('.loader').classList.add('done');
-},800);
-});
-
-// ===== SMOOTH SCROLL =====
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-a.addEventListener('click',e=>{
-const href=a.getAttribute('href');
-if(href==='#')return;
-e.preventDefault();
-const target=document.querySelector(href);
-if(target){
-target.scrollIntoView({behavior:'smooth',block:'start'});
-}
-});
-});
-
-// ===== COUNTER DATA ATTRIBUTES =====
-document.querySelectorAll('.stat-num').forEach(el=>{
-el.dataset.target=el.dataset.count;
-el.dataset.suffix=el.dataset.count>=1000?'+':'+';
-});
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Restaurant",
-  "name": "Pothuraju Biryani",
-  "alternateName": "The Dum God of Biryani",
-  "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=1200&h=630&fit=crop&q=80",
-  "url": "https://pothurajubiryani.shop",
-  "telephone": "+919640034646",
-  "servesCuisine": ["Hyderabadi Biryani", "Indian", "Chinese"],
-  "priceRange": "â¹150-â¹999",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Kondapur",
-    "addressLocality": "Hyderabad",
-    "addressRegion": "Telangana",
-    "postalCode": "500084",
-    "addressCountry": "IN"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 17.4625,
-    "longitude": 78.3548
-  },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-    "opens": "11:00",
-    "closes": "00:00"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.5",
-    "reviewCount": "4800"
-  },
-  "hasMenu": "https://pothurajubiryani.shop/#menu",
-  "acceptsReservations": false,
-  "sameAs": []
-}
-</script>
-</body>
-</html>
+NÂÛÛÝ\Ù]YØÝ[Y[]Y\TÙ[XÝÜYNÂY\Ù]
+^Â\Ù]ØÜÛ[ÕY]ÊØZ][ÜÜÛ[ÛÝ	ËØÚÎÜÝ\	ßJNÂBJNÂJNÂËÈOOOOHÓÕSTUHUPUTÈOOOOBØÝ[Y[]Y\TÙ[XÝÜ[
+	ËÝ][[IÊKÜXXÚ
+[OÂ[]\Ù]\Ù]Y[]\Ù]ÛÝ[Â[]\Ù]ÝY^Y[]\Ù]ÛÝ[LLÉÊÉÎÊÉÎÂJNÂÜØÜ\ØÜ\\OH\XØ][ÛÛ
+ÚÛÛÂÛÛ^ÎËÜØÚ[XKÜÈ\H\Ý]\[[YHÝ\ZH\X[H[\]S[YHH[HÛÙÙ\X[H[XYÙHÎËÚ[XYÙ\Ë[Ü\ÚÛÛKÜÝËLMMÌÍÎLLLÌÎKLØXXMÝÏLL	MÌ	]XÜÜ	ON\ÎËÜÝ\ZX\X[KÚÜ[\ÛHÎLNMÍÙ\\ÐÝZ\Ú[HÈY\XYH\X[H[X[Ú[\ÙHKXÙT[ÙH¸ ®LMLx ®NNNHY\ÜÈÂ\HÜÝ[Y\ÜÈÝY]Y\ÜÈÛÛ\\Y\ÜÓØØ[]HY\XYY\ÜÔYÚ[Û[[Ø[HÜÝ[ÛÙHLY\ÜÐÛÝ[HSKÙ[ÈÂ\HÙ[ÐÛÛÜ[]\È]]YHMËKÛÚ]YHÎÍMKÜ[[ÒÝ\ÔÜXÚYXØ][ÛÂ\HÜ[[ÒÝ\ÔÜXÚYXØ][Û^SÙÙYZÈÈ[Û^HY\Ù^HÙY\Ù^H\Ù^HY^HØ]\^HÝ[^HKÜ[ÈLNÛÜÙ\ÈKYÙÜYØ]T][ÈÂ\HYÙÜYØ]T][È][Õ[YHH]Y]ÐÛÝ[K\ÓY[HÎËÜÝ\ZX\X[KÚÜÈÛY[HXØÙ\Ô\Ù\][ÛÈ[ÙKØ[YP\È×B
