@@ -209,10 +209,10 @@ function Marquee() {
 function WhyUs() {
   const ref = useReveal();
   const features = [
-    { icon: "🔥", title: "Authentic Dum", desc: "Slow-cooked over coal in sealed handis. No shortcuts, no pressure cookers." },
-    { icon: "🌿", title: "Fresh Daily", desc: "Every ingredient sourced fresh each morning. No frozen meat, no day-old rice." },
-    { icon: "🍽️", title: "25+ Items", desc: "From royal Mutton Dum to fiery Dragon Chicken. Something for every craving." },
-    { icon: "⚡", title: "30min Delivery", desc: "Kondapur deliveries in under 30 minutes. Hotter than your expectations." },
+    { img: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=200&h=200&fit=crop&q=80", title: "Authentic Dum", desc: "Slow-cooked over coal in sealed handis. No shortcuts, no pressure cookers." },
+    { img: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=200&h=200&fit=crop&q=80", title: "Fresh Daily", desc: "Every ingredient sourced fresh each morning. No frozen meat, no day-old rice." },
+    { img: "https://images.unsplash.com/photo-1567337710282-00832b415979?w=200&h=200&fit=crop&q=80", title: "25+ Items", desc: "From royal Mutton Dum to fiery Dragon Chicken. Something for every craving." },
+    { img: "https://images.unsplash.com/photo-1526367790999-0150786686a2?w=200&h=200&fit=crop&q=80", title: "30min Delivery", desc: "Kondapur deliveries in under 30 minutes. Hotter than your expectations." },
   ];
 
   return (
@@ -227,7 +227,9 @@ function WhyUs() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((f, i) => (
             <div key={f.title} className={`reveal reveal-delay-${i + 1} group bg-dark/50 border border-white/5 rounded-2xl p-6 hover:border-gold/30 transition-all duration-500 hover:-translate-y-1`}>
-              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">{f.icon}</div>
+              <div className="w-16 h-16 rounded-full overflow-hidden mb-4 group-hover:scale-110 transition-transform border-2 border-gold/20">
+                <Image src={f.img} alt={f.title} width={64} height={64} className="object-cover w-full h-full" />
+              </div>
               <h3 className="font-display text-xl text-white mb-2">{f.title}</h3>
               <p className="text-sm text-white/40 leading-relaxed">{f.desc}</p>
             </div>
