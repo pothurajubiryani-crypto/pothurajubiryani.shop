@@ -64,10 +64,10 @@ export const COMBOS: Combo[] = [
 ];
 
 export const CATEGORIES = [
-  { id: "biryani", label: "Biryani", icon: "ð", count: 8 },
-  { id: "pulao", label: "Pulao", icon: "ð²", count: 4 },
-  { id: "chinese", label: "Chinese", icon: "ð¥¡", count: 7 },
-  { id: "sides", label: "Sides & Drinks", icon: "ð¥¤", count: 6 },
+  { id: "biryani", label: "Biryani", icon: "🍛", count: 8 },
+  { id: "pulao", label: "Pulao", icon: "🍲", count: 4 },
+  { id: "chinese", label: "Chinese", icon: "🥡", count: 7 },
+  { id: "sides", label: "Sides & Drinks", icon: "🥤", count: 6 },
 ];
 
 export const REVIEWS = [
